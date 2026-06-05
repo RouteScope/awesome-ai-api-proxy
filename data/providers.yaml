@@ -135,6 +135,19 @@ china_relays:
     supports_stream: true
     supports_tools: true
     notes: "Issues enterprise invoices; self-describes as largest enterprise-grade relay in Asia."
+- name: CoderPlan
+  url: https://coderplan.ai
+  type: mixed
+  status: unverified
+  payment: [alipay, wechat]
+  models: [openai, anthropic, gemini, deepseek]
+  last_verified: null
+  verified_by: community
+  entity_registered: unknown
+  supports_stream: true
+  supports_tools: true
+  notes: "OpenAI-compatible API relay with competitive pricing and free credits on signup."
+
 
 # ---------------------------------------------------------------------------
 # Comparison / monitoring tools (中轉站對比工具)
