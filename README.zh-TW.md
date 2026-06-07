@@ -18,6 +18,7 @@
 - [海外閘道與聚合平台](#海外閘道與聚合平台)
 - [自架替代方案](#自架替代方案)
 - [對比與監控工具](#對比與監控工具)
+- [想被收錄嗎？](#想被收錄嗎)
 - [價格快照（每週更新）](#價格快照每週更新)
 - [如何安全地挑選](#如何安全地挑選)
 - [給 AI agent 與程式化使用](#給-ai-agent-與程式化使用)
@@ -112,6 +113,22 @@ OpenAI、Anthropic、Google 等官方 API，而是把 `base_url` 改成中轉站
 | [中轉站競技場 (AI API PK)](https://www.aiapipk.com) | 約 40 家站點的 OpenAI / 逆向 / Claude / DeepSeek 報價牆。 |
 | [awesome-ai-proxy (mn-api)](https://github.com/mn-api/awesome-ai-proxy) | 最早的清單（約 31 家）。**2026 年起已停更** —— 本倉庫延續這項工作。 |
 
+## 想被收錄嗎？
+
+歡迎社群提交 —— **包括中轉站營運者本人**。兩種路徑，挑簡單的：
+
+- **一鍵 issue：**[開新中轉站 issue](https://github.com/howardpen9/awesome-ai-api-proxy/issues/new?template=new-provider.md) —— 填表單、維護者會加入。
+- **直接 PR：**只改 [`data/providers.yaml`](data/providers.yaml)（README 表格自動重新生成）。schema 見 [CONTRIBUTING.md](CONTRIBUTING.md)；[PR template](.github/pull_request_template.md) 有逐項 checklist。
+
+**預設 `status: unverified`**，直到維護者親自跑一次 canary。這不是拒絕 ——
+只是表示「社群登錄、未獨立確認」。通常 2 週內驗證完，狀態改成 `active`、
+寫入 `last_verified`。
+
+我們不收 referral 連結、不收行銷文案。但**接受營運者自薦**——
+`notes` 寫一句事實、不要最高級形容詞就好。
+
+> **每個 PR 自動跑 schema CI**（[pr-validate workflow](.github/workflows/pr-validate.yml)）—— 欄位拼錯或 `type` 不合法，bot 會先告訴你、不用等維護者抓。
+
 ## 價格快照（每週更新）
 
 > 為什麼按 tier 分組：頂尖 10 個前沿模型的價格相差 **10 倍**
@@ -125,6 +142,10 @@ OpenAI、Anthropic、Google 等官方 API，而是把 `base_url` 改成中轉站
 
 <!-- prices:start -->
 _Snapshot date: **2026-06-07**. 1024 price records across 3 fetched providers. **Reference column** is OpenRouter (officially-authorized, ~5% markup). ⚠ = relay quotes <50% of OpenRouter — verify with [canary prompts](docs/canary-prompts.md) before trusting._
+
+![Tier-ladder input pricing](assets/charts/tier-ladder-input.svg)
+
+_More charts (output pricing, cost-spread heatmaps): [`assets/charts/`](assets/charts/). Interactive dashboard: <https://howardpen9.github.io/awesome-ai-api-proxy/>._
 
 ### Tier 1 — cheapest viable (routine, batch summaries) — USD per 1M input tokens
 
