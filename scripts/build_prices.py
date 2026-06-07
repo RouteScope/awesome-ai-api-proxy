@@ -105,6 +105,28 @@ def _write_prices_latest(records: list[dict], snapshot_date: str) -> None:
     )
 
 
+def _write_tabular_exports(records: list[dict], snapshot_date: str) -> tuple[Path, Path] | None:
+    """Write CSV + Parquet alongside the JSON for analyst-friendly access.
+
+    Skipped silently when pandas isn't installed (the [charts] extra).
+    """
+    try:
+        import pandas as pd
+    except ImportError:
+        console.print("[yellow]pandas not installed — skipping CSV/Parquet export. "
+                      "Install with `pip install -e .[charts]`[/yellow]")
+        return None
+
+    df = pd.DataFrame(records)
+    # Add snapshot_date as a column so the CSV is self-describing.
+    df.insert(0, "snapshot_date", snapshot_date)
+    csv_path = PRICES_LATEST.with_suffix(".csv")
+    parquet_path = PRICES_LATEST.with_suffix(".parquet")
+    df.to_csv(csv_path, index=False)
+    df.to_parquet(parquet_path, index=False, compression="snappy")
+    return csv_path, parquet_path
+
+
 def _append_history(records: list[dict], snapshot_date: str) -> None:
     provider_counts: dict[str, int] = defaultdict(int)
     canonical_seen: set[str] = set()
@@ -265,6 +287,10 @@ def _build_tier_tables(
         f"{len(providers_in_use)} fetched providers. **Reference column** is OpenRouter "
         f"(officially-authorized, ~5% markup). ⚠ = relay quotes <50% of OpenRouter — "
         f"verify with [canary prompts](docs/canary-prompts.md) before trusting._\n\n"
+        f"![Tier-ladder input pricing](assets/charts/tier-ladder-input.svg)\n\n"
+        f"_More charts (output pricing, cost-spread heatmaps): "
+        f"[`assets/charts/`](assets/charts/). "
+        f"Interactive dashboard: <https://howardpen9.github.io/awesome-ai-api-proxy/>._\n\n"
     )
     outro = (
         "\n_Full per-model breakdown (including non-canonical models): "
@@ -347,6 +373,12 @@ def main() -> int:
 
     _write_prices_latest(records, snapshot_date)
     console.print(f"[green]wrote[/green] {PRICES_LATEST.relative_to(SNAPSHOTS_DIR.parent.parent)}")
+
+    tabular = _write_tabular_exports(records, snapshot_date)
+    if tabular:
+        csv_path, parquet_path = tabular
+        console.print(f"[green]wrote[/green] {csv_path.relative_to(SNAPSHOTS_DIR.parent.parent)}")
+        console.print(f"[green]wrote[/green] {parquet_path.relative_to(SNAPSHOTS_DIR.parent.parent)}")
 
     _append_history(records, snapshot_date)
     console.print(f"[green]appended[/green] {PRICES_HISTORY.relative_to(SNAPSHOTS_DIR.parent.parent)}")

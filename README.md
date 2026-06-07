@@ -22,6 +22,7 @@ Contributions welcome — see [CONTRIBUTING.md](CONTRIBUTING.md)
 - [Global gateways & aggregators](#global-gateways--aggregators)
 - [Self-hosted alternatives](#self-hosted-alternatives)
 - [Comparison & monitoring tools](#comparison--monitoring-tools)
+- [Want your relay listed?](#want-your-relay-listed)
 - [Price snapshot (weekly)](#price-snapshot-weekly)
 - [How to choose one safely](#how-to-choose-one-safely)
 - [For AI agents & programmatic use](#for-ai-agents--programmatic-use)
@@ -125,6 +126,23 @@ You give up the relay's Alipay/WeChat convenience and accept ops overhead.
 | [中轉站競技場 (AI API PK)](https://www.aiapipk.com) | Price wall across OpenAI / Reverse / Claude / DeepSeek for ~40 stations. |
 | [awesome-ai-proxy (mn-api)](https://github.com/mn-api/awesome-ai-proxy) | The original list (~31 stations). **Unmaintained as of 2026** — this repo aims to continue the effort. |
 
+## Want your relay listed?
+
+We accept community submissions, **including from relay operators themselves**.
+Two paths — pick whichever is easier:
+
+- **One-click issue:** [Open a new-provider issue](https://github.com/howardpen9/awesome-ai-api-proxy/issues/new?template=new-provider.md) — fill the form, a maintainer adds it.
+- **Direct PR:** edit [`data/providers.yaml`](data/providers.yaml) only (READMEs auto-regenerate). See [CONTRIBUTING.md](CONTRIBUTING.md) for the schema; the [PR template](.github/pull_request_template.md) has a one-glance checklist.
+
+**Default status is `unverified`** until a maintainer runs a canary against your station.
+That's not a rejection — it just means the entry says "community-listed, not independently confirmed."
+After verification (typically <2 weeks) status flips to `active` with `last_verified` set.
+
+We never accept referral links or marketing copy. We do accept honest entries
+from operators — one factual sentence in `notes`, no superlatives.
+
+> **Schema CI runs on every PR** ([pr-validate workflow](.github/workflows/pr-validate.yml)) — if you mis-spell a field or use an invalid `type`, the bot will tell you before a human gets there.
+
 ## Price snapshot (weekly)
 
 > Why tier groups: the top 10 frontier models span a **10× cost spread**
@@ -139,6 +157,10 @@ You give up the relay's Alipay/WeChat convenience and accept ops overhead.
 
 <!-- prices:start -->
 _Snapshot date: **2026-06-07**. 1024 price records across 3 fetched providers. **Reference column** is OpenRouter (officially-authorized, ~5% markup). ⚠ = relay quotes <50% of OpenRouter — verify with [canary prompts](docs/canary-prompts.md) before trusting._
+
+![Tier-ladder input pricing](assets/charts/tier-ladder-input.svg)
+
+_More charts (output pricing, cost-spread heatmaps): [`assets/charts/`](assets/charts/). Interactive dashboard: <https://howardpen9.github.io/awesome-ai-api-proxy/>._
 
 ### Tier 1 — cheapest viable (routine, batch summaries) — USD per 1M input tokens
 

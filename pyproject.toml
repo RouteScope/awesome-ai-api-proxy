@@ -17,6 +17,7 @@ dependencies = [
 
 [project.optional-dependencies]
 playwright = ["playwright>=1.45"]
+charts = ["pandas>=2.2", "matplotlib>=3.9", "pyarrow>=16.0"]
 dev = ["pytest>=8.0", "ruff>=0.4"]
 
 [tool.ruff]
