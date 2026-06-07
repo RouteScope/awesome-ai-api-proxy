@@ -28,14 +28,20 @@ jobs:
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
-          pip install -e .
+          pip install -e ".[charts]"
 
       - name: Scrape all fetchers
         id: scrape
         run: python -m scripts.scrape
 
-      - name: Build prices
+      - name: Build prices (+ CSV/Parquet exports)
         run: python -m scripts.build_prices
+
+      - name: Build charts (SVG)
+        run: python -m scripts.build_charts
+
+      - name: Build provider tables (READMEs from providers.yaml)
+        run: python -m scripts.build_provider_tables
 
       - name: Validate
         run: python -m scripts.validate

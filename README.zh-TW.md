@@ -18,6 +18,7 @@
 - [海外閘道與聚合平台](#海外閘道與聚合平台)
 - [自架替代方案](#自架替代方案)
 - [對比與監控工具](#對比與監控工具)
+- [想被收錄嗎？](#想被收錄嗎)
 - [價格快照（每週更新）](#價格快照每週更新)
 - [如何安全地挑選](#如何安全地挑選)
 - [給 AI agent 與程式化使用](#給-ai-agent-與程式化使用)
@@ -63,32 +64,40 @@ OpenAI、Anthropic、Google 等官方 API，而是把 `base_url` 改成中轉站
 
 ## 中國 / 亞洲中轉站
 
-> 狀態：`active` = 可獨立存取；`unverified` = 社群來源，未獨立確認。
-> **最後驗證**＝維護者最後一次造訪該站的日期；unverified 條目沒有此欄位。
-> 價格變動極快，請以官網為準。資料生成自 [`data/providers.yaml`](data/providers.yaml)。
+> **信任** = 狀態 + 最後驗證日期 +（若公開可見公司主體會多 `· 已註冊`）。
+> `active` = 可獨立存取；`unverified` = 社群來源，未獨立確認。
+> 價格變動極快，請以官網為準。完整欄位（payment、models、supports_tools 等）
+> 在 [`data/providers.yaml`](data/providers.yaml)；下面的表格由
+> [`scripts/build_provider_tables.py`](scripts/build_provider_tables.py) 自動生成。
 
-| 中轉站 | 類型 | 支付 | 狀態 | 最後驗證 | 公司主體 | 備註 |
-|---|---|---|---|---|---|---|
-| [云雾 API (YUNWU)](https://yunwu.ai) | mixed | 支付寶/微信 | active | 2026-05-26 | 未知 | 主打高速穩定；社群常列為頭部站。 |
-| [柏拉图 AI (bltcy)](https://api.bltcy.ai) | mixed | 支付寶/微信 | active | 2026-05-26 | 未知 | Azure 通道；主打最低價。 |
-| [No.1-API](https://api.rcouyi.com) | aggregator | 支付寶/微信 | active | 2026-05-26 | 未知 | 一站式聚合 + 中轉平台。 |
-| [UiUiAPI](https://uiuiapi.com) | official-relay | 支付寶/微信 | active | 2026-05-26 | 未知 | 宣稱官方渠道 + 官方倍率；約便宜 49%（宣稱），300+ 模型。 |
-| [DMXAPI](https://dmxapi.cn) | mixed | 支付寶/微信 | unverified | — | 未知 | 社群收錄；官網未獨立核實。 |
-| [MKEAI](https://mkeai.com) | mixed | 支付寶/微信 | unverified | — | 未知 | 社群論壇 + 中轉混合；主推 DeepSeek。 |
-| [GPTGOD](https://gptgod.online) | reverse | 支付寶 | unverified | — | 未知 | 逆向；便宜，穩定性無保證。 |
-| [CloseAI](https://www.closeai-asia.com) | official-relay | 支付寶/微信/對公 | active | 2026-05-26 | 已註冊 | 提供對公發票；自稱亞洲最大企業級中轉。 |
+<!-- providers:china_relays:start -->
+| 中轉站 | 類型 | 支付 | 信任 | 備註 |
+|---|---|---|---|---|
+| [云雾 API (YUNWU)](https://yunwu.ai) | mixed | 支付寶/微信 | active · 2026-05-26 | 主打高速穩定；社群常列為頭部站。 |
+| [柏拉图 AI (bltcy)](https://api.bltcy.ai) | mixed | 支付寶/微信 | active · 2026-05-26 | Azure 通道；主打最低價。 |
+| [No.1-API](https://api.rcouyi.com) | aggregator | 支付寶/微信 | active · 2026-05-26 | 一站式聚合 + 中轉平台。 |
+| [UiUiAPI](https://uiuiapi.com) | official-relay | 支付寶/微信 | active · 2026-05-26 | 宣稱官方渠道 + 官方倍率；約便宜 49%（宣稱），300+ 模型。 |
+| [DMXAPI](https://dmxapi.cn) | mixed | 支付寶/微信 | unverified | 社群收錄；官網未獨立核實。 |
+| [MKEAI](https://mkeai.com) | mixed | 支付寶/微信 | unverified | 社群論壇 + 中轉混合；主推 DeepSeek。 |
+| [GPTGOD](https://gptgod.online) | reverse | 支付寶 | unverified | 逆向；便宜，穩定性無保證。 |
+| [CloseAI](https://www.closeai-asia.com) | official-relay | 支付寶/微信/對公 | active · 2026-05-26 · 已註冊 | 提供對公發票；自稱亞洲最大企業級中轉。 |
+<!-- providers:china_relays:end -->
 
 > **收錄 ≠ 推薦。** 收錄是為了記錄市場。打款或傳資料前請先走
 > [評估清單](docs/evaluation.md)。
 
 ## 海外閘道與聚合平台
 
+<!-- providers:global_gateways:start -->
 | 服務 | 類型 | 支付 | 備註 |
 |---|---|---|---|
-| [OpenRouter](https://openrouter.ai) | aggregator | 卡/加密貨幣 | 官方授權路由，加價約 5%；400+ 模型、60+ 供應商。ARR 據報約 $5M（2025-05）→ 約 $50M（2026 初）。 |
+| [OpenRouter](https://openrouter.ai) | aggregator | 卡/加密貨幣 | 官方授權路由，加價約 5%；400+ 模型、60+ 供應商。ARR 據報約 $5M（2025-05）→ 約 $50M（2026 初）。公開 `/api/v1/models` JSON。 |
+| [Atlas Cloud](https://www.atlascloud.ai) | aggregator | 卡 | 多模態聚合平台；影像/影片模型多（Grok Imagine、Kling、ByteDance、Vidu）。公開 OpenAI 相容 `/v1/models` 含 cache-read 計價。 |
+| [Relaydance](https://relaydance.com) | mixed | 支付寶/微信/卡 | 基於 new-api 的中文介面海外站，主打 xAI Grok + 字節跳動 Doubao。`/api/pricing` 公開倍率計價（model_ratio × $2/1M tokens）。 |
 | [LiteLLM](https://litellm.ai) | gateway-oss | — | 開源閘道（100+ 供應商）+ 企業版。自架，自帶 Key。 |
 | [Helicone](https://helicone.ai) | observability | — | LLM 可觀測性閘道；日誌/成本分析。 |
 | [AIMLAPI](https://aimlapi.com) | aggregator | 卡/加密貨幣 | 400+ 模型，$20 起預付；支援加密貨幣暗示繞支付障礙。 |
+<!-- providers:global_gateways:end -->
 
 ## 自架替代方案
 
@@ -96,21 +105,43 @@ OpenAI、Anthropic、Google 等官方 API，而是把 `base_url` 改成中轉站
 你自帶上游官方 key（或自負風險使用中轉站 key）、跑在自己的機器上、資料留在自己手中。
 大部分中國中轉站本身就是用這些開源專案搭起來的。
 
+<!-- providers:self_hosted_alternatives:start -->
 | 專案 | 類型 | 備註 |
 |---|---|---|
 | [One-API](https://github.com/songquanpeng/one-api) | gateway-oss | 流行的 Go 多廠商閘道；多數中轉站的底層 OSS 模板。 |
 | [new-api](https://github.com/Calcium-Ion/new-api) | gateway-oss | One-API 的 fork，多了幾種通道類型；同樣自架、自帶 key。 |
-| [LiteLLM](https://litellm.ai) | gateway-oss | 上面列過，Python 為主、100+ 供應商、企業常用。 |
+<!-- providers:self_hosted_alternatives:end -->
+
+> [LiteLLM](https://litellm.ai)（在上面海外閘道表格內）同樣是自架方案（Python 為主、100+ 供應商、企業常用）。
 
 **什麼時候該自架而非用中轉站**：合規/敏感資料、production 工作負載、你已經能用國外卡付款、
 或需要可審計的日誌。代價是失去支付寶/微信的便利，並承擔運維成本。
 
 ## 對比與監控工具
 
+<!-- providers:comparison_tools:start -->
 | 工具 | 備註 |
 |---|---|
 | [中轉站競技場 (AI API PK)](https://www.aiapipk.com) | 約 40 家站點的 OpenAI / 逆向 / Claude / DeepSeek 報價牆。 |
-| [awesome-ai-proxy (mn-api)](https://github.com/mn-api/awesome-ai-proxy) | 最早的清單（約 31 家）。**2026 年起已停更** —— 本倉庫延續這項工作。 |
+| [awesome-ai-proxy (mn-api, unmaintained)](https://github.com/mn-api/awesome-ai-proxy) | 最早的清單（約 31 家）。**2026 年起已停更** —— 本倉庫延續這項工作。 |
+| [CoderPlan](https://coderplan.ai) | 社群投稿；宣稱 50+ 模型，含 OpenAI/Anthropic/Google/DeepSeek/xAI。 |
+<!-- providers:comparison_tools:end -->
+
+## 想被收錄嗎？
+
+歡迎社群提交 —— **包括中轉站營運者本人**。兩種路徑，挑簡單的：
+
+- **一鍵 issue：**[開新中轉站 issue](https://github.com/howardpen9/awesome-ai-api-proxy/issues/new?template=new-provider.md) —— 填表單、維護者會加入。
+- **直接 PR：**只改 [`data/providers.yaml`](data/providers.yaml)（README 表格自動重新生成）。schema 見 [CONTRIBUTING.md](CONTRIBUTING.md)；[PR template](.github/pull_request_template.md) 有逐項 checklist。
+
+**預設 `status: unverified`**，直到維護者親自跑一次 canary。這不是拒絕 ——
+只是表示「社群登錄、未獨立確認」。通常 2 週內驗證完，狀態改成 `active`、
+寫入 `last_verified`。
+
+我們不收 referral 連結、不收行銷文案。但**接受營運者自薦**——
+`notes` 寫一句事實、不要最高級形容詞就好。
+
+> **每個 PR 自動跑 schema CI**（[pr-validate workflow](.github/workflows/pr-validate.yml)）—— 欄位拼錯或 `type` 不合法，bot 會先告訴你、不用等維護者抓。
 
 ## 價格快照（每週更新）
 
@@ -125,6 +156,10 @@ OpenAI、Anthropic、Google 等官方 API，而是把 `base_url` 改成中轉站
 
 <!-- prices:start -->
 _Snapshot date: **2026-06-07**. 1024 price records across 3 fetched providers. **Reference column** is OpenRouter (officially-authorized, ~5% markup). ⚠ = relay quotes <50% of OpenRouter — verify with [canary prompts](docs/canary-prompts.md) before trusting._
+
+![Tier-ladder input pricing](assets/charts/tier-ladder-input.svg)
+
+_More charts (output pricing, cost-spread heatmaps): [`assets/charts/`](assets/charts/). Interactive dashboard: <https://howardpen9.github.io/awesome-ai-api-proxy/>._
 
 ### Tier 1 — cheapest viable (routine, batch summaries) — USD per 1M input tokens
 

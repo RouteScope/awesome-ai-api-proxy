@@ -19,7 +19,7 @@ Unverifiable claims must be marked with `(claimed)` or `status: unverified`.
 | `entity_registered` | no | `true`, `false`, or `unknown`. Is a registered company / ICP filing publicly visible. |
 | `supports_stream` | no | `true`, `false`, or `unknown`. SSE / streaming responses available. |
 | `supports_tools` | no | `true`, `false`, or `unknown`. Function-calling / tools API compatibility. |
-| `notes` | no | One sentence. Factual. No marketing language. |
+| `notes` | no | One factual sentence, no marketing. **May be a string OR a dict `{en, zh-TW, zh-CN}` for bilingual entries.** Missing translations fall back to `en`. Required key when dict: `en`. |
 | `pricing` | no | Block. See below — present when this provider has an automated fetcher. |
 
 ## `pricing` block (optional, schema v3)
