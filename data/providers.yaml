@@ -168,12 +168,55 @@ global_gateways:
     models: [openai, anthropic, google, meta, mistral]
     model_count: 400
     provider_count: 60
-    last_verified: "2026-05-26"
+    last_verified: "2026-06-07"
     verified_by: maintainer
     entity_registered: true
     supports_stream: true
     supports_tools: true
-    notes: "Official-authorized routing, ~5% markup. ARR reportedly $5M (2025-05) to ~$50M (early 2026)."
+    pricing:
+      pricing_url: https://openrouter.ai/models
+      api_url: https://openrouter.ai/api/v1/models
+      fetcher: openrouter
+      pricing_currency: USD
+    notes: "Official-authorized routing, ~5% markup. ARR reportedly $5M (2025-05) to ~$50M (early 2026). Public JSON API at /api/v1/models with normalized per-token pricing."
+
+  - name: Atlas Cloud
+    url: https://www.atlascloud.ai
+    type: aggregator
+    status: active
+    payment: [card]
+    models: [deepseek, qwen, moonshot, anthropic, grok, kling, minimax, bytedance, vidu, openai, google]
+    model_count: 118
+    last_verified: "2026-06-07"
+    verified_by: maintainer
+    entity_registered: unknown
+    supports_stream: true
+    supports_tools: true
+    pricing:
+      pricing_url: https://www.atlascloud.ai/models
+      api_url: https://api.atlascloud.ai/v1/models
+      fetcher: atlascloud
+      pricing_currency: USD
+    notes: "Multi-modal aggregator; image/video heavy (Grok Imagine, Kling, ByteDance, Vidu). Public OpenAI-compatible /v1/models endpoint exposes per-token pricing including cache-read."
+
+  - name: Relaydance
+    url: https://relaydance.com
+    type: mixed
+    status: active
+    payment: [alipay, wechat, card]
+    models: [grok, doubao, seedance]
+    model_count: 22
+    last_verified: "2026-06-07"
+    verified_by: maintainer
+    entity_registered: unknown
+    supports_stream: true
+    supports_tools: unknown
+    pricing:
+      pricing_url: https://relaydance.com/pricing
+      api_url: https://relaydance.com/api/pricing
+      fetcher: relaydance
+      pricing_currency: USD
+    notes: "新-API (Calcium-Ion fork) operator focused on xAI Grok + ByteDance Doubao. Public /api/pricing returns ratio-based pricing (model_ratio × $2 / 1M tokens)."
 
   - name: LiteLLM
     url: https://litellm.ai

@@ -20,6 +20,21 @@ Unverifiable claims must be marked with `(claimed)` or `status: unverified`.
 | `supports_stream` | no | `true`, `false`, or `unknown`. SSE / streaming responses available. |
 | `supports_tools` | no | `true`, `false`, or `unknown`. Function-calling / tools API compatibility. |
 | `notes` | no | One sentence. Factual. No marketing language. |
+| `pricing` | no | Block. See below — present when this provider has an automated fetcher. |
+
+## `pricing` block (optional, schema v3)
+
+Add to a provider entry when its prices can be fetched automatically by
+`scripts/scrape.py`. Snapshots land in `data/snapshots/<YYYY-MM-DD>/<fetcher>.json`
+weekly via the `price-refresh` workflow.
+
+| Field | Required | Description |
+|---|---|---|
+| `pricing_url` | yes | The human-readable pricing page (what users see). |
+| `api_url` | no | The JSON endpoint the fetcher calls. Omit when fetcher uses HTML/DOM. |
+| `fetcher` | yes | Fetcher ID — must match `fetchers/<id>.py`'s `PROVIDER_ID`. |
+| `pricing_currency` | yes | ISO 4217. We normalize to `USD` in `data/prices.latest.json`. |
+| `last_priced` | no | `YYYY-MM-DD` of the most recent successful scrape. Written by `scripts/build_prices.py`. |
 
 ## `type` definitions
 
@@ -45,4 +60,7 @@ official-relay  >  mixed  >  aggregator  >  reverse
 1. No referral links. Plain URLs only.
 2. No "best / cheapest / #1" superlatives in `notes` unless attributed and dated.
 3. A station that has run away (`跑路`) → set `status: inactive`, keep the entry, add a dated note. We do not delete history.
-4. Prices decay fast — prefer `discount_vs_official` over absolute numbers, and always tag `(claimed)`.
+4. **Two pricing schemas coexist (schema v3+):**
+   - Providers with `pricing.fetcher` → objective, dated, snapshot-backed absolute prices live in `data/snapshots/` + `data/prices.latest.json`. The README's price table is generated from these. No `(claimed)` tag.
+   - Providers without `pricing.fetcher` → continue using `discount_vs_official: "... (claimed)"` for narrative context. Prices decay fast so they remain marked `(claimed)`.
+5. Every record in `data/prices.latest.json` carries `source_url` + `captured_at` + `method`. This is the citation envelope LLM agents quote — don't drop those fields when adding a fetcher.
