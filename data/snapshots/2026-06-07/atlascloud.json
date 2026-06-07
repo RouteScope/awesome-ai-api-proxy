@@ -1,6 +1,6 @@
 {
   "provider_id": "atlascloud",
-  "captured_at": "2026-06-07T04:53:08.859843+00:00",
+  "captured_at": "2026-06-07T06:46:33.624761+00:00",
   "records": [
     {
       "provider_id": "atlascloud",
@@ -13,7 +13,7 @@
       "unit": "per_1m_input_tokens",
       "price_usd": 0.216,
       "source_url": "https://www.atlascloud.ai/models",
-      "captured_at": "2026-06-07T04:53:08.857672+00:00",
+      "captured_at": "2026-06-07T06:46:33.622821+00:00",
       "confidence": "high",
       "method": "json-api",
       "notes": null
@@ -29,7 +29,7 @@
       "unit": "per_1m_output_tokens",
       "price_usd": 0.88,
       "source_url": "https://www.atlascloud.ai/models",
-      "captured_at": "2026-06-07T04:53:08.857718+00:00",
+      "captured_at": "2026-06-07T06:46:33.622856+00:00",
       "confidence": "high",
       "method": "json-api",
       "notes": null
@@ -45,7 +45,7 @@
       "unit": "per_1m_input_cache_read_tokens",
       "price_usd": 0.18,
       "source_url": "https://www.atlascloud.ai/models",
-      "captured_at": "2026-06-07T04:53:08.857727+00:00",
+      "captured_at": "2026-06-07T06:46:33.622865+00:00",
       "confidence": "high",
       "method": "json-api",
       "notes": null
@@ -61,7 +61,7 @@
       "unit": "per_1m_input_tokens",
       "price_usd": 0.09999999999999999,
       "source_url": "https://www.atlascloud.ai/models",
-      "captured_at": "2026-06-07T04:53:08.857740+00:00",
+      "captured_at": "2026-06-07T06:46:33.622877+00:00",
       "confidence": "high",
       "method": "json-api",
       "notes": null
@@ -77,7 +77,7 @@
       "unit": "per_1m_output_tokens",
       "price_usd": 1.2,
       "source_url": "https://www.atlascloud.ai/models",
-      "captured_at": "2026-06-07T04:53:08.857746+00:00",
+      "captured_at": "2026-06-07T06:46:33.622883+00:00",
       "confidence": "high",
       "method": "json-api",
       "notes": null
@@ -93,7 +93,7 @@
       "unit": "per_1m_input_cache_read_tokens",
       "price_usd": 0.09999999999999999,
       "source_url": "https://www.atlascloud.ai/models",
-      "captured_at": "2026-06-07T04:53:08.857752+00:00",
+      "captured_at": "2026-06-07T06:46:33.622889+00:00",
       "confidence": "high",
       "method": "json-api",
       "notes": null
@@ -109,7 +109,7 @@
       "unit": "per_1m_input_tokens",
       "price_usd": 0.55,
       "source_url": "https://www.atlascloud.ai/models",
-      "captured_at": "2026-06-07T04:53:08.857763+00:00",
+      "captured_at": "2026-06-07T06:46:33.622896+00:00",
       "confidence": "high",
       "method": "json-api",
       "notes": null
@@ -125,7 +125,7 @@
       "unit": "per_1m_output_tokens",
       "price_usd": 2.1500000000000004,
       "source_url": "https://www.atlascloud.ai/models",
-      "captured_at": "2026-06-07T04:53:08.857769+00:00",
+      "captured_at": "2026-06-07T06:46:33.622904+00:00",
       "confidence": "high",
       "method": "json-api",
       "notes": null
@@ -141,7 +141,7 @@
       "unit": "per_1m_input_cache_read_tokens",
       "price_usd": 0.35,
       "source_url": "https://www.atlascloud.ai/models",
-      "captured_at": "2026-06-07T04:53:08.857774+00:00",
+      "captured_at": "2026-06-07T06:46:33.622910+00:00",
       "confidence": "high",
       "method": "json-api",
       "notes": null
@@ -157,7 +157,7 @@
       "unit": "per_1m_input_tokens",
       "price_usd": 0.7,
       "source_url": "https://www.atlascloud.ai/models",
-      "captured_at": "2026-06-07T04:53:08.857780+00:00",
+      "captured_at": "2026-06-07T06:46:33.622919+00:00",
       "confidence": "high",
       "method": "json-api",
       "notes": null
@@ -173,7 +173,7 @@
       "unit": "per_1m_output_tokens",
       "price_usd": 2.5,
       "source_url": "https://www.atlascloud.ai/models",
-      "captured_at": "2026-06-07T04:53:08.857788+00:00",
+      "captured_at": "2026-06-07T06:46:33.622924+00:00",
       "confidence": "high",
       "method": "json-api",
       "notes": null
@@ -189,7 +189,7 @@
       "unit": "per_1m_input_cache_read_tokens",
       "price_usd": 0.7,
       "source_url": "https://www.atlascloud.ai/models",
-      "captured_at": "2026-06-07T04:53:08.857794+00:00",
+      "captured_at": "2026-06-07T06:46:33.622929+00:00",
       "confidence": "high",
       "method": "json-api",
       "notes": null
@@ -205,7 +205,7 @@
       "unit": "per_1m_input_tokens",
       "price_usd": 0.78,
       "source_url": "https://www.atlascloud.ai/models",
-      "captured_at": "2026-06-07T04:53:08.857802+00:00",
+      "captured_at": "2026-06-07T06:46:33.622938+00:00",
       "confidence": "high",
       "method": "json-api",
       "notes": null
@@ -221,7 +221,7 @@
       "unit": "per_1m_output_tokens",
       "price_usd": 3.8,
       "source_url": "https://www.atlascloud.ai/models",
-      "captured_at": "2026-06-07T04:53:08.857807+00:00",
+      "captured_at": "2026-06-07T06:46:33.622943+00:00",
       "confidence": "high",
       "method": "json-api",
       "notes": null
@@ -237,7 +237,7 @@
       "unit": "per_1m_input_cache_read_tokens",
       "price_usd": 0.19999999999999998,
       "source_url": "https://www.atlascloud.ai/models",
-      "captured_at": "2026-06-07T04:53:08.857812+00:00",
+      "captured_at": "2026-06-07T06:46:33.622948+00:00",
       "confidence": "high",
       "method": "json-api",
       "notes": null
@@ -253,7 +253,7 @@
       "unit": "per_1m_input_tokens",
       "price_usd": 0.19999999999999998,
       "source_url": "https://www.atlascloud.ai/models",
-      "captured_at": "2026-06-07T04:53:08.857819+00:00",
+      "captured_at": "2026-06-07T06:46:33.622955+00:00",
       "confidence": "high",
       "method": "json-api",
       "notes": null
@@ -269,7 +269,7 @@
       "unit": "per_1m_output_tokens",
       "price_usd": 0.88,
       "source_url": "https://www.atlascloud.ai/models",
-      "captured_at": "2026-06-07T04:53:08.857824+00:00",
+      "captured_at": "2026-06-07T06:46:33.622961+00:00",
       "confidence": "high",
       "method": "json-api",
       "notes": null
@@ -285,7 +285,7 @@
       "unit": "per_1m_input_cache_read_tokens",
       "price_usd": 0.19999999999999998,
       "source_url": "https://www.atlascloud.ai/models",
-      "captured_at": "2026-06-07T04:53:08.857829+00:00",
+      "captured_at": "2026-06-07T06:46:33.622966+00:00",
       "confidence": "high",
       "method": "json-api",
       "notes": null
@@ -301,7 +301,7 @@
       "unit": "per_1m_input_tokens",
       "price_usd": 0.3,
       "source_url": "https://www.atlascloud.ai/models",
-      "captured_at": "2026-06-07T04:53:08.857836+00:00",
+      "captured_at": "2026-06-07T06:46:33.622973+00:00",
       "confidence": "high",
       "method": "json-api",
       "notes": null
@@ -317,7 +317,7 @@
       "unit": "per_1m_output_tokens",
       "price_usd": 0.95,
       "source_url": "https://www.atlascloud.ai/models",
-      "captured_at": "2026-06-07T04:53:08.857840+00:00",
+      "captured_at": "2026-06-07T06:46:33.622977+00:00",
       "confidence": "high",
       "method": "json-api",
       "notes": null
@@ -333,7 +333,7 @@
       "unit": "per_1m_input_cache_read_tokens",
       "price_usd": 0.13,
       "source_url": "https://www.atlascloud.ai/models",
-      "captured_at": "2026-06-07T04:53:08.857845+00:00",
+      "captured_at": "2026-06-07T06:46:33.622982+00:00",
       "confidence": "high",
       "method": "json-api",
       "notes": null
@@ -349,7 +349,7 @@
       "unit": "per_1m_input_tokens",
       "price_usd": 0.6,
       "source_url": "https://www.atlascloud.ai/models",
-      "captured_at": "2026-06-07T04:53:08.857852+00:00",
+      "captured_at": "2026-06-07T06:46:33.622989+00:00",
       "confidence": "high",
       "method": "json-api",
       "notes": null
@@ -365,7 +365,7 @@
       "unit": "per_1m_output_tokens",
       "price_usd": 2.5,
       "source_url": "https://www.atlascloud.ai/models",
-      "captured_at": "2026-06-07T04:53:08.857858+00:00",
+      "captured_at": "2026-06-07T06:46:33.622994+00:00",
       "confidence": "high",
       "method": "json-api",
       "notes": null
@@ -381,7 +381,7 @@
       "unit": "per_1m_input_cache_read_tokens",
       "price_usd": 0.6,
       "source_url": "https://www.atlascloud.ai/models",
-      "captured_at": "2026-06-07T04:53:08.857863+00:00",
+      "captured_at": "2026-06-07T06:46:33.622999+00:00",
       "confidence": "high",
       "method": "json-api",
       "notes": null
@@ -397,7 +397,7 @@
       "unit": "per_1m_input_tokens",
       "price_usd": 0.15,
       "source_url": "https://www.atlascloud.ai/models",
-      "captured_at": "2026-06-07T04:53:08.857869+00:00",
+      "captured_at": "2026-06-07T06:46:33.623005+00:00",
       "confidence": "high",
       "method": "json-api",
       "notes": null
@@ -413,7 +413,7 @@
       "unit": "per_1m_output_tokens",
       "price_usd": 1.5,
       "source_url": "https://www.atlascloud.ai/models",
-      "captured_at": "2026-06-07T04:53:08.857875+00:00",
+      "captured_at": "2026-06-07T06:46:33.623010+00:00",
       "confidence": "high",
       "method": "json-api",
       "notes": null
@@ -429,7 +429,7 @@
       "unit": "per_1m_input_cache_read_tokens",
       "price_usd": 0.15,
       "source_url": "https://www.atlascloud.ai/models",
-      "captured_at": "2026-06-07T04:53:08.857880+00:00",
+      "captured_at": "2026-06-07T06:46:33.623015+00:00",
       "confidence": "high",
       "method": "json-api",
       "notes": null
@@ -445,7 +445,7 @@
       "unit": "per_1m_input_tokens",
       "price_usd": 0.15,
       "source_url": "https://www.atlascloud.ai/models",
-      "captured_at": "2026-06-07T04:53:08.857887+00:00",
+      "captured_at": "2026-06-07T06:46:33.623021+00:00",
       "confidence": "high",
       "method": "json-api",
       "notes": null
@@ -461,7 +461,7 @@
       "unit": "per_1m_output_tokens",
       "price_usd": 1.5,
       "source_url": "https://www.atlascloud.ai/models",
-      "captured_at": "2026-06-07T04:53:08.857892+00:00",
+      "captured_at": "2026-06-07T06:46:33.623026+00:00",
       "confidence": "high",
       "method": "json-api",
       "notes": null
@@ -477,7 +477,7 @@
       "unit": "per_1m_input_cache_read_tokens",
       "price_usd": 0.15,
       "source_url": "https://www.atlascloud.ai/models",
-      "captured_at": "2026-06-07T04:53:08.857897+00:00",
+      "captured_at": "2026-06-07T06:46:33.623033+00:00",
       "confidence": "high",
       "method": "json-api",
       "notes": null
@@ -493,7 +493,7 @@
       "unit": "per_1m_input_tokens",
       "price_usd": 0.09999999999999999,
       "source_url": "https://www.atlascloud.ai/models",
-      "captured_at": "2026-06-07T04:53:08.857904+00:00",
+      "captured_at": "2026-06-07T06:46:33.623040+00:00",
       "confidence": "high",
       "method": "json-api",
       "notes": null
@@ -509,7 +509,7 @@
       "unit": "per_1m_output_tokens",
       "price_usd": 0.3,
       "source_url": "https://www.atlascloud.ai/models",
-      "captured_at": "2026-06-07T04:53:08.857909+00:00",
+      "captured_at": "2026-06-07T06:46:33.623045+00:00",
       "confidence": "high",
       "method": "json-api",
       "notes": null
@@ -525,7 +525,7 @@
       "unit": "per_1m_input_cache_read_tokens",
       "price_usd": 0.08,
       "source_url": "https://www.atlascloud.ai/models",
-      "captured_at": "2026-06-07T04:53:08.857914+00:00",
+      "captured_at": "2026-06-07T06:46:33.623050+00:00",
       "confidence": "high",
       "method": "json-api",
       "notes": null
@@ -541,7 +541,7 @@
       "unit": "per_1m_input_tokens",
       "price_usd": 0.3,
       "source_url": "https://www.atlascloud.ai/models",
-      "captured_at": "2026-06-07T04:53:08.857920+00:00",
+      "captured_at": "2026-06-07T06:46:33.623056+00:00",
       "confidence": "high",
       "method": "json-api",
       "notes": null
@@ -557,7 +557,7 @@
       "unit": "per_1m_output_tokens",
       "price_usd": 0.95,
       "source_url": "https://www.atlascloud.ai/models",
-      "captured_at": "2026-06-07T04:53:08.857925+00:00",
+      "captured_at": "2026-06-07T06:46:33.623060+00:00",
       "confidence": "high",
       "method": "json-api",
       "notes": null
@@ -573,7 +573,7 @@
       "unit": "per_1m_input_cache_read_tokens",
       "price_usd": 0.13,
       "source_url": "https://www.atlascloud.ai/models",
-      "captured_at": "2026-06-07T04:53:08.857930+00:00",
+      "captured_at": "2026-06-07T06:46:33.623065+00:00",
       "confidence": "high",
       "method": "json-api",
       "notes": null
@@ -589,7 +589,7 @@
       "unit": "per_1m_input_tokens",
       "price_usd": 0.27,
       "source_url": "https://www.atlascloud.ai/models",
-      "captured_at": "2026-06-07T04:53:08.857936+00:00",
+      "captured_at": "2026-06-07T06:46:33.623071+00:00",
       "confidence": "high",
       "method": "json-api",
       "notes": null
@@ -605,7 +605,7 @@
       "unit": "per_1m_output_tokens",
       "price_usd": 0.41,
       "source_url": "https://www.atlascloud.ai/models",
-      "captured_at": "2026-06-07T04:53:08.857943+00:00",
+      "captured_at": "2026-06-07T06:46:33.623076+00:00",
       "confidence": "high",
       "method": "json-api",
       "notes": null
@@ -621,7 +621,7 @@
       "unit": "per_1m_input_cache_read_tokens",
       "price_usd": 0.27,
       "source_url": "https://www.atlascloud.ai/models",
-      "captured_at": "2026-06-07T04:53:08.857948+00:00",
+      "captured_at": "2026-06-07T06:46:33.623081+00:00",
       "confidence": "high",
       "method": "json-api",
       "notes": null
@@ -637,7 +637,7 @@
       "unit": "per_1m_input_tokens",
       "price_usd": 0.6,
       "source_url": "https://www.atlascloud.ai/models",
-      "captured_at": "2026-06-07T04:53:08.857954+00:00",
+      "captured_at": "2026-06-07T06:46:33.623087+00:00",
       "confidence": "high",
       "method": "json-api",
       "notes": null
@@ -653,7 +653,7 @@
       "unit": "per_1m_output_tokens",
       "price_usd": 2.2,
       "source_url": "https://www.atlascloud.ai/models",
-      "captured_at": "2026-06-07T04:53:08.857959+00:00",
+      "captured_at": "2026-06-07T06:46:33.623094+00:00",
       "confidence": "high",
       "method": "json-api",
       "notes": null
@@ -669,7 +669,7 @@
       "unit": "per_1m_input_cache_read_tokens",
       "price_usd": 0.11,
       "source_url": "https://www.atlascloud.ai/models",
-      "captured_at": "2026-06-07T04:53:08.857966+00:00",
+      "captured_at": "2026-06-07T06:46:33.623099+00:00",
       "confidence": "high",
       "method": "json-api",
       "notes": null
@@ -685,7 +685,7 @@
       "unit": "per_1m_input_tokens",
       "price_usd": 0.255,
       "source_url": "https://www.atlascloud.ai/models",
-      "captured_at": "2026-06-07T04:53:08.857973+00:00",
+      "captured_at": "2026-06-07T06:46:33.623105+00:00",
       "confidence": "high",
       "method": "json-api",
       "notes": null
@@ -701,7 +701,7 @@
       "unit": "per_1m_output_tokens",
       "price_usd": 1.0,
       "source_url": "https://www.atlascloud.ai/models",
-      "captured_at": "2026-06-07T04:53:08.857978+00:00",
+      "captured_at": "2026-06-07T06:46:33.623110+00:00",
       "confidence": "high",
       "method": "json-api",
       "notes": null
@@ -717,7 +717,7 @@
       "unit": "per_1m_input_cache_read_tokens",
       "price_usd": 0.03,
       "source_url": "https://www.atlascloud.ai/models",
-      "captured_at": "2026-06-07T04:53:08.857983+00:00",
+      "captured_at": "2026-06-07T06:46:33.623114+00:00",
       "confidence": "high",
       "method": "json-api",
       "notes": null
@@ -733,7 +733,7 @@
       "unit": "per_1m_input_tokens",
       "price_usd": 0.3,
       "source_url": "https://www.atlascloud.ai/models",
-      "captured_at": "2026-06-07T04:53:08.857989+00:00",
+      "captured_at": "2026-06-07T06:46:33.623121+00:00",
       "confidence": "high",
       "method": "json-api",
       "notes": null
@@ -749,7 +749,7 @@
       "unit": "per_1m_output_tokens",
       "price_usd": 1.5,
       "source_url": "https://www.atlascloud.ai/models",
-      "captured_at": "2026-06-07T04:53:08.857996+00:00",
+      "captured_at": "2026-06-07T06:46:33.623126+00:00",
       "confidence": "high",
       "method": "json-api",
       "notes": null
@@ -765,7 +765,7 @@
       "unit": "per_1m_input_cache_read_tokens",
       "price_usd": 0.3,
       "source_url": "https://www.atlascloud.ai/models",
-      "captured_at": "2026-06-07T04:53:08.858001+00:00",
+      "captured_at": "2026-06-07T06:46:33.623130+00:00",
       "confidence": "high",
       "method": "json-api",
       "notes": null
@@ -781,7 +781,7 @@
       "unit": "per_1m_input_tokens",
       "price_usd": 0.6,
       "source_url": "https://www.atlascloud.ai/models",
-      "captured_at": "2026-06-07T04:53:08.858007+00:00",
+      "captured_at": "2026-06-07T06:46:33.623138+00:00",
       "confidence": "high",
       "method": "json-api",
       "notes": null
@@ -797,7 +797,7 @@
       "unit": "per_1m_output_tokens",
       "price_usd": 2.5,
       "source_url": "https://www.atlascloud.ai/models",
-      "captured_at": "2026-06-07T04:53:08.858012+00:00",
+      "captured_at": "2026-06-07T06:46:33.623143+00:00",
       "confidence": "high",
       "method": "json-api",
       "notes": null
@@ -813,7 +813,7 @@
       "unit": "per_1m_input_cache_read_tokens",
       "price_usd": 0.6,
       "source_url": "https://www.atlascloud.ai/models",
-      "captured_at": "2026-06-07T04:53:08.858016+00:00",
+      "captured_at": "2026-06-07T06:46:33.623148+00:00",
       "confidence": "high",
       "method": "json-api",
       "notes": null
@@ -829,7 +829,7 @@
       "unit": "per_1m_input_tokens",
       "price_usd": 0.3,
       "source_url": "https://www.atlascloud.ai/models",
-      "captured_at": "2026-06-07T04:53:08.858022+00:00",
+      "captured_at": "2026-06-07T06:46:33.623154+00:00",
       "confidence": "high",
       "method": "json-api",
       "notes": null
@@ -845,7 +845,7 @@
       "unit": "per_1m_output_tokens",
       "price_usd": 2.5,
       "source_url": "https://www.atlascloud.ai/models",
-      "captured_at": "2026-06-07T04:53:08.858028+00:00",
+      "captured_at": "2026-06-07T06:46:33.623159+00:00",
       "confidence": "high",
       "method": "json-api",
       "notes": null
@@ -861,7 +861,7 @@
       "unit": "per_1m_input_cache_read_tokens",
       "price_usd": 0.03,
       "source_url": "https://www.atlascloud.ai/models",
-      "captured_at": "2026-06-07T04:53:08.858033+00:00",
+      "captured_at": "2026-06-07T06:46:33.623164+00:00",
       "confidence": "high",
       "method": "json-api",
       "notes": null
@@ -877,7 +877,7 @@
       "unit": "per_1m_input_tokens",
       "price_usd": 0.3,
       "source_url": "https://www.atlascloud.ai/models",
-      "captured_at": "2026-06-07T04:53:08.858039+00:00",
+      "captured_at": "2026-06-07T06:46:33.623170+00:00",
       "confidence": "high",
       "method": "json-api",
       "notes": null
@@ -893,7 +893,7 @@
       "unit": "per_1m_output_tokens",
       "price_usd": 2.5,
       "source_url": "https://www.atlascloud.ai/models",
-      "captured_at": "2026-06-07T04:53:08.858044+00:00",
+      "captured_at": "2026-06-07T06:46:33.623175+00:00",
       "confidence": "high",
       "method": "json-api",
       "notes": null
@@ -909,7 +909,7 @@
       "unit": "per_1m_input_cache_read_tokens",
       "price_usd": 0.03,
       "source_url": "https://www.atlascloud.ai/models",
-      "captured_at": "2026-06-07T04:53:08.858051+00:00",
+      "captured_at": "2026-06-07T06:46:33.623179+00:00",
       "confidence": "high",
       "method": "json-api",
       "notes": null
@@ -925,7 +925,7 @@
       "unit": "per_1m_input_tokens",
       "price_usd": 0.09999999999999999,
       "source_url": "https://www.atlascloud.ai/models",
-      "captured_at": "2026-06-07T04:53:08.858058+00:00",
+      "captured_at": "2026-06-07T06:46:33.623185+00:00",
       "confidence": "high",
       "method": "json-api",
       "notes": null
@@ -941,7 +941,7 @@
       "unit": "per_1m_output_tokens",
       "price_usd": 0.39999999999999997,
       "source_url": "https://www.atlascloud.ai/models",
-      "captured_at": "2026-06-07T04:53:08.858063+00:00",
+      "captured_at": "2026-06-07T06:46:33.623190+00:00",
       "confidence": "high",
       "method": "json-api",
       "notes": null
@@ -957,7 +957,7 @@
       "unit": "per_1m_input_cache_read_tokens",
       "price_usd": 0.01,
       "source_url": "https://www.atlascloud.ai/models",
-      "captured_at": "2026-06-07T04:53:08.858068+00:00",
+      "captured_at": "2026-06-07T06:46:33.623195+00:00",
       "confidence": "high",
       "method": "json-api",
       "notes": null
@@ -973,7 +973,7 @@
       "unit": "per_1m_input_tokens",
       "price_usd": 0.09999999999999999,
       "source_url": "https://www.atlascloud.ai/models",
-      "captured_at": "2026-06-07T04:53:08.858075+00:00",
+      "captured_at": "2026-06-07T06:46:33.623200+00:00",
       "confidence": "high",
       "method": "json-api",
       "notes": null
@@ -989,7 +989,7 @@
       "unit": "per_1m_output_tokens",
       "price_usd": 0.39999999999999997,
       "source_url": "https://www.atlascloud.ai/models",
-      "captured_at": "2026-06-07T04:53:08.858083+00:00",
+      "captured_at": "2026-06-07T06:46:33.623205+00:00",
       "confidence": "high",
       "method": "json-api",
       "notes": null
@@ -1005,7 +1005,7 @@
       "unit": "per_1m_input_cache_read_tokens",
       "price_usd": 0.01,
       "source_url": "https://www.atlascloud.ai/models",
-      "captured_at": "2026-06-07T04:53:08.858087+00:00",
+      "captured_at": "2026-06-07T06:46:33.623210+00:00",
       "confidence": "high",
       "method": "json-api",
       "notes": null
@@ -1021,7 +1021,7 @@
       "unit": "per_1m_input_tokens",
       "price_usd": 1.25,
       "source_url": "https://www.atlascloud.ai/models",
-      "captured_at": "2026-06-07T04:53:08.858094+00:00",
+      "captured_at": "2026-06-07T06:46:33.623216+00:00",
       "confidence": "high",
       "method": "json-api",
       "notes": null
@@ -1037,7 +1037,7 @@
       "unit": "per_1m_output_tokens",
       "price_usd": 10.0,
       "source_url": "https://www.atlascloud.ai/models",
-      "captured_at": "2026-06-07T04:53:08.858099+00:00",
+      "captured_at": "2026-06-07T06:46:33.623221+00:00",
       "confidence": "high",
       "method": "json-api",
       "notes": null
@@ -1053,7 +1053,7 @@
       "unit": "per_1m_input_cache_read_tokens",
       "price_usd": 0.125,
       "source_url": "https://www.atlascloud.ai/models",
-      "captured_at": "2026-06-07T04:53:08.858104+00:00",
+      "captured_at": "2026-06-07T06:46:33.623226+00:00",
       "confidence": "high",
       "method": "json-api",
       "notes": null
@@ -1069,7 +1069,7 @@
       "unit": "per_1m_input_tokens",
       "price_usd": 1.25,
       "source_url": "https://www.atlascloud.ai/models",
-      "captured_at": "2026-06-07T04:53:08.858110+00:00",
+      "captured_at": "2026-06-07T06:46:33.623232+00:00",
       "confidence": "high",
       "method": "json-api",
       "notes": null
@@ -1085,7 +1085,7 @@
       "unit": "per_1m_output_tokens",
       "price_usd": 10.0,
       "source_url": "https://www.atlascloud.ai/models",
-      "captured_at": "2026-06-07T04:53:08.858115+00:00",
+      "captured_at": "2026-06-07T06:46:33.623237+00:00",
       "confidence": "high",
       "method": "json-api",
       "notes": null
@@ -1101,7 +1101,7 @@
       "unit": "per_1m_input_cache_read_tokens",
       "price_usd": 0.125,
       "source_url": "https://www.atlascloud.ai/models",
-      "captured_at": "2026-06-07T04:53:08.858120+00:00",
+      "captured_at": "2026-06-07T06:46:33.623242+00:00",
       "confidence": "high",
       "method": "json-api",
       "notes": null
@@ -1117,7 +1117,7 @@
       "unit": "per_1m_input_tokens",
       "price_usd": 1.25,
       "source_url": "https://www.atlascloud.ai/models",
-      "captured_at": "2026-06-07T04:53:08.858126+00:00",
+      "captured_at": "2026-06-07T06:46:33.623250+00:00",
       "confidence": "high",
       "method": "json-api",
       "notes": null
@@ -1133,7 +1133,7 @@
       "unit": "per_1m_output_tokens",
       "price_usd": 10.0,
       "source_url": "https://www.atlascloud.ai/models",
-      "captured_at": "2026-06-07T04:53:08.858130+00:00",
+      "captured_at": "2026-06-07T06:46:33.623255+00:00",
       "confidence": "high",
       "method": "json-api",
       "notes": null
@@ -1149,7 +1149,7 @@
       "unit": "per_1m_input_cache_read_tokens",
       "price_usd": 0.125,
       "source_url": "https://www.atlascloud.ai/models",
-      "captured_at": "2026-06-07T04:53:08.858135+00:00",
+      "captured_at": "2026-06-07T06:46:33.623261+00:00",
       "confidence": "high",
       "method": "json-api",
       "notes": null
@@ -1165,7 +1165,7 @@
       "unit": "per_1m_input_tokens",
       "price_usd": 0.25,
       "source_url": "https://www.atlascloud.ai/models",
-      "captured_at": "2026-06-07T04:53:08.858144+00:00",
+      "captured_at": "2026-06-07T06:46:33.623267+00:00",
       "confidence": "high",
       "method": "json-api",
       "notes": null
@@ -1181,7 +1181,7 @@
       "unit": "per_1m_output_tokens",
       "price_usd": 2.0,
       "source_url": "https://www.atlascloud.ai/models",
-      "captured_at": "2026-06-07T04:53:08.858149+00:00",
+      "captured_at": "2026-06-07T06:46:33.623272+00:00",
       "confidence": "high",
       "method": "json-api",
       "notes": null
@@ -1197,7 +1197,7 @@
       "unit": "per_1m_input_cache_read_tokens",
       "price_usd": 0.024999999999999998,
       "source_url": "https://www.atlascloud.ai/models",
-      "captured_at": "2026-06-07T04:53:08.858154+00:00",
+      "captured_at": "2026-06-07T06:46:33.623277+00:00",
       "confidence": "high",
       "method": "json-api",
       "notes": null
@@ -1213,7 +1213,7 @@
       "unit": "per_1m_input_tokens",
       "price_usd": 2.5,
       "source_url": "https://www.atlascloud.ai/models",
-      "captured_at": "2026-06-07T04:53:08.858160+00:00",
+      "captured_at": "2026-06-07T06:46:33.623283+00:00",
       "confidence": "high",
       "method": "json-api",
       "notes": null
@@ -1229,7 +1229,7 @@
       "unit": "per_1m_output_tokens",
       "price_usd": 10.0,
       "source_url": "https://www.atlascloud.ai/models",
-      "captured_at": "2026-06-07T04:53:08.858165+00:00",
+      "captured_at": "2026-06-07T06:46:33.623287+00:00",
       "confidence": "high",
       "method": "json-api",
       "notes": null
@@ -1245,7 +1245,7 @@
       "unit": "per_1m_input_cache_read_tokens",
       "price_usd": 1.25,
       "source_url": "https://www.atlascloud.ai/models",
-      "captured_at": "2026-06-07T04:53:08.858171+00:00",
+      "captured_at": "2026-06-07T06:46:33.623293+00:00",
       "confidence": "high",
       "method": "json-api",
       "notes": null
@@ -1261,7 +1261,7 @@
       "unit": "per_1m_input_tokens",
       "price_usd": 0.15,
       "source_url": "https://www.atlascloud.ai/models",
-      "captured_at": "2026-06-07T04:53:08.858177+00:00",
+      "captured_at": "2026-06-07T06:46:33.623299+00:00",
       "confidence": "high",
       "method": "json-api",
       "notes": null
@@ -1277,7 +1277,7 @@
       "unit": "per_1m_output_tokens",
       "price_usd": 0.6,
       "source_url": "https://www.atlascloud.ai/models",
-      "captured_at": "2026-06-07T04:53:08.858181+00:00",
+      "captured_at": "2026-06-07T06:46:33.623304+00:00",
       "confidence": "high",
       "method": "json-api",
       "notes": null
@@ -1293,7 +1293,7 @@
       "unit": "per_1m_input_cache_read_tokens",
       "price_usd": 0.075,
       "source_url": "https://www.atlascloud.ai/models",
-      "captured_at": "2026-06-07T04:53:08.858186+00:00",
+      "captured_at": "2026-06-07T06:46:33.623309+00:00",
       "confidence": "high",
       "method": "json-api",
       "notes": null
@@ -1309,7 +1309,7 @@
       "unit": "per_1m_input_tokens",
       "price_usd": 2.0,
       "source_url": "https://www.atlascloud.ai/models",
-      "captured_at": "2026-06-07T04:53:08.858192+00:00",
+      "captured_at": "2026-06-07T06:46:33.623315+00:00",
       "confidence": "high",
       "method": "json-api",
       "notes": null
@@ -1325,7 +1325,7 @@
       "unit": "per_1m_output_tokens",
       "price_usd": 8.0,
       "source_url": "https://www.atlascloud.ai/models",
-      "captured_at": "2026-06-07T04:53:08.858197+00:00",
+      "captured_at": "2026-06-07T06:46:33.623320+00:00",
       "confidence": "high",
       "method": "json-api",
       "notes": null
@@ -1341,7 +1341,7 @@
       "unit": "per_1m_input_cache_read_tokens",
       "price_usd": 0.5,
       "source_url": "https://www.atlascloud.ai/models",
-      "captured_at": "2026-06-07T04:53:08.858202+00:00",
+      "captured_at": "2026-06-07T06:46:33.623324+00:00",
       "confidence": "high",
       "method": "json-api",
       "notes": null
@@ -1357,7 +1357,7 @@
       "unit": "per_1m_input_tokens",
       "price_usd": 0.39999999999999997,
       "source_url": "https://www.atlascloud.ai/models",
-      "captured_at": "2026-06-07T04:53:08.858208+00:00",
+      "captured_at": "2026-06-07T06:46:33.623330+00:00",
       "confidence": "high",
       "method": "json-api",
       "notes": null
@@ -1373,7 +1373,7 @@
       "unit": "per_1m_output_tokens",
       "price_usd": 1.5999999999999999,
       "source_url": "https://www.atlascloud.ai/models",
-      "captured_at": "2026-06-07T04:53:08.858212+00:00",
+      "captured_at": "2026-06-07T06:46:33.623335+00:00",
       "confidence": "high",
       "method": "json-api",
       "notes": null
@@ -1389,7 +1389,7 @@
       "unit": "per_1m_input_cache_read_tokens",
       "price_usd": 0.09999999999999999,
       "source_url": "https://www.atlascloud.ai/models",
-      "captured_at": "2026-06-07T04:53:08.858219+00:00",
+      "captured_at": "2026-06-07T06:46:33.623340+00:00",
       "confidence": "high",
       "method": "json-api",
       "notes": null
@@ -1405,7 +1405,7 @@
       "unit": "per_1m_input_tokens",
       "price_usd": 0.09999999999999999,
       "source_url": "https://www.atlascloud.ai/models",
-      "captured_at": "2026-06-07T04:53:08.858225+00:00",
+      "captured_at": "2026-06-07T06:46:33.623346+00:00",
       "confidence": "high",
       "method": "json-api",
       "notes": null
@@ -1421,7 +1421,7 @@
       "unit": "per_1m_output_tokens",
       "price_usd": 0.39999999999999997,
       "source_url": "https://www.atlascloud.ai/models",
-      "captured_at": "2026-06-07T04:53:08.858230+00:00",
+      "captured_at": "2026-06-07T06:46:33.623350+00:00",
       "confidence": "high",
       "method": "json-api",
       "notes": null
@@ -1437,7 +1437,7 @@
       "unit": "per_1m_input_cache_read_tokens",
       "price_usd": 0.024999999999999998,
       "source_url": "https://www.atlascloud.ai/models",
-      "captured_at": "2026-06-07T04:53:08.858234+00:00",
+      "captured_at": "2026-06-07T06:46:33.623355+00:00",
       "confidence": "high",
       "method": "json-api",
       "notes": null
@@ -1453,7 +1453,7 @@
       "unit": "per_1m_input_tokens",
       "price_usd": 15.0,
       "source_url": "https://www.atlascloud.ai/models",
-      "captured_at": "2026-06-07T04:53:08.858240+00:00",
+      "captured_at": "2026-06-07T06:46:33.623361+00:00",
       "confidence": "high",
       "method": "json-api",
       "notes": null
@@ -1469,7 +1469,7 @@
       "unit": "per_1m_output_tokens",
       "price_usd": 60.0,
       "source_url": "https://www.atlascloud.ai/models",
-      "captured_at": "2026-06-07T04:53:08.858246+00:00",
+      "captured_at": "2026-06-07T06:46:33.623366+00:00",
       "confidence": "high",
       "method": "json-api",
       "notes": null
@@ -1485,7 +1485,7 @@
       "unit": "per_1m_input_cache_read_tokens",
       "price_usd": 7.5,
       "source_url": "https://www.atlascloud.ai/models",
-      "captured_at": "2026-06-07T04:53:08.858250+00:00",
+      "captured_at": "2026-06-07T06:46:33.623371+00:00",
       "confidence": "high",
       "method": "json-api",
       "notes": null
@@ -1501,7 +1501,7 @@
       "unit": "per_1m_input_tokens",
       "price_usd": 2.0,
       "source_url": "https://www.atlascloud.ai/models",
-      "captured_at": "2026-06-07T04:53:08.858257+00:00",
+      "captured_at": "2026-06-07T06:46:33.623377+00:00",
       "confidence": "high",
       "method": "json-api",
       "notes": null
@@ -1517,7 +1517,7 @@
       "unit": "per_1m_output_tokens",
       "price_usd": 8.0,
       "source_url": "https://www.atlascloud.ai/models",
-      "captured_at": "2026-06-07T04:53:08.858262+00:00",
+      "captured_at": "2026-06-07T06:46:33.623382+00:00",
       "confidence": "high",
       "method": "json-api",
       "notes": null
@@ -1533,7 +1533,7 @@
       "unit": "per_1m_input_cache_read_tokens",
       "price_usd": 0.5,
       "source_url": "https://www.atlascloud.ai/models",
-      "captured_at": "2026-06-07T04:53:08.858267+00:00",
+      "captured_at": "2026-06-07T06:46:33.623387+00:00",
       "confidence": "high",
       "method": "json-api",
       "notes": null
@@ -1549,7 +1549,7 @@
       "unit": "per_1m_input_tokens",
       "price_usd": 1.1,
       "source_url": "https://www.atlascloud.ai/models",
-      "captured_at": "2026-06-07T04:53:08.858273+00:00",
+      "captured_at": "2026-06-07T06:46:33.623393+00:00",
       "confidence": "high",
       "method": "json-api",
       "notes": null
@@ -1565,7 +1565,7 @@
       "unit": "per_1m_output_tokens",
       "price_usd": 4.4,
       "source_url": "https://www.atlascloud.ai/models",
-      "captured_at": "2026-06-07T04:53:08.858278+00:00",
+      "captured_at": "2026-06-07T06:46:33.623397+00:00",
       "confidence": "high",
       "method": "json-api",
       "notes": null
@@ -1581,7 +1581,7 @@
       "unit": "per_1m_input_cache_read_tokens",
       "price_usd": 0.55,
       "source_url": "https://www.atlascloud.ai/models",
-      "captured_at": "2026-06-07T04:53:08.858282+00:00",
+      "captured_at": "2026-06-07T06:46:33.623402+00:00",
       "confidence": "high",
       "method": "json-api",
       "notes": null
@@ -1597,7 +1597,7 @@
       "unit": "per_1m_input_tokens",
       "price_usd": 1.1,
       "source_url": "https://www.atlascloud.ai/models",
-      "captured_at": "2026-06-07T04:53:08.858289+00:00",
+      "captured_at": "2026-06-07T06:46:33.623408+00:00",
       "confidence": "high",
       "method": "json-api",
       "notes": null
@@ -1613,7 +1613,7 @@
       "unit": "per_1m_output_tokens",
       "price_usd": 4.4,
       "source_url": "https://www.atlascloud.ai/models",
-      "captured_at": "2026-06-07T04:53:08.858293+00:00",
+      "captured_at": "2026-06-07T06:46:33.623413+00:00",
       "confidence": "high",
       "method": "json-api",
       "notes": null
@@ -1629,7 +1629,7 @@
       "unit": "per_1m_input_cache_read_tokens",
       "price_usd": 0.55,
       "source_url": "https://www.atlascloud.ai/models",
-      "captured_at": "2026-06-07T04:53:08.858298+00:00",
+      "captured_at": "2026-06-07T06:46:33.623418+00:00",
       "confidence": "high",
       "method": "json-api",
       "notes": null
@@ -1645,7 +1645,7 @@
       "unit": "per_1m_input_tokens",
       "price_usd": 20.0,
       "source_url": "https://www.atlascloud.ai/models",
-      "captured_at": "2026-06-07T04:53:08.858304+00:00",
+      "captured_at": "2026-06-07T06:46:33.623426+00:00",
       "confidence": "high",
       "method": "json-api",
       "notes": null
@@ -1661,7 +1661,7 @@
       "unit": "per_1m_output_tokens",
       "price_usd": 80.0,
       "source_url": "https://www.atlascloud.ai/models",
-      "captured_at": "2026-06-07T04:53:08.858311+00:00",
+      "captured_at": "2026-06-07T06:46:33.623431+00:00",
       "confidence": "high",
       "method": "json-api",
       "notes": null
@@ -1677,7 +1677,7 @@
       "unit": "per_1m_input_cache_read_tokens",
       "price_usd": 20.0,
       "source_url": "https://www.atlascloud.ai/models",
-      "captured_at": "2026-06-07T04:53:08.858316+00:00",
+      "captured_at": "2026-06-07T06:46:33.623435+00:00",
       "confidence": "high",
       "method": "json-api",
       "notes": null
@@ -1693,7 +1693,7 @@
       "unit": "per_1m_input_tokens",
       "price_usd": 3.0,
       "source_url": "https://www.atlascloud.ai/models",
-      "captured_at": "2026-06-07T04:53:08.858323+00:00",
+      "captured_at": "2026-06-07T06:46:33.623442+00:00",
       "confidence": "high",
       "method": "json-api",
       "notes": null
@@ -1709,7 +1709,7 @@
       "unit": "per_1m_output_tokens",
       "price_usd": 15.0,
       "source_url": "https://www.atlascloud.ai/models",
-      "captured_at": "2026-06-07T04:53:08.858328+00:00",
+      "captured_at": "2026-06-07T06:46:33.623447+00:00",
       "confidence": "high",
       "method": "json-api",
       "notes": null
@@ -1725,7 +1725,7 @@
       "unit": "per_1m_input_cache_read_tokens",
       "price_usd": 0.3,
       "source_url": "https://www.atlascloud.ai/models",
-      "captured_at": "2026-06-07T04:53:08.858333+00:00",
+      "captured_at": "2026-06-07T06:46:33.623452+00:00",
       "confidence": "high",
       "method": "json-api",
       "notes": null
@@ -1741,7 +1741,7 @@
       "unit": "per_1m_input_tokens",
       "price_usd": 1.0,
       "source_url": "https://www.atlascloud.ai/models",
-      "captured_at": "2026-06-07T04:53:08.858339+00:00",
+      "captured_at": "2026-06-07T06:46:33.623458+00:00",
       "confidence": "high",
       "method": "json-api",
       "notes": null
@@ -1757,7 +1757,7 @@
       "unit": "per_1m_output_tokens",
       "price_usd": 5.0,
       "source_url": "https://www.atlascloud.ai/models",
-      "captured_at": "2026-06-07T04:53:08.858347+00:00",
+      "captured_at": "2026-06-07T06:46:33.623465+00:00",
       "confidence": "high",
       "method": "json-api",
       "notes": null
@@ -1773,7 +1773,7 @@
       "unit": "per_1m_input_cache_read_tokens",
       "price_usd": 0.09999999999999999,
       "source_url": "https://www.atlascloud.ai/models",
-      "captured_at": "2026-06-07T04:53:08.858352+00:00",
+      "captured_at": "2026-06-07T06:46:33.623470+00:00",
       "confidence": "high",
       "method": "json-api",
       "notes": null
@@ -1789,7 +1789,7 @@
       "unit": "per_1m_input_tokens",
       "price_usd": 3.0,
       "source_url": "https://www.atlascloud.ai/models",
-      "captured_at": "2026-06-07T04:53:08.858358+00:00",
+      "captured_at": "2026-06-07T06:46:33.623476+00:00",
       "confidence": "high",
       "method": "json-api",
       "notes": null
@@ -1805,7 +1805,7 @@
       "unit": "per_1m_output_tokens",
       "price_usd": 15.0,
       "source_url": "https://www.atlascloud.ai/models",
-      "captured_at": "2026-06-07T04:53:08.858363+00:00",
+      "captured_at": "2026-06-07T06:46:33.623481+00:00",
       "confidence": "high",
       "method": "json-api",
       "notes": null
@@ -1821,7 +1821,7 @@
       "unit": "per_1m_input_cache_read_tokens",
       "price_usd": 0.3,
       "source_url": "https://www.atlascloud.ai/models",
-      "captured_at": "2026-06-07T04:53:08.858368+00:00",
+      "captured_at": "2026-06-07T06:46:33.623486+00:00",
       "confidence": "high",
       "method": "json-api",
       "notes": null
@@ -1837,7 +1837,7 @@
       "unit": "per_1m_input_tokens",
       "price_usd": 15.0,
       "source_url": "https://www.atlascloud.ai/models",
-      "captured_at": "2026-06-07T04:53:08.858374+00:00",
+      "captured_at": "2026-06-07T06:46:33.623492+00:00",
       "confidence": "high",
       "method": "json-api",
       "notes": null
@@ -1853,7 +1853,7 @@
       "unit": "per_1m_output_tokens",
       "price_usd": 75.0,
       "source_url": "https://www.atlascloud.ai/models",
-      "captured_at": "2026-06-07T04:53:08.858379+00:00",
+      "captured_at": "2026-06-07T06:46:33.623497+00:00",
       "confidence": "high",
       "method": "json-api",
       "notes": null
@@ -1869,7 +1869,7 @@
       "unit": "per_1m_input_cache_read_tokens",
       "price_usd": 1.5,
       "source_url": "https://www.atlascloud.ai/models",
-      "captured_at": "2026-06-07T04:53:08.858383+00:00",
+      "captured_at": "2026-06-07T06:46:33.623501+00:00",
       "confidence": "high",
       "method": "json-api",
       "notes": null
@@ -1885,7 +1885,7 @@
       "unit": "per_1m_input_tokens",
       "price_usd": 15.0,
       "source_url": "https://www.atlascloud.ai/models",
-      "captured_at": "2026-06-07T04:53:08.858390+00:00",
+      "captured_at": "2026-06-07T06:46:33.623507+00:00",
       "confidence": "high",
       "method": "json-api",
       "notes": null
@@ -1901,7 +1901,7 @@
       "unit": "per_1m_output_tokens",
       "price_usd": 75.0,
       "source_url": "https://www.atlascloud.ai/models",
-      "captured_at": "2026-06-07T04:53:08.858395+00:00",
+      "captured_at": "2026-06-07T06:46:33.623512+00:00",
       "confidence": "high",
       "method": "json-api",
       "notes": null
@@ -1917,7 +1917,7 @@
       "unit": "per_1m_input_cache_read_tokens",
       "price_usd": 1.5,
       "source_url": "https://www.atlascloud.ai/models",
-      "captured_at": "2026-06-07T04:53:08.858399+00:00",
+      "captured_at": "2026-06-07T06:46:33.623517+00:00",
       "confidence": "high",
       "method": "json-api",
       "notes": null
@@ -1933,7 +1933,7 @@
       "unit": "per_1m_input_tokens",
       "price_usd": 0.26,
       "source_url": "https://www.atlascloud.ai/models",
-      "captured_at": "2026-06-07T04:53:08.858406+00:00",
+      "captured_at": "2026-06-07T06:46:33.623525+00:00",
       "confidence": "high",
       "method": "json-api",
       "notes": null
@@ -1949,7 +1949,7 @@
       "unit": "per_1m_output_tokens",
       "price_usd": 0.38,
       "source_url": "https://www.atlascloud.ai/models",
-      "captured_at": "2026-06-07T04:53:08.858410+00:00",
+      "captured_at": "2026-06-07T06:46:33.623530+00:00",
       "confidence": "high",
       "method": "json-api",
       "notes": null
@@ -1965,7 +1965,7 @@
       "unit": "per_1m_input_cache_read_tokens",
       "price_usd": 0.13,
       "source_url": "https://www.atlascloud.ai/models",
-      "captured_at": "2026-06-07T04:53:08.858415+00:00",
+      "captured_at": "2026-06-07T06:46:33.623536+00:00",
       "confidence": "high",
       "method": "json-api",
       "notes": null
@@ -1981,7 +1981,7 @@
       "unit": "per_1m_input_tokens",
       "price_usd": 1.25,
       "source_url": "https://www.atlascloud.ai/models",
-      "captured_at": "2026-06-07T04:53:08.858422+00:00",
+      "captured_at": "2026-06-07T06:46:33.623542+00:00",
       "confidence": "high",
       "method": "json-api",
       "notes": null
@@ -1997,7 +1997,7 @@
       "unit": "per_1m_output_tokens",
       "price_usd": 10.0,
       "source_url": "https://www.atlascloud.ai/models",
-      "captured_at": "2026-06-07T04:53:08.858426+00:00",
+      "captured_at": "2026-06-07T06:46:33.623547+00:00",
       "confidence": "high",
       "method": "json-api",
       "notes": null
@@ -2013,7 +2013,7 @@
       "unit": "per_1m_input_cache_read_tokens",
       "price_usd": 0.125,
       "source_url": "https://www.atlascloud.ai/models",
-      "captured_at": "2026-06-07T04:53:08.858431+00:00",
+      "captured_at": "2026-06-07T06:46:33.623552+00:00",
       "confidence": "high",
       "method": "json-api",
       "notes": null
@@ -2029,7 +2029,7 @@
       "unit": "per_1m_input_tokens",
       "price_usd": 1.25,
       "source_url": "https://www.atlascloud.ai/models",
-      "captured_at": "2026-06-07T04:53:08.858440+00:00",
+      "captured_at": "2026-06-07T06:46:33.623558+00:00",
       "confidence": "high",
       "method": "json-api",
       "notes": null
@@ -2045,7 +2045,7 @@
       "unit": "per_1m_output_tokens",
       "price_usd": 10.0,
       "source_url": "https://www.atlascloud.ai/models",
-      "captured_at": "2026-06-07T04:53:08.858447+00:00",
+      "captured_at": "2026-06-07T06:46:33.623563+00:00",
       "confidence": "high",
       "method": "json-api",
       "notes": null
@@ -2061,7 +2061,7 @@
       "unit": "per_1m_input_cache_read_tokens",
       "price_usd": 0.125,
       "source_url": "https://www.atlascloud.ai/models",
-      "captured_at": "2026-06-07T04:53:08.858452+00:00",
+      "captured_at": "2026-06-07T06:46:33.623568+00:00",
       "confidence": "high",
       "method": "json-api",
       "notes": null
@@ -2077,7 +2077,7 @@
       "unit": "per_1m_input_tokens",
       "price_usd": 1.25,
       "source_url": "https://www.atlascloud.ai/models",
-      "captured_at": "2026-06-07T04:53:08.858459+00:00",
+      "captured_at": "2026-06-07T06:46:33.623574+00:00",
       "confidence": "high",
       "method": "json-api",
       "notes": null
@@ -2093,7 +2093,7 @@
       "unit": "per_1m_output_tokens",
       "price_usd": 10.0,
       "source_url": "https://www.atlascloud.ai/models",
-      "captured_at": "2026-06-07T04:53:08.858464+00:00",
+      "captured_at": "2026-06-07T06:46:33.623579+00:00",
       "confidence": "high",
       "method": "json-api",
       "notes": null
@@ -2109,7 +2109,7 @@
       "unit": "per_1m_input_cache_read_tokens",
       "price_usd": 0.125,
       "source_url": "https://www.atlascloud.ai/models",
-      "captured_at": "2026-06-07T04:53:08.858469+00:00",
+      "captured_at": "2026-06-07T06:46:33.623584+00:00",
       "confidence": "high",
       "method": "json-api",
       "notes": null
@@ -2125,7 +2125,7 @@
       "unit": "per_1m_input_tokens",
       "price_usd": 0.25,
       "source_url": "https://www.atlascloud.ai/models",
-      "captured_at": "2026-06-07T04:53:08.858475+00:00",
+      "captured_at": "2026-06-07T06:46:33.623590+00:00",
       "confidence": "high",
       "method": "json-api",
       "notes": null
@@ -2141,7 +2141,7 @@
       "unit": "per_1m_output_tokens",
       "price_usd": 2.0,
       "source_url": "https://www.atlascloud.ai/models",
-      "captured_at": "2026-06-07T04:53:08.858480+00:00",
+      "captured_at": "2026-06-07T06:46:33.623597+00:00",
       "confidence": "high",
       "method": "json-api",
       "notes": null
@@ -2157,7 +2157,7 @@
       "unit": "per_1m_input_cache_read_tokens",
       "price_usd": 0.024999999999999998,
       "source_url": "https://www.atlascloud.ai/models",
-      "captured_at": "2026-06-07T04:53:08.858487+00:00",
+      "captured_at": "2026-06-07T06:46:33.623601+00:00",
       "confidence": "high",
       "method": "json-api",
       "notes": null
@@ -2173,7 +2173,7 @@
       "unit": "per_1m_input_tokens",
       "price_usd": 0.049999999999999996,
       "source_url": "https://www.atlascloud.ai/models",
-      "captured_at": "2026-06-07T04:53:08.858493+00:00",
+      "captured_at": "2026-06-07T06:46:33.623609+00:00",
       "confidence": "high",
       "method": "json-api",
       "notes": null
@@ -2189,7 +2189,7 @@
       "unit": "per_1m_output_tokens",
       "price_usd": 0.39999999999999997,
       "source_url": "https://www.atlascloud.ai/models",
-      "captured_at": "2026-06-07T04:53:08.858498+00:00",
+      "captured_at": "2026-06-07T06:46:33.623614+00:00",
       "confidence": "high",
       "method": "json-api",
       "notes": null
@@ -2205,7 +2205,7 @@
       "unit": "per_1m_input_cache_read_tokens",
       "price_usd": 0.005,
       "source_url": "https://www.atlascloud.ai/models",
-      "captured_at": "2026-06-07T04:53:08.858502+00:00",
+      "captured_at": "2026-06-07T06:46:33.623619+00:00",
       "confidence": "high",
       "method": "json-api",
       "notes": null
@@ -2221,7 +2221,7 @@
       "unit": "per_1m_input_tokens",
       "price_usd": 15.0,
       "source_url": "https://www.atlascloud.ai/models",
-      "captured_at": "2026-06-07T04:53:08.858509+00:00",
+      "captured_at": "2026-06-07T06:46:33.623625+00:00",
       "confidence": "high",
       "method": "json-api",
       "notes": null
@@ -2237,7 +2237,7 @@
       "unit": "per_1m_output_tokens",
       "price_usd": 120.0,
       "source_url": "https://www.atlascloud.ai/models",
-      "captured_at": "2026-06-07T04:53:08.858513+00:00",
+      "captured_at": "2026-06-07T06:46:33.623630+00:00",
       "confidence": "high",
       "method": "json-api",
       "notes": null
@@ -2253,7 +2253,7 @@
       "unit": "per_1m_input_cache_read_tokens",
       "price_usd": 15.0,
       "source_url": "https://www.atlascloud.ai/models",
-      "captured_at": "2026-06-07T04:53:08.858518+00:00",
+      "captured_at": "2026-06-07T06:46:33.623634+00:00",
       "confidence": "high",
       "method": "json-api",
       "notes": null
@@ -2269,7 +2269,7 @@
       "unit": "per_1m_input_tokens",
       "price_usd": 1.25,
       "source_url": "https://www.atlascloud.ai/models",
-      "captured_at": "2026-06-07T04:53:08.858525+00:00",
+      "captured_at": "2026-06-07T06:46:33.623640+00:00",
       "confidence": "high",
       "method": "json-api",
       "notes": null
@@ -2285,7 +2285,7 @@
       "unit": "per_1m_output_tokens",
       "price_usd": 10.0,
       "source_url": "https://www.atlascloud.ai/models",
-      "captured_at": "2026-06-07T04:53:08.858529+00:00",
+      "captured_at": "2026-06-07T06:46:33.623647+00:00",
       "confidence": "high",
       "method": "json-api",
       "notes": null
@@ -2301,7 +2301,7 @@
       "unit": "per_1m_input_cache_read_tokens",
       "price_usd": 0.125,
       "source_url": "https://www.atlascloud.ai/models",
-      "captured_at": "2026-06-07T04:53:08.858534+00:00",
+      "captured_at": "2026-06-07T06:46:33.623652+00:00",
       "confidence": "high",
       "method": "json-api",
       "notes": null
@@ -2317,7 +2317,7 @@
       "unit": "per_1m_input_tokens",
       "price_usd": 1.75,
       "source_url": "https://www.atlascloud.ai/models",
-      "captured_at": "2026-06-07T04:53:08.858540+00:00",
+      "captured_at": "2026-06-07T06:46:33.623658+00:00",
       "confidence": "high",
       "method": "json-api",
       "notes": null
@@ -2333,7 +2333,7 @@
       "unit": "per_1m_output_tokens",
       "price_usd": 14.0,
       "source_url": "https://www.atlascloud.ai/models",
-      "captured_at": "2026-06-07T04:53:08.858545+00:00",
+      "captured_at": "2026-06-07T06:46:33.623662+00:00",
       "confidence": "high",
       "method": "json-api",
       "notes": null
@@ -2349,7 +2349,7 @@
       "unit": "per_1m_input_cache_read_tokens",
       "price_usd": 0.175,
       "source_url": "https://www.atlascloud.ai/models",
-      "captured_at": "2026-06-07T04:53:08.858549+00:00",
+      "captured_at": "2026-06-07T06:46:33.623667+00:00",
       "confidence": "high",
       "method": "json-api",
       "notes": null
@@ -2365,7 +2365,7 @@
       "unit": "per_1m_input_tokens",
       "price_usd": 1.75,
       "source_url": "https://www.atlascloud.ai/models",
-      "captured_at": "2026-06-07T04:53:08.858555+00:00",
+      "captured_at": "2026-06-07T06:46:33.623673+00:00",
       "confidence": "high",
       "method": "json-api",
       "notes": null
@@ -2381,7 +2381,7 @@
       "unit": "per_1m_output_tokens",
       "price_usd": 14.0,
       "source_url": "https://www.atlascloud.ai/models",
-      "captured_at": "2026-06-07T04:53:08.858560+00:00",
+      "captured_at": "2026-06-07T06:46:33.623677+00:00",
       "confidence": "high",
       "method": "json-api",
       "notes": null
@@ -2397,7 +2397,7 @@
       "unit": "per_1m_input_cache_read_tokens",
       "price_usd": 0.175,
       "source_url": "https://www.atlascloud.ai/models",
-      "captured_at": "2026-06-07T04:53:08.858565+00:00",
+      "captured_at": "2026-06-07T06:46:33.623684+00:00",
       "confidence": "high",
       "method": "json-api",
       "notes": null
@@ -2413,7 +2413,7 @@
       "unit": "per_1m_input_tokens",
       "price_usd": 1.25,
       "source_url": "https://www.atlascloud.ai/models",
-      "captured_at": "2026-06-07T04:53:08.858572+00:00",
+      "captured_at": "2026-06-07T06:46:33.623691+00:00",
       "confidence": "high",
       "method": "json-api",
       "notes": null
@@ -2429,7 +2429,7 @@
       "unit": "per_1m_output_tokens",
       "price_usd": 10.0,
       "source_url": "https://www.atlascloud.ai/models",
-      "captured_at": "2026-06-07T04:53:08.858577+00:00",
+      "captured_at": "2026-06-07T06:46:33.623695+00:00",
       "confidence": "high",
       "method": "json-api",
       "notes": null
@@ -2445,7 +2445,7 @@
       "unit": "per_1m_input_cache_read_tokens",
       "price_usd": 0.125,
       "source_url": "https://www.atlascloud.ai/models",
-      "captured_at": "2026-06-07T04:53:08.858582+00:00",
+      "captured_at": "2026-06-07T06:46:33.623700+00:00",
       "confidence": "high",
       "method": "json-api",
       "notes": null
@@ -2461,7 +2461,7 @@
       "unit": "per_1m_input_tokens",
       "price_usd": 5.0,
       "source_url": "https://www.atlascloud.ai/models",
-      "captured_at": "2026-06-07T04:53:08.858588+00:00",
+      "captured_at": "2026-06-07T06:46:33.623706+00:00",
       "confidence": "high",
       "method": "json-api",
       "notes": null
@@ -2477,7 +2477,7 @@
       "unit": "per_1m_output_tokens",
       "price_usd": 25.0,
       "source_url": "https://www.atlascloud.ai/models",
-      "captured_at": "2026-06-07T04:53:08.858592+00:00",
+      "captured_at": "2026-06-07T06:46:33.623710+00:00",
       "confidence": "high",
       "method": "json-api",
       "notes": null
@@ -2493,7 +2493,7 @@
       "unit": "per_1m_input_cache_read_tokens",
       "price_usd": 0.5,
       "source_url": "https://www.atlascloud.ai/models",
-      "captured_at": "2026-06-07T04:53:08.858597+00:00",
+      "captured_at": "2026-06-07T06:46:33.623715+00:00",
       "confidence": "high",
       "method": "json-api",
       "notes": null
@@ -2509,7 +2509,7 @@
       "unit": "per_1m_input_tokens",
       "price_usd": 0.5,
       "source_url": "https://www.atlascloud.ai/models",
-      "captured_at": "2026-06-07T04:53:08.858603+00:00",
+      "captured_at": "2026-06-07T06:46:33.623721+00:00",
       "confidence": "high",
       "method": "json-api",
       "notes": null
@@ -2525,7 +2525,7 @@
       "unit": "per_1m_output_tokens",
       "price_usd": 3.0,
       "source_url": "https://www.atlascloud.ai/models",
-      "captured_at": "2026-06-07T04:53:08.858608+00:00",
+      "captured_at": "2026-06-07T06:46:33.623726+00:00",
       "confidence": "high",
       "method": "json-api",
       "notes": null
@@ -2541,7 +2541,7 @@
       "unit": "per_1m_input_cache_read_tokens",
       "price_usd": 0.049999999999999996,
       "source_url": "https://www.atlascloud.ai/models",
-      "captured_at": "2026-06-07T04:53:08.858613+00:00",
+      "captured_at": "2026-06-07T06:46:33.623731+00:00",
       "confidence": "high",
       "method": "json-api",
       "notes": null
@@ -2557,7 +2557,7 @@
       "unit": "per_1m_input_tokens",
       "price_usd": 0.52,
       "source_url": "https://www.atlascloud.ai/models",
-      "captured_at": "2026-06-07T04:53:08.858619+00:00",
+      "captured_at": "2026-06-07T06:46:33.623737+00:00",
       "confidence": "high",
       "method": "json-api",
       "notes": null
@@ -2573,7 +2573,7 @@
       "unit": "per_1m_output_tokens",
       "price_usd": 1.85,
       "source_url": "https://www.atlascloud.ai/models",
-      "captured_at": "2026-06-07T04:53:08.858624+00:00",
+      "captured_at": "2026-06-07T06:46:33.623741+00:00",
       "confidence": "high",
       "method": "json-api",
       "notes": null
@@ -2589,7 +2589,7 @@
       "unit": "per_1m_input_cache_read_tokens",
       "price_usd": 0.12,
       "source_url": "https://www.atlascloud.ai/models",
-      "captured_at": "2026-06-07T04:53:08.858629+00:00",
+      "captured_at": "2026-06-07T06:46:33.623746+00:00",
       "confidence": "high",
       "method": "json-api",
       "notes": null
@@ -2605,7 +2605,7 @@
       "unit": "per_1m_input_tokens",
       "price_usd": 0.29,
       "source_url": "https://www.atlascloud.ai/models",
-      "captured_at": "2026-06-07T04:53:08.858635+00:00",
+      "captured_at": "2026-06-07T06:46:33.623752+00:00",
       "confidence": "high",
       "method": "json-api",
       "notes": null
@@ -2621,7 +2621,7 @@
       "unit": "per_1m_output_tokens",
       "price_usd": 0.95,
       "source_url": "https://www.atlascloud.ai/models",
-      "captured_at": "2026-06-07T04:53:08.858641+00:00",
+      "captured_at": "2026-06-07T06:46:33.623757+00:00",
       "confidence": "high",
       "method": "json-api",
       "notes": null
@@ -2637,7 +2637,7 @@
       "unit": "per_1m_input_cache_read_tokens",
       "price_usd": 0.03,
       "source_url": "https://www.atlascloud.ai/models",
-      "captured_at": "2026-06-07T04:53:08.858645+00:00",
+      "captured_at": "2026-06-07T06:46:33.623763+00:00",
       "confidence": "high",
       "method": "json-api",
       "notes": null
@@ -2653,7 +2653,7 @@
       "unit": "per_1m_input_tokens",
       "price_usd": 0.09999999999999999,
       "source_url": "https://www.atlascloud.ai/models",
-      "captured_at": "2026-06-07T04:53:08.858656+00:00",
+      "captured_at": "2026-06-07T06:46:33.623769+00:00",
       "confidence": "high",
       "method": "json-api",
       "notes": null
@@ -2669,7 +2669,7 @@
       "unit": "per_1m_output_tokens",
       "price_usd": 0.39999999999999997,
       "source_url": "https://www.atlascloud.ai/models",
-      "captured_at": "2026-06-07T04:53:08.858663+00:00",
+      "captured_at": "2026-06-07T06:46:33.623774+00:00",
       "confidence": "high",
       "method": "json-api",
       "notes": null
@@ -2685,7 +2685,7 @@
       "unit": "per_1m_input_cache_read_tokens",
       "price_usd": 0.09999999999999999,
       "source_url": "https://www.atlascloud.ai/models",
-      "captured_at": "2026-06-07T04:53:08.858668+00:00",
+      "captured_at": "2026-06-07T06:46:33.623779+00:00",
       "confidence": "high",
       "method": "json-api",
       "notes": null
@@ -2701,7 +2701,7 @@
       "unit": "per_1m_input_tokens",
       "price_usd": 0.075,
       "source_url": "https://www.atlascloud.ai/models",
-      "captured_at": "2026-06-07T04:53:08.858675+00:00",
+      "captured_at": "2026-06-07T06:46:33.623785+00:00",
       "confidence": "high",
       "method": "json-api",
       "notes": null
@@ -2717,7 +2717,7 @@
       "unit": "per_1m_output_tokens",
       "price_usd": 0.3,
       "source_url": "https://www.atlascloud.ai/models",
-      "captured_at": "2026-06-07T04:53:08.858680+00:00",
+      "captured_at": "2026-06-07T06:46:33.623790+00:00",
       "confidence": "high",
       "method": "json-api",
       "notes": null
@@ -2733,7 +2733,7 @@
       "unit": "per_1m_input_cache_read_tokens",
       "price_usd": 0.075,
       "source_url": "https://www.atlascloud.ai/models",
-      "captured_at": "2026-06-07T04:53:08.858684+00:00",
+      "captured_at": "2026-06-07T06:46:33.623795+00:00",
       "confidence": "high",
       "method": "json-api",
       "notes": null
@@ -2749,7 +2749,7 @@
       "unit": "per_1m_input_tokens",
       "price_usd": 0.049999999999999996,
       "source_url": "https://www.atlascloud.ai/models",
-      "captured_at": "2026-06-07T04:53:08.858691+00:00",
+      "captured_at": "2026-06-07T06:46:33.623801+00:00",
       "confidence": "high",
       "method": "json-api",
       "notes": null
@@ -2765,7 +2765,7 @@
       "unit": "per_1m_output_tokens",
       "price_usd": 0.39999999999999997,
       "source_url": "https://www.atlascloud.ai/models",
-      "captured_at": "2026-06-07T04:53:08.858695+00:00",
+      "captured_at": "2026-06-07T06:46:33.623805+00:00",
       "confidence": "high",
       "method": "json-api",
       "notes": null
@@ -2781,7 +2781,7 @@
       "unit": "per_1m_input_cache_read_tokens",
       "price_usd": 0.049999999999999996,
       "source_url": "https://www.atlascloud.ai/models",
-      "captured_at": "2026-06-07T04:53:08.858701+00:00",
+      "captured_at": "2026-06-07T06:46:33.623811+00:00",
       "confidence": "high",
       "method": "json-api",
       "notes": null
@@ -2797,7 +2797,7 @@
       "unit": "per_1m_input_tokens",
       "price_usd": 0.28,
       "source_url": "https://www.atlascloud.ai/models",
-      "captured_at": "2026-06-07T04:53:08.858707+00:00",
+      "captured_at": "2026-06-07T06:46:33.623817+00:00",
       "confidence": "high",
       "method": "json-api",
       "notes": null
@@ -2813,7 +2813,7 @@
       "unit": "per_1m_output_tokens",
       "price_usd": 2.3,
       "source_url": "https://www.atlascloud.ai/models",
-      "captured_at": "2026-06-07T04:53:08.858713+00:00",
+      "captured_at": "2026-06-07T06:46:33.623821+00:00",
       "confidence": "high",
       "method": "json-api",
       "notes": null
@@ -2829,7 +2829,7 @@
       "unit": "per_1m_input_cache_read_tokens",
       "price_usd": 0.28,
       "source_url": "https://www.atlascloud.ai/models",
-      "captured_at": "2026-06-07T04:53:08.858717+00:00",
+      "captured_at": "2026-06-07T06:46:33.623826+00:00",
       "confidence": "high",
       "method": "json-api",
       "notes": null
@@ -2845,7 +2845,7 @@
       "unit": "per_1m_input_tokens",
       "price_usd": 0.5,
       "source_url": "https://www.atlascloud.ai/models",
-      "captured_at": "2026-06-07T04:53:08.858723+00:00",
+      "captured_at": "2026-06-07T06:46:33.623832+00:00",
       "confidence": "high",
       "method": "json-api",
       "notes": null
@@ -2861,7 +2861,7 @@
       "unit": "per_1m_output_tokens",
       "price_usd": 2.5,
       "source_url": "https://www.atlascloud.ai/models",
-      "captured_at": "2026-06-07T04:53:08.858728+00:00",
+      "captured_at": "2026-06-07T06:46:33.623836+00:00",
       "confidence": "high",
       "method": "json-api",
       "notes": null
@@ -2877,7 +2877,7 @@
       "unit": "per_1m_input_cache_read_tokens",
       "price_usd": 0.5,
       "source_url": "https://www.atlascloud.ai/models",
-      "captured_at": "2026-06-07T04:53:08.858732+00:00",
+      "captured_at": "2026-06-07T06:46:33.623841+00:00",
       "confidence": "high",
       "method": "json-api",
       "notes": null
@@ -2893,7 +2893,7 @@
       "unit": "per_1m_input_tokens",
       "price_usd": 0.08,
       "source_url": "https://www.atlascloud.ai/models",
-      "captured_at": "2026-06-07T04:53:08.858739+00:00",
+      "captured_at": "2026-06-07T06:46:33.623847+00:00",
       "confidence": "high",
       "method": "json-api",
       "notes": null
@@ -2909,7 +2909,7 @@
       "unit": "per_1m_output_tokens",
       "price_usd": 1.25,
       "source_url": "https://www.atlascloud.ai/models",
-      "captured_at": "2026-06-07T04:53:08.858745+00:00",
+      "captured_at": "2026-06-07T06:46:33.623851+00:00",
       "confidence": "high",
       "method": "json-api",
       "notes": null
@@ -2925,7 +2925,7 @@
       "unit": "per_1m_input_cache_read_tokens",
       "price_usd": 0.08,
       "source_url": "https://www.atlascloud.ai/models",
-      "captured_at": "2026-06-07T04:53:08.858751+00:00",
+      "captured_at": "2026-06-07T06:46:33.623856+00:00",
       "confidence": "high",
       "method": "json-api",
       "notes": null
@@ -2941,7 +2941,7 @@
       "unit": "per_1m_input_tokens",
       "price_usd": 0.08,
       "source_url": "https://www.atlascloud.ai/models",
-      "captured_at": "2026-06-07T04:53:08.858757+00:00",
+      "captured_at": "2026-06-07T06:46:33.623862+00:00",
       "confidence": "high",
       "method": "json-api",
       "notes": null
@@ -2957,7 +2957,7 @@
       "unit": "per_1m_output_tokens",
       "price_usd": 0.39999999999999997,
       "source_url": "https://www.atlascloud.ai/models",
-      "captured_at": "2026-06-07T04:53:08.858761+00:00",
+      "captured_at": "2026-06-07T06:46:33.623867+00:00",
       "confidence": "high",
       "method": "json-api",
       "notes": null
@@ -2973,7 +2973,7 @@
       "unit": "per_1m_input_cache_read_tokens",
       "price_usd": 0.08,
       "source_url": "https://www.atlascloud.ai/models",
-      "captured_at": "2026-06-07T04:53:08.858766+00:00",
+      "captured_at": "2026-06-07T06:46:33.623871+00:00",
       "confidence": "high",
       "method": "json-api",
       "notes": null
@@ -2989,7 +2989,7 @@
       "unit": "per_1m_input_tokens",
       "price_usd": 0.04,
       "source_url": "https://www.atlascloud.ai/models",
-      "captured_at": "2026-06-07T04:53:08.858773+00:00",
+      "captured_at": "2026-06-07T06:46:33.623877+00:00",
       "confidence": "high",
       "method": "json-api",
       "notes": null
@@ -3005,7 +3005,7 @@
       "unit": "per_1m_output_tokens",
       "price_usd": 0.08,
       "source_url": "https://www.atlascloud.ai/models",
-      "captured_at": "2026-06-07T04:53:08.858778+00:00",
+      "captured_at": "2026-06-07T06:46:33.623882+00:00",
       "confidence": "high",
       "method": "json-api",
       "notes": null
@@ -3021,7 +3021,7 @@
       "unit": "per_1m_input_cache_read_tokens",
       "price_usd": 0.04,
       "source_url": "https://www.atlascloud.ai/models",
-      "captured_at": "2026-06-07T04:53:08.858783+00:00",
+      "captured_at": "2026-06-07T06:46:33.623887+00:00",
       "confidence": "high",
       "method": "json-api",
       "notes": null
@@ -3037,7 +3037,7 @@
       "unit": "per_1m_input_tokens",
       "price_usd": 0.3,
       "source_url": "https://www.atlascloud.ai/models",
-      "captured_at": "2026-06-07T04:53:08.858789+00:00",
+      "captured_at": "2026-06-07T06:46:33.623895+00:00",
       "confidence": "high",
       "method": "json-api",
       "notes": null
@@ -3053,7 +3053,7 @@
       "unit": "per_1m_output_tokens",
       "price_usd": 2.5,
       "source_url": "https://www.atlascloud.ai/models",
-      "captured_at": "2026-06-07T04:53:08.858793+00:00",
+      "captured_at": "2026-06-07T06:46:33.623899+00:00",
       "confidence": "high",
       "method": "json-api",
       "notes": null
@@ -3069,7 +3069,7 @@
       "unit": "per_1m_input_cache_read_tokens",
       "price_usd": 0.3,
       "source_url": "https://www.atlascloud.ai/models",
-      "captured_at": "2026-06-07T04:53:08.858798+00:00",
+      "captured_at": "2026-06-07T06:46:33.623904+00:00",
       "confidence": "high",
       "method": "json-api",
       "notes": null
@@ -3085,7 +3085,7 @@
       "unit": "per_1m_input_tokens",
       "price_usd": 2.0,
       "source_url": "https://www.atlascloud.ai/models",
-      "captured_at": "2026-06-07T04:53:08.858805+00:00",
+      "captured_at": "2026-06-07T06:46:33.623912+00:00",
       "confidence": "high",
       "method": "json-api",
       "notes": null
@@ -3101,7 +3101,7 @@
       "unit": "per_1m_output_tokens",
       "price_usd": 12.0,
       "source_url": "https://www.atlascloud.ai/models",
-      "captured_at": "2026-06-07T04:53:08.858809+00:00",
+      "captured_at": "2026-06-07T06:46:33.623917+00:00",
       "confidence": "high",
       "method": "json-api",
       "notes": null
@@ -3117,7 +3117,7 @@
       "unit": "per_1m_input_cache_read_tokens",
       "price_usd": 2.0,
       "source_url": "https://www.atlascloud.ai/models",
-      "captured_at": "2026-06-07T04:53:08.858814+00:00",
+      "captured_at": "2026-06-07T06:46:33.623921+00:00",
       "confidence": "high",
       "method": "json-api",
       "notes": null
@@ -3133,7 +3133,7 @@
       "unit": "per_1m_input_tokens",
       "price_usd": 3.0,
       "source_url": "https://www.atlascloud.ai/models",
-      "captured_at": "2026-06-07T04:53:08.858820+00:00",
+      "captured_at": "2026-06-07T06:46:33.623930+00:00",
       "confidence": "high",
       "method": "json-api",
       "notes": null
@@ -3149,7 +3149,7 @@
       "unit": "per_1m_output_tokens",
       "price_usd": 15.0,
       "source_url": "https://www.atlascloud.ai/models",
-      "captured_at": "2026-06-07T04:53:08.858827+00:00",
+      "captured_at": "2026-06-07T06:46:33.623934+00:00",
       "confidence": "high",
       "method": "json-api",
       "notes": null
@@ -3165,7 +3165,7 @@
       "unit": "per_1m_input_cache_read_tokens",
       "price_usd": 3.0,
       "source_url": "https://www.atlascloud.ai/models",
-      "captured_at": "2026-06-07T04:53:08.858834+00:00",
+      "captured_at": "2026-06-07T06:46:33.623939+00:00",
       "confidence": "high",
       "method": "json-api",
       "notes": null
@@ -3181,7 +3181,7 @@
       "unit": "per_1m_input_tokens",
       "price_usd": 0.19999999999999998,
       "source_url": "https://www.atlascloud.ai/models",
-      "captured_at": "2026-06-07T04:53:08.858840+00:00",
+      "captured_at": "2026-06-07T06:46:33.623945+00:00",
       "confidence": "high",
       "method": "json-api",
       "notes": null
@@ -3197,7 +3197,7 @@
       "unit": "per_1m_output_tokens",
       "price_usd": 0.5,
       "source_url": "https://www.atlascloud.ai/models",
-      "captured_at": "2026-06-07T04:53:08.858845+00:00",
+      "captured_at": "2026-06-07T06:46:33.623950+00:00",
       "confidence": "high",
       "method": "json-api",
       "notes": null
@@ -3213,7 +3213,7 @@
       "unit": "per_1m_input_cache_read_tokens",
       "price_usd": 0.19999999999999998,
       "source_url": "https://www.atlascloud.ai/models",
-      "captured_at": "2026-06-07T04:53:08.858849+00:00",
+      "captured_at": "2026-06-07T06:46:33.623954+00:00",
       "confidence": "high",
       "method": "json-api",
       "notes": null
@@ -3229,7 +3229,7 @@
       "unit": "per_1m_input_tokens",
       "price_usd": 0.19999999999999998,
       "source_url": "https://www.atlascloud.ai/models",
-      "captured_at": "2026-06-07T04:53:08.858855+00:00",
+      "captured_at": "2026-06-07T06:46:33.623961+00:00",
       "confidence": "high",
       "method": "json-api",
       "notes": null
@@ -3245,7 +3245,7 @@
       "unit": "per_1m_output_tokens",
       "price_usd": 0.5,
       "source_url": "https://www.atlascloud.ai/models",
-      "captured_at": "2026-06-07T04:53:08.858860+00:00",
+      "captured_at": "2026-06-07T06:46:33.623966+00:00",
       "confidence": "high",
       "method": "json-api",
       "notes": null
@@ -3261,7 +3261,7 @@
       "unit": "per_1m_input_cache_read_tokens",
       "price_usd": 0.19999999999999998,
       "source_url": "https://www.atlascloud.ai/models",
-      "captured_at": "2026-06-07T04:53:08.858864+00:00",
+      "captured_at": "2026-06-07T06:46:33.623971+00:00",
       "confidence": "high",
       "method": "json-api",
       "notes": null
@@ -3277,7 +3277,7 @@
       "unit": "per_1m_input_tokens",
       "price_usd": 0.19999999999999998,
       "source_url": "https://www.atlascloud.ai/models",
-      "captured_at": "2026-06-07T04:53:08.858873+00:00",
+      "captured_at": "2026-06-07T06:46:33.623977+00:00",
       "confidence": "high",
       "method": "json-api",
       "notes": null
@@ -3293,7 +3293,7 @@
       "unit": "per_1m_output_tokens",
       "price_usd": 0.5,
       "source_url": "https://www.atlascloud.ai/models",
-      "captured_at": "2026-06-07T04:53:08.858878+00:00",
+      "captured_at": "2026-06-07T06:46:33.623981+00:00",
       "confidence": "high",
       "method": "json-api",
       "notes": null
@@ -3309,7 +3309,7 @@
       "unit": "per_1m_input_cache_read_tokens",
       "price_usd": 0.19999999999999998,
       "source_url": "https://www.atlascloud.ai/models",
-      "captured_at": "2026-06-07T04:53:08.858898+00:00",
+      "captured_at": "2026-06-07T06:46:33.623986+00:00",
       "confidence": "high",
       "method": "json-api",
       "notes": null
@@ -3325,7 +3325,7 @@
       "unit": "per_1m_input_tokens",
       "price_usd": 0.19999999999999998,
       "source_url": "https://www.atlascloud.ai/models",
-      "captured_at": "2026-06-07T04:53:08.858905+00:00",
+      "captured_at": "2026-06-07T06:46:33.623992+00:00",
       "confidence": "high",
       "method": "json-api",
       "notes": null
@@ -3341,7 +3341,7 @@
       "unit": "per_1m_output_tokens",
       "price_usd": 0.5,
       "source_url": "https://www.atlascloud.ai/models",
-      "captured_at": "2026-06-07T04:53:08.858910+00:00",
+      "captured_at": "2026-06-07T06:46:33.623996+00:00",
       "confidence": "high",
       "method": "json-api",
       "notes": null
@@ -3357,7 +3357,7 @@
       "unit": "per_1m_input_cache_read_tokens",
       "price_usd": 0.19999999999999998,
       "source_url": "https://www.atlascloud.ai/models",
-      "captured_at": "2026-06-07T04:53:08.858914+00:00",
+      "captured_at": "2026-06-07T06:46:33.624001+00:00",
       "confidence": "high",
       "method": "json-api",
       "notes": null
@@ -3373,7 +3373,7 @@
       "unit": "per_1m_input_tokens",
       "price_usd": 1.2,
       "source_url": "https://www.atlascloud.ai/models",
-      "captured_at": "2026-06-07T04:53:08.858921+00:00",
+      "captured_at": "2026-06-07T06:46:33.624007+00:00",
       "confidence": "high",
       "method": "json-api",
       "notes": null
@@ -3389,7 +3389,7 @@
       "unit": "per_1m_output_tokens",
       "price_usd": 6.0,
       "source_url": "https://www.atlascloud.ai/models",
-      "captured_at": "2026-06-07T04:53:08.858926+00:00",
+      "captured_at": "2026-06-07T06:46:33.624012+00:00",
       "confidence": "high",
       "method": "json-api",
       "notes": null
@@ -3405,7 +3405,7 @@
       "unit": "per_1m_input_cache_read_tokens",
       "price_usd": 1.2,
       "source_url": "https://www.atlascloud.ai/models",
-      "captured_at": "2026-06-07T04:53:08.858931+00:00",
+      "captured_at": "2026-06-07T06:46:33.624016+00:00",
       "confidence": "high",
       "method": "json-api",
       "notes": null
@@ -3421,7 +3421,7 @@
       "unit": "per_1m_input_tokens",
       "price_usd": 0.49,
       "source_url": "https://www.atlascloud.ai/models",
-      "captured_at": "2026-06-07T04:53:08.858937+00:00",
+      "captured_at": "2026-06-07T06:46:33.624022+00:00",
       "confidence": "high",
       "method": "json-api",
       "notes": null
@@ -3437,7 +3437,7 @@
       "unit": "per_1m_output_tokens",
       "price_usd": 2.5,
       "source_url": "https://www.atlascloud.ai/models",
-      "captured_at": "2026-06-07T04:53:08.858942+00:00",
+      "captured_at": "2026-06-07T06:46:33.624027+00:00",
       "confidence": "high",
       "method": "json-api",
       "notes": null
@@ -3453,7 +3453,7 @@
       "unit": "per_1m_input_cache_read_tokens",
       "price_usd": 0.19999999999999998,
       "source_url": "https://www.atlascloud.ai/models",
-      "captured_at": "2026-06-07T04:53:08.858947+00:00",
+      "captured_at": "2026-06-07T06:46:33.624032+00:00",
       "confidence": "high",
       "method": "json-api",
       "notes": null
@@ -3469,7 +3469,7 @@
       "unit": "per_1m_input_tokens",
       "price_usd": 5.0,
       "source_url": "https://www.atlascloud.ai/models",
-      "captured_at": "2026-06-07T04:53:08.858953+00:00",
+      "captured_at": "2026-06-07T06:46:33.624038+00:00",
       "confidence": "high",
       "method": "json-api",
       "notes": null
@@ -3485,7 +3485,7 @@
       "unit": "per_1m_output_tokens",
       "price_usd": 25.0,
       "source_url": "https://www.atlascloud.ai/models",
-      "captured_at": "2026-06-07T04:53:08.858958+00:00",
+      "captured_at": "2026-06-07T06:46:33.624042+00:00",
       "confidence": "high",
       "method": "json-api",
       "notes": null
@@ -3501,7 +3501,7 @@
       "unit": "per_1m_input_cache_read_tokens",
       "price_usd": 0.5,
       "source_url": "https://www.atlascloud.ai/models",
-      "captured_at": "2026-06-07T04:53:08.858963+00:00",
+      "captured_at": "2026-06-07T06:46:33.624047+00:00",
       "confidence": "high",
       "method": "json-api",
       "notes": null
@@ -3517,7 +3517,7 @@
       "unit": "per_1m_input_tokens",
       "price_usd": 0.95,
       "source_url": "https://www.atlascloud.ai/models",
-      "captured_at": "2026-06-07T04:53:08.858969+00:00",
+      "captured_at": "2026-06-07T06:46:33.624053+00:00",
       "confidence": "high",
       "method": "json-api",
       "notes": null
@@ -3533,7 +3533,7 @@
       "unit": "per_1m_output_tokens",
       "price_usd": 3.15,
       "source_url": "https://www.atlascloud.ai/models",
-      "captured_at": "2026-06-07T04:53:08.858973+00:00",
+      "captured_at": "2026-06-07T06:46:33.624057+00:00",
       "confidence": "high",
       "method": "json-api",
       "notes": null
@@ -3549,7 +3549,7 @@
       "unit": "per_1m_input_cache_read_tokens",
       "price_usd": 0.19,
       "source_url": "https://www.atlascloud.ai/models",
-      "captured_at": "2026-06-07T04:53:08.858978+00:00",
+      "captured_at": "2026-06-07T06:46:33.624062+00:00",
       "confidence": "high",
       "method": "json-api",
       "notes": null
@@ -3565,7 +3565,7 @@
       "unit": "per_1m_input_tokens",
       "price_usd": 0.295,
       "source_url": "https://www.atlascloud.ai/models",
-      "captured_at": "2026-06-07T04:53:08.858984+00:00",
+      "captured_at": "2026-06-07T06:46:33.624068+00:00",
       "confidence": "high",
       "method": "json-api",
       "notes": null
@@ -3581,7 +3581,7 @@
       "unit": "per_1m_output_tokens",
       "price_usd": 1.2,
       "source_url": "https://www.atlascloud.ai/models",
-      "captured_at": "2026-06-07T04:53:08.858989+00:00",
+      "captured_at": "2026-06-07T06:46:33.624073+00:00",
       "confidence": "high",
       "method": "json-api",
       "notes": null
@@ -3597,7 +3597,7 @@
       "unit": "per_1m_input_cache_read_tokens",
       "price_usd": 0.06,
       "source_url": "https://www.atlascloud.ai/models",
-      "captured_at": "2026-06-07T04:53:08.858993+00:00",
+      "captured_at": "2026-06-07T06:46:33.624077+00:00",
       "confidence": "high",
       "method": "json-api",
       "notes": null
@@ -3613,7 +3613,7 @@
       "unit": "per_1m_input_tokens",
       "price_usd": 0.55,
       "source_url": "https://www.atlascloud.ai/models",
-      "captured_at": "2026-06-07T04:53:08.858999+00:00",
+      "captured_at": "2026-06-07T06:46:33.624083+00:00",
       "confidence": "high",
       "method": "json-api",
       "notes": null
@@ -3629,7 +3629,7 @@
       "unit": "per_1m_output_tokens",
       "price_usd": 3.5,
       "source_url": "https://www.atlascloud.ai/models",
-      "captured_at": "2026-06-07T04:53:08.859004+00:00",
+      "captured_at": "2026-06-07T06:46:33.624090+00:00",
       "confidence": "high",
       "method": "json-api",
       "notes": null
@@ -3645,7 +3645,7 @@
       "unit": "per_1m_input_cache_read_tokens",
       "price_usd": 0.55,
       "source_url": "https://www.atlascloud.ai/models",
-      "captured_at": "2026-06-07T04:53:08.859011+00:00",
+      "captured_at": "2026-06-07T06:46:33.624095+00:00",
       "confidence": "high",
       "method": "json-api",
       "notes": null
@@ -3661,7 +3661,7 @@
       "unit": "per_1m_input_tokens",
       "price_usd": 2.0,
       "source_url": "https://www.atlascloud.ai/models",
-      "captured_at": "2026-06-07T04:53:08.859017+00:00",
+      "captured_at": "2026-06-07T06:46:33.624101+00:00",
       "confidence": "high",
       "method": "json-api",
       "notes": null
@@ -3677,7 +3677,7 @@
       "unit": "per_1m_output_tokens",
       "price_usd": 12.0,
       "source_url": "https://www.atlascloud.ai/models",
-      "captured_at": "2026-06-07T04:53:08.859022+00:00",
+      "captured_at": "2026-06-07T06:46:33.624108+00:00",
       "confidence": "high",
       "method": "json-api",
       "notes": null
@@ -3693,7 +3693,7 @@
       "unit": "per_1m_input_cache_read_tokens",
       "price_usd": 0.19999999999999998,
       "source_url": "https://www.atlascloud.ai/models",
-      "captured_at": "2026-06-07T04:53:08.859027+00:00",
+      "captured_at": "2026-06-07T06:46:33.624113+00:00",
       "confidence": "high",
       "method": "json-api",
       "notes": null
@@ -3709,7 +3709,7 @@
       "unit": "per_1m_input_tokens",
       "price_usd": 3.0,
       "source_url": "https://www.atlascloud.ai/models",
-      "captured_at": "2026-06-07T04:53:08.859033+00:00",
+      "captured_at": "2026-06-07T06:46:33.624119+00:00",
       "confidence": "high",
       "method": "json-api",
       "notes": null
@@ -3725,7 +3725,7 @@
       "unit": "per_1m_output_tokens",
       "price_usd": 15.0,
       "source_url": "https://www.atlascloud.ai/models",
-      "captured_at": "2026-06-07T04:53:08.859038+00:00",
+      "captured_at": "2026-06-07T06:46:33.624124+00:00",
       "confidence": "high",
       "method": "json-api",
       "notes": null
@@ -3741,7 +3741,7 @@
       "unit": "per_1m_input_cache_read_tokens",
       "price_usd": 0.3,
       "source_url": "https://www.atlascloud.ai/models",
-      "captured_at": "2026-06-07T04:53:08.859043+00:00",
+      "captured_at": "2026-06-07T06:46:33.624129+00:00",
       "confidence": "high",
       "method": "json-api",
       "notes": null
@@ -3757,7 +3757,7 @@
       "unit": "per_1m_input_tokens",
       "price_usd": 0.18,
       "source_url": "https://www.atlascloud.ai/models",
-      "captured_at": "2026-06-07T04:53:08.859050+00:00",
+      "captured_at": "2026-06-07T06:46:33.624135+00:00",
       "confidence": "high",
       "method": "json-api",
       "notes": null
@@ -3773,7 +3773,7 @@
       "unit": "per_1m_output_tokens",
       "price_usd": 1.35,
       "source_url": "https://www.atlascloud.ai/models",
-      "captured_at": "2026-06-07T04:53:08.859054+00:00",
+      "captured_at": "2026-06-07T06:46:33.624140+00:00",
       "confidence": "high",
       "method": "json-api",
       "notes": null
@@ -3789,7 +3789,7 @@
       "unit": "per_1m_input_cache_read_tokens",
       "price_usd": 0.18,
       "source_url": "https://www.atlascloud.ai/models",
-      "captured_at": "2026-06-07T04:53:08.859059+00:00",
+      "captured_at": "2026-06-07T06:46:33.624144+00:00",
       "confidence": "high",
       "method": "json-api",
       "notes": null
@@ -3805,7 +3805,7 @@
       "unit": "per_1m_input_tokens",
       "price_usd": 0.3,
       "source_url": "https://www.atlascloud.ai/models",
-      "captured_at": "2026-06-07T04:53:08.859065+00:00",
+      "captured_at": "2026-06-07T06:46:33.624150+00:00",
       "confidence": "high",
       "method": "json-api",
       "notes": null
@@ -3821,7 +3821,7 @@
       "unit": "per_1m_output_tokens",
       "price_usd": 2.4,
       "source_url": "https://www.atlascloud.ai/models",
-      "captured_at": "2026-06-07T04:53:08.859070+00:00",
+      "captured_at": "2026-06-07T06:46:33.624155+00:00",
       "confidence": "high",
       "method": "json-api",
       "notes": null
@@ -3837,7 +3837,7 @@
       "unit": "per_1m_input_cache_read_tokens",
       "price_usd": 0.3,
       "source_url": "https://www.atlascloud.ai/models",
-      "captured_at": "2026-06-07T04:53:08.859074+00:00",
+      "captured_at": "2026-06-07T06:46:33.624160+00:00",
       "confidence": "high",
       "method": "json-api",
       "notes": null
@@ -3853,7 +3853,7 @@
       "unit": "per_1m_input_tokens",
       "price_usd": 0.22499999999999998,
       "source_url": "https://www.atlascloud.ai/models",
-      "captured_at": "2026-06-07T04:53:08.859081+00:00",
+      "captured_at": "2026-06-07T06:46:33.624166+00:00",
       "confidence": "high",
       "method": "json-api",
       "notes": null
@@ -3869,7 +3869,7 @@
       "unit": "per_1m_output_tokens",
       "price_usd": 1.7999999999999998,
       "source_url": "https://www.atlascloud.ai/models",
-      "captured_at": "2026-06-07T04:53:08.859086+00:00",
+      "captured_at": "2026-06-07T06:46:33.624170+00:00",
       "confidence": "high",
       "method": "json-api",
       "notes": null
@@ -3885,7 +3885,7 @@
       "unit": "per_1m_input_cache_read_tokens",
       "price_usd": 0.22499999999999998,
       "source_url": "https://www.atlascloud.ai/models",
-      "captured_at": "2026-06-07T04:53:08.859090+00:00",
+      "captured_at": "2026-06-07T06:46:33.624175+00:00",
       "confidence": "high",
       "method": "json-api",
       "notes": null
@@ -3901,7 +3901,7 @@
       "unit": "per_1m_input_tokens",
       "price_usd": 0.27,
       "source_url": "https://www.atlascloud.ai/models",
-      "captured_at": "2026-06-07T04:53:08.859096+00:00",
+      "captured_at": "2026-06-07T06:46:33.624181+00:00",
       "confidence": "high",
       "method": "json-api",
       "notes": null
@@ -3917,7 +3917,7 @@
       "unit": "per_1m_output_tokens",
       "price_usd": 2.16,
       "source_url": "https://www.atlascloud.ai/models",
-      "captured_at": "2026-06-07T04:53:08.859101+00:00",
+      "captured_at": "2026-06-07T06:46:33.624186+00:00",
       "confidence": "high",
       "method": "json-api",
       "notes": null
@@ -3933,7 +3933,7 @@
       "unit": "per_1m_input_cache_read_tokens",
       "price_usd": 0.27,
       "source_url": "https://www.atlascloud.ai/models",
-      "captured_at": "2026-06-07T04:53:08.859106+00:00",
+      "captured_at": "2026-06-07T06:46:33.624190+00:00",
       "confidence": "high",
       "method": "json-api",
       "notes": null
@@ -3949,7 +3949,7 @@
       "unit": "per_1m_input_tokens",
       "price_usd": 1.75,
       "source_url": "https://www.atlascloud.ai/models",
-      "captured_at": "2026-06-07T04:53:08.859114+00:00",
+      "captured_at": "2026-06-07T06:46:33.624197+00:00",
       "confidence": "high",
       "method": "json-api",
       "notes": null
@@ -3965,7 +3965,7 @@
       "unit": "per_1m_output_tokens",
       "price_usd": 14.0,
       "source_url": "https://www.atlascloud.ai/models",
-      "captured_at": "2026-06-07T04:53:08.859119+00:00",
+      "captured_at": "2026-06-07T06:46:33.624202+00:00",
       "confidence": "high",
       "method": "json-api",
       "notes": null
@@ -3981,7 +3981,7 @@
       "unit": "per_1m_input_cache_read_tokens",
       "price_usd": 0.175,
       "source_url": "https://www.atlascloud.ai/models",
-      "captured_at": "2026-06-07T04:53:08.859124+00:00",
+      "captured_at": "2026-06-07T06:46:33.624206+00:00",
       "confidence": "high",
       "method": "json-api",
       "notes": null
@@ -3997,7 +3997,7 @@
       "unit": "per_1m_input_tokens",
       "price_usd": 1.75,
       "source_url": "https://www.atlascloud.ai/models",
-      "captured_at": "2026-06-07T04:53:08.859130+00:00",
+      "captured_at": "2026-06-07T06:46:33.624212+00:00",
       "confidence": "high",
       "method": "json-api",
       "notes": null
@@ -4013,7 +4013,7 @@
       "unit": "per_1m_output_tokens",
       "price_usd": 14.0,
       "source_url": "https://www.atlascloud.ai/models",
-      "captured_at": "2026-06-07T04:53:08.859134+00:00",
+      "captured_at": "2026-06-07T06:46:33.624217+00:00",
       "confidence": "high",
       "method": "json-api",
       "notes": null
@@ -4029,7 +4029,7 @@
       "unit": "per_1m_input_cache_read_tokens",
       "price_usd": 0.175,
       "source_url": "https://www.atlascloud.ai/models",
-      "captured_at": "2026-06-07T04:53:08.859139+00:00",
+      "captured_at": "2026-06-07T06:46:33.624221+00:00",
       "confidence": "high",
       "method": "json-api",
       "notes": null
@@ -4045,7 +4045,7 @@
       "unit": "per_1m_input_tokens",
       "price_usd": 0.14,
       "source_url": "https://www.atlascloud.ai/models",
-      "captured_at": "2026-06-07T04:53:08.859145+00:00",
+      "captured_at": "2026-06-07T06:46:33.624227+00:00",
       "confidence": "high",
       "method": "json-api",
       "notes": null
@@ -4061,7 +4061,7 @@
       "unit": "per_1m_output_tokens",
       "price_usd": 0.28,
       "source_url": "https://www.atlascloud.ai/models",
-      "captured_at": "2026-06-07T04:53:08.859152+00:00",
+      "captured_at": "2026-06-07T06:46:33.624232+00:00",
       "confidence": "high",
       "method": "json-api",
       "notes": null
@@ -4077,7 +4077,7 @@
       "unit": "per_1m_input_cache_read_tokens",
       "price_usd": 0.028,
       "source_url": "https://www.atlascloud.ai/models",
-      "captured_at": "2026-06-07T04:53:08.859157+00:00",
+      "captured_at": "2026-06-07T06:46:33.624237+00:00",
       "confidence": "high",
       "method": "json-api",
       "notes": null
@@ -4093,7 +4093,7 @@
       "unit": "per_1m_input_tokens",
       "price_usd": 0.3,
       "source_url": "https://www.atlascloud.ai/models",
-      "captured_at": "2026-06-07T04:53:08.859163+00:00",
+      "captured_at": "2026-06-07T06:46:33.624243+00:00",
       "confidence": "high",
       "method": "json-api",
       "notes": null
@@ -4109,7 +4109,7 @@
       "unit": "per_1m_output_tokens",
       "price_usd": 1.2,
       "source_url": "https://www.atlascloud.ai/models",
-      "captured_at": "2026-06-07T04:53:08.859168+00:00",
+      "captured_at": "2026-06-07T06:46:33.624248+00:00",
       "confidence": "high",
       "method": "json-api",
       "notes": null
@@ -4125,7 +4125,7 @@
       "unit": "per_1m_input_cache_read_tokens",
       "price_usd": 0.06,
       "source_url": "https://www.atlascloud.ai/models",
-      "captured_at": "2026-06-07T04:53:08.859173+00:00",
+      "captured_at": "2026-06-07T06:46:33.624254+00:00",
       "confidence": "high",
       "method": "json-api",
       "notes": null
@@ -4141,7 +4141,7 @@
       "unit": "per_1m_input_tokens",
       "price_usd": 2.5,
       "source_url": "https://www.atlascloud.ai/models",
-      "captured_at": "2026-06-07T04:53:08.859198+00:00",
+      "captured_at": "2026-06-07T06:46:33.624260+00:00",
       "confidence": "high",
       "method": "json-api",
       "notes": null
@@ -4157,7 +4157,7 @@
       "unit": "per_1m_output_tokens",
       "price_usd": 15.0,
       "source_url": "https://www.atlascloud.ai/models",
-      "captured_at": "2026-06-07T04:53:08.859203+00:00",
+      "captured_at": "2026-06-07T06:46:33.624264+00:00",
       "confidence": "high",
       "method": "json-api",
       "notes": null
@@ -4173,7 +4173,7 @@
       "unit": "per_1m_input_cache_read_tokens",
       "price_usd": 0.25,
       "source_url": "https://www.atlascloud.ai/models",
-      "captured_at": "2026-06-07T04:53:08.859209+00:00",
+      "captured_at": "2026-06-07T06:46:33.624269+00:00",
       "confidence": "high",
       "method": "json-api",
       "notes": null
@@ -4189,7 +4189,7 @@
       "unit": "per_1m_input_tokens",
       "price_usd": 1.2,
       "source_url": "https://www.atlascloud.ai/models",
-      "captured_at": "2026-06-07T04:53:08.859217+00:00",
+      "captured_at": "2026-06-07T06:46:33.624275+00:00",
       "confidence": "high",
       "method": "json-api",
       "notes": null
@@ -4205,7 +4205,7 @@
       "unit": "per_1m_output_tokens",
       "price_usd": 4.0,
       "source_url": "https://www.atlascloud.ai/models",
-      "captured_at": "2026-06-07T04:53:08.859222+00:00",
+      "captured_at": "2026-06-07T06:46:33.624280+00:00",
       "confidence": "high",
       "method": "json-api",
       "notes": null
@@ -4221,7 +4221,7 @@
       "unit": "per_1m_input_cache_read_tokens",
       "price_usd": 0.24,
       "source_url": "https://www.atlascloud.ai/models",
-      "captured_at": "2026-06-07T04:53:08.859227+00:00",
+      "captured_at": "2026-06-07T06:46:33.624284+00:00",
       "confidence": "high",
       "method": "json-api",
       "notes": null
@@ -4237,7 +4237,7 @@
       "unit": "per_1m_input_tokens",
       "price_usd": 0.5,
       "source_url": "https://www.atlascloud.ai/models",
-      "captured_at": "2026-06-07T04:53:08.859233+00:00",
+      "captured_at": "2026-06-07T06:46:33.624293+00:00",
       "confidence": "high",
       "method": "json-api",
       "notes": null
@@ -4253,7 +4253,7 @@
       "unit": "per_1m_output_tokens",
       "price_usd": 3.0,
       "source_url": "https://www.atlascloud.ai/models",
-      "captured_at": "2026-06-07T04:53:08.859238+00:00",
+      "captured_at": "2026-06-07T06:46:33.624297+00:00",
       "confidence": "high",
       "method": "json-api",
       "notes": null
@@ -4269,7 +4269,7 @@
       "unit": "per_1m_input_cache_read_tokens",
       "price_usd": 0.5,
       "source_url": "https://www.atlascloud.ai/models",
-      "captured_at": "2026-06-07T04:53:08.859243+00:00",
+      "captured_at": "2026-06-07T06:46:33.624302+00:00",
       "confidence": "high",
       "method": "json-api",
       "notes": null
@@ -4285,7 +4285,7 @@
       "unit": "per_1m_input_tokens",
       "price_usd": 0.08,
       "source_url": "https://www.atlascloud.ai/models",
-      "captured_at": "2026-06-07T04:53:08.859249+00:00",
+      "captured_at": "2026-06-07T06:46:33.624308+00:00",
       "confidence": "high",
       "method": "json-api",
       "notes": null
@@ -4301,7 +4301,7 @@
       "unit": "per_1m_output_tokens",
       "price_usd": 0.5,
       "source_url": "https://www.atlascloud.ai/models",
-      "captured_at": "2026-06-07T04:53:08.859254+00:00",
+      "captured_at": "2026-06-07T06:46:33.624313+00:00",
       "confidence": "high",
       "method": "json-api",
       "notes": null
@@ -4317,7 +4317,7 @@
       "unit": "per_1m_input_cache_read_tokens",
       "price_usd": 0.08,
       "source_url": "https://www.atlascloud.ai/models",
-      "captured_at": "2026-06-07T04:53:08.859258+00:00",
+      "captured_at": "2026-06-07T06:46:33.624320+00:00",
       "confidence": "high",
       "method": "json-api",
       "notes": null
@@ -4333,7 +4333,7 @@
       "unit": "per_1m_input_tokens",
       "price_usd": 0.15,
       "source_url": "https://www.atlascloud.ai/models",
-      "captured_at": "2026-06-07T04:53:08.859264+00:00",
+      "captured_at": "2026-06-07T06:46:33.624326+00:00",
       "confidence": "high",
       "method": "json-api",
       "notes": null
@@ -4349,7 +4349,7 @@
       "unit": "per_1m_output_tokens",
       "price_usd": 1.5,
       "source_url": "https://www.atlascloud.ai/models",
-      "captured_at": "2026-06-07T04:53:08.859269+00:00",
+      "captured_at": "2026-06-07T06:46:33.624330+00:00",
       "confidence": "high",
       "method": "json-api",
       "notes": null
@@ -4365,7 +4365,7 @@
       "unit": "per_1m_input_cache_read_tokens",
       "price_usd": 0.15,
       "source_url": "https://www.atlascloud.ai/models",
-      "captured_at": "2026-06-07T04:53:08.859274+00:00",
+      "captured_at": "2026-06-07T06:46:33.624335+00:00",
       "confidence": "high",
       "method": "json-api",
       "notes": null
@@ -4381,7 +4381,7 @@
       "unit": "per_1m_input_tokens",
       "price_usd": 0.15,
       "source_url": "https://www.atlascloud.ai/models",
-      "captured_at": "2026-06-07T04:53:08.859280+00:00",
+      "captured_at": "2026-06-07T06:46:33.624341+00:00",
       "confidence": "high",
       "method": "json-api",
       "notes": null
@@ -4397,7 +4397,7 @@
       "unit": "per_1m_output_tokens",
       "price_usd": 0.6,
       "source_url": "https://www.atlascloud.ai/models",
-      "captured_at": "2026-06-07T04:53:08.859286+00:00",
+      "captured_at": "2026-06-07T06:46:33.624346+00:00",
       "confidence": "high",
       "method": "json-api",
       "notes": null
@@ -4413,7 +4413,7 @@
       "unit": "per_1m_input_cache_read_tokens",
       "price_usd": 0.15,
       "source_url": "https://www.atlascloud.ai/models",
-      "captured_at": "2026-06-07T04:53:08.859290+00:00",
+      "captured_at": "2026-06-07T06:46:33.624350+00:00",
       "confidence": "high",
       "method": "json-api",
       "notes": null
@@ -4429,7 +4429,7 @@
       "unit": "per_1m_input_tokens",
       "price_usd": 0.3,
       "source_url": "https://www.atlascloud.ai/models",
-      "captured_at": "2026-06-07T04:53:08.859296+00:00",
+      "captured_at": "2026-06-07T06:46:33.624356+00:00",
       "confidence": "high",
       "method": "json-api",
       "notes": null
@@ -4445,7 +4445,7 @@
       "unit": "per_1m_output_tokens",
       "price_usd": 1.2,
       "source_url": "https://www.atlascloud.ai/models",
-      "captured_at": "2026-06-07T04:53:08.859301+00:00",
+      "captured_at": "2026-06-07T06:46:33.624361+00:00",
       "confidence": "high",
       "method": "json-api",
       "notes": null
@@ -4461,7 +4461,7 @@
       "unit": "per_1m_input_cache_read_tokens",
       "price_usd": 0.06,
       "source_url": "https://www.atlascloud.ai/models",
-      "captured_at": "2026-06-07T04:53:08.859306+00:00",
+      "captured_at": "2026-06-07T06:46:33.624365+00:00",
       "confidence": "high",
       "method": "json-api",
       "notes": null
@@ -4477,7 +4477,7 @@
       "unit": "per_1m_input_tokens",
       "price_usd": 1.26,
       "source_url": "https://www.atlascloud.ai/models",
-      "captured_at": "2026-06-07T04:53:08.859312+00:00",
+      "captured_at": "2026-06-07T06:46:33.624371+00:00",
       "confidence": "high",
       "method": "json-api",
       "notes": null
@@ -4493,7 +4493,7 @@
       "unit": "per_1m_output_tokens",
       "price_usd": 3.9600000000000004,
       "source_url": "https://www.atlascloud.ai/models",
-      "captured_at": "2026-06-07T04:53:08.859316+00:00",
+      "captured_at": "2026-06-07T06:46:33.624376+00:00",
       "confidence": "high",
       "method": "json-api",
       "notes": null
@@ -4509,7 +4509,7 @@
       "unit": "per_1m_input_cache_read_tokens",
       "price_usd": 0.234,
       "source_url": "https://www.atlascloud.ai/models",
-      "captured_at": "2026-06-07T04:53:08.859321+00:00",
+      "captured_at": "2026-06-07T06:46:33.624383+00:00",
       "confidence": "high",
       "method": "json-api",
       "notes": null
@@ -4525,7 +4525,7 @@
       "unit": "per_1m_input_tokens",
       "price_usd": 0.325,
       "source_url": "https://www.atlascloud.ai/models",
-      "captured_at": "2026-06-07T04:53:08.859328+00:00",
+      "captured_at": "2026-06-07T06:46:33.624389+00:00",
       "confidence": "high",
       "method": "json-api",
       "notes": null
@@ -4541,7 +4541,7 @@
       "unit": "per_1m_output_tokens",
       "price_usd": 1.95,
       "source_url": "https://www.atlascloud.ai/models",
-      "captured_at": "2026-06-07T04:53:08.859332+00:00",
+      "captured_at": "2026-06-07T06:46:33.624394+00:00",
       "confidence": "high",
       "method": "json-api",
       "notes": null
@@ -4557,7 +4557,7 @@
       "unit": "per_1m_input_cache_read_tokens",
       "price_usd": 0.0325,
       "source_url": "https://www.atlascloud.ai/models",
-      "captured_at": "2026-06-07T04:53:08.859337+00:00",
+      "captured_at": "2026-06-07T06:46:33.624398+00:00",
       "confidence": "high",
       "method": "json-api",
       "notes": null
@@ -4573,7 +4573,7 @@
       "unit": "per_1m_input_tokens",
       "price_usd": 1.2,
       "source_url": "https://www.atlascloud.ai/models",
-      "captured_at": "2026-06-07T04:53:08.859343+00:00",
+      "captured_at": "2026-06-07T06:46:33.624404+00:00",
       "confidence": "high",
       "method": "json-api",
       "notes": null
@@ -4589,7 +4589,7 @@
       "unit": "per_1m_output_tokens",
       "price_usd": 4.0,
       "source_url": "https://www.atlascloud.ai/models",
-      "captured_at": "2026-06-07T04:53:08.859350+00:00",
+      "captured_at": "2026-06-07T06:46:33.624409+00:00",
       "confidence": "high",
       "method": "json-api",
       "notes": null
@@ -4605,7 +4605,7 @@
       "unit": "per_1m_input_cache_read_tokens",
       "price_usd": 0.24,
       "source_url": "https://www.atlascloud.ai/models",
-      "captured_at": "2026-06-07T04:53:08.859355+00:00",
+      "captured_at": "2026-06-07T06:46:33.624413+00:00",
       "confidence": "high",
       "method": "json-api",
       "notes": null
@@ -4621,7 +4621,7 @@
       "unit": "per_1m_input_tokens",
       "price_usd": 5.0,
       "source_url": "https://www.atlascloud.ai/models",
-      "captured_at": "2026-06-07T04:53:08.859361+00:00",
+      "captured_at": "2026-06-07T06:46:33.624421+00:00",
       "confidence": "high",
       "method": "json-api",
       "notes": null
@@ -4637,7 +4637,7 @@
       "unit": "per_1m_output_tokens",
       "price_usd": 25.0,
       "source_url": "https://www.atlascloud.ai/models",
-      "captured_at": "2026-06-07T04:53:08.859368+00:00",
+      "captured_at": "2026-06-07T06:46:33.624426+00:00",
       "confidence": "high",
       "method": "json-api",
       "notes": null
@@ -4653,7 +4653,7 @@
       "unit": "per_1m_input_cache_read_tokens",
       "price_usd": 0.5,
       "source_url": "https://www.atlascloud.ai/models",
-      "captured_at": "2026-06-07T04:53:08.859372+00:00",
+      "captured_at": "2026-06-07T06:46:33.624431+00:00",
       "confidence": "high",
       "method": "json-api",
       "notes": null
@@ -4669,7 +4669,7 @@
       "unit": "per_1m_input_tokens",
       "price_usd": 0.95,
       "source_url": "https://www.atlascloud.ai/models",
-      "captured_at": "2026-06-07T04:53:08.859379+00:00",
+      "captured_at": "2026-06-07T06:46:33.624437+00:00",
       "confidence": "high",
       "method": "json-api",
       "notes": null
@@ -4685,7 +4685,7 @@
       "unit": "per_1m_output_tokens",
       "price_usd": 4.0,
       "source_url": "https://www.atlascloud.ai/models",
-      "captured_at": "2026-06-07T04:53:08.859383+00:00",
+      "captured_at": "2026-06-07T06:46:33.624445+00:00",
       "confidence": "high",
       "method": "json-api",
       "notes": null
@@ -4701,7 +4701,7 @@
       "unit": "per_1m_input_cache_read_tokens",
       "price_usd": 0.16,
       "source_url": "https://www.atlascloud.ai/models",
-      "captured_at": "2026-06-07T04:53:08.859388+00:00",
+      "captured_at": "2026-06-07T06:46:33.624450+00:00",
       "confidence": "high",
       "method": "json-api",
       "notes": null
@@ -4717,7 +4717,7 @@
       "unit": "per_1m_input_tokens",
       "price_usd": 0.16119999999999998,
       "source_url": "https://www.atlascloud.ai/models",
-      "captured_at": "2026-06-07T04:53:08.859395+00:00",
+      "captured_at": "2026-06-07T06:46:33.624456+00:00",
       "confidence": "high",
       "method": "json-api",
       "notes": null
@@ -4733,7 +4733,7 @@
       "unit": "per_1m_output_tokens",
       "price_usd": 0.9652499999999999,
       "source_url": "https://www.atlascloud.ai/models",
-      "captured_at": "2026-06-07T04:53:08.859400+00:00",
+      "captured_at": "2026-06-07T06:46:33.624461+00:00",
       "confidence": "high",
       "method": "json-api",
       "notes": null
@@ -4749,7 +4749,7 @@
       "unit": "per_1m_input_cache_read_tokens",
       "price_usd": 0.16119999999999998,
       "source_url": "https://www.atlascloud.ai/models",
-      "captured_at": "2026-06-07T04:53:08.859405+00:00",
+      "captured_at": "2026-06-07T06:46:33.624465+00:00",
       "confidence": "high",
       "method": "json-api",
       "notes": null
@@ -4765,7 +4765,7 @@
       "unit": "per_1m_input_tokens",
       "price_usd": 1.68,
       "source_url": "https://www.atlascloud.ai/models",
-      "captured_at": "2026-06-07T04:53:08.859518+00:00",
+      "captured_at": "2026-06-07T06:46:33.624473+00:00",
       "confidence": "high",
       "method": "json-api",
       "notes": null
@@ -4781,7 +4781,7 @@
       "unit": "per_1m_output_tokens",
       "price_usd": 3.38,
       "source_url": "https://www.atlascloud.ai/models",
-      "captured_at": "2026-06-07T04:53:08.859540+00:00",
+      "captured_at": "2026-06-07T06:46:33.624478+00:00",
       "confidence": "high",
       "method": "json-api",
       "notes": null
@@ -4797,7 +4797,7 @@
       "unit": "per_1m_input_cache_read_tokens",
       "price_usd": 0.13,
       "source_url": "https://www.atlascloud.ai/models",
-      "captured_at": "2026-06-07T04:53:08.859547+00:00",
+      "captured_at": "2026-06-07T06:46:33.624483+00:00",
       "confidence": "high",
       "method": "json-api",
       "notes": null
@@ -4813,7 +4813,7 @@
       "unit": "per_1m_input_tokens",
       "price_usd": 5.0,
       "source_url": "https://www.atlascloud.ai/models",
-      "captured_at": "2026-06-07T04:53:08.859559+00:00",
+      "captured_at": "2026-06-07T06:46:33.624489+00:00",
       "confidence": "high",
       "method": "json-api",
       "notes": null
@@ -4829,7 +4829,7 @@
       "unit": "per_1m_input_cache_read_tokens",
       "price_usd": 1.25,
       "source_url": "https://www.atlascloud.ai/models",
-      "captured_at": "2026-06-07T04:53:08.859564+00:00",
+      "captured_at": "2026-06-07T06:46:33.624494+00:00",
       "confidence": "high",
       "method": "json-api",
       "notes": null
@@ -4845,7 +4845,7 @@
       "unit": "per_1m_input_tokens",
       "price_usd": 1.5,
       "source_url": "https://www.atlascloud.ai/models",
-      "captured_at": "2026-06-07T04:53:08.859572+00:00",
+      "captured_at": "2026-06-07T06:46:33.624500+00:00",
       "confidence": "high",
       "method": "json-api",
       "notes": null
@@ -4861,7 +4861,7 @@
       "unit": "per_1m_output_tokens",
       "price_usd": 9.0,
       "source_url": "https://www.atlascloud.ai/models",
-      "captured_at": "2026-06-07T04:53:08.859577+00:00",
+      "captured_at": "2026-06-07T06:46:33.624505+00:00",
       "confidence": "high",
       "method": "json-api",
       "notes": null
@@ -4877,7 +4877,7 @@
       "unit": "per_1m_input_cache_read_tokens",
       "price_usd": 0.15,
       "source_url": "https://www.atlascloud.ai/models",
-      "captured_at": "2026-06-07T04:53:08.859581+00:00",
+      "captured_at": "2026-06-07T06:46:33.624509+00:00",
       "confidence": "high",
       "method": "json-api",
       "notes": null
@@ -4893,7 +4893,7 @@
       "unit": "per_1m_input_tokens",
       "price_usd": 0.25,
       "source_url": "https://www.atlascloud.ai/models",
-      "captured_at": "2026-06-07T04:53:08.859589+00:00",
+      "captured_at": "2026-06-07T06:46:33.624515+00:00",
       "confidence": "high",
       "method": "json-api",
       "notes": null
@@ -4909,7 +4909,7 @@
       "unit": "per_1m_output_tokens",
       "price_usd": 1.5,
       "source_url": "https://www.atlascloud.ai/models",
-      "captured_at": "2026-06-07T04:53:08.859593+00:00",
+      "captured_at": "2026-06-07T06:46:33.624520+00:00",
       "confidence": "high",
       "method": "json-api",
       "notes": null
@@ -4925,7 +4925,7 @@
       "unit": "per_1m_input_cache_read_tokens",
       "price_usd": 0.024999999999999998,
       "source_url": "https://www.atlascloud.ai/models",
-      "captured_at": "2026-06-07T04:53:08.859598+00:00",
+      "captured_at": "2026-06-07T06:46:33.624525+00:00",
       "confidence": "high",
       "method": "json-api",
       "notes": null
@@ -4941,7 +4941,7 @@
       "unit": "per_1m_input_tokens",
       "price_usd": 5.0,
       "source_url": "https://www.atlascloud.ai/models",
-      "captured_at": "2026-06-07T04:53:08.859604+00:00",
+      "captured_at": "2026-06-07T06:46:33.624531+00:00",
       "confidence": "high",
       "method": "json-api",
       "notes": null
@@ -4957,7 +4957,7 @@
       "unit": "per_1m_output_tokens",
       "price_usd": 25.0,
       "source_url": "https://www.atlascloud.ai/models",
-      "captured_at": "2026-06-07T04:53:08.859610+00:00",
+      "captured_at": "2026-06-07T06:46:33.624538+00:00",
       "confidence": "high",
       "method": "json-api",
       "notes": null
@@ -4973,7 +4973,7 @@
       "unit": "per_1m_input_cache_read_tokens",
       "price_usd": 0.5,
       "source_url": "https://www.atlascloud.ai/models",
-      "captured_at": "2026-06-07T04:53:08.859614+00:00",
+      "captured_at": "2026-06-07T06:46:33.624543+00:00",
       "confidence": "high",
       "method": "json-api",
       "notes": null
@@ -4989,7 +4989,7 @@
       "unit": "per_1m_input_tokens",
       "price_usd": 3.0,
       "source_url": "https://www.atlascloud.ai/models",
-      "captured_at": "2026-06-07T04:53:08.859621+00:00",
+      "captured_at": "2026-06-07T06:46:33.624551+00:00",
       "confidence": "high",
       "method": "json-api",
       "notes": null
@@ -5005,7 +5005,7 @@
       "unit": "per_1m_output_tokens",
       "price_usd": 15.0,
       "source_url": "https://www.atlascloud.ai/models",
-      "captured_at": "2026-06-07T04:53:08.859626+00:00",
+      "captured_at": "2026-06-07T06:46:33.624556+00:00",
       "confidence": "high",
       "method": "json-api",
       "notes": null
@@ -5021,7 +5021,7 @@
       "unit": "per_1m_input_cache_read_tokens",
       "price_usd": 0.3,
       "source_url": "https://www.atlascloud.ai/models",
-      "captured_at": "2026-06-07T04:53:08.859631+00:00",
+      "captured_at": "2026-06-07T06:46:33.624561+00:00",
       "confidence": "high",
       "method": "json-api",
       "notes": null
@@ -5037,7 +5037,7 @@
       "unit": "per_1m_input_tokens",
       "price_usd": 1.0,
       "source_url": "https://www.atlascloud.ai/models",
-      "captured_at": "2026-06-07T04:53:08.859637+00:00",
+      "captured_at": "2026-06-07T06:46:33.624566+00:00",
       "confidence": "high",
       "method": "json-api",
       "notes": null
@@ -5053,7 +5053,7 @@
       "unit": "per_1m_output_tokens",
       "price_usd": 5.0,
       "source_url": "https://www.atlascloud.ai/models",
-      "captured_at": "2026-06-07T04:53:08.859642+00:00",
+      "captured_at": "2026-06-07T06:46:33.624571+00:00",
       "confidence": "high",
       "method": "json-api",
       "notes": null
@@ -5069,7 +5069,7 @@
       "unit": "per_1m_input_cache_read_tokens",
       "price_usd": 0.09999999999999999,
       "source_url": "https://www.atlascloud.ai/models",
-      "captured_at": "2026-06-07T04:53:08.859647+00:00",
+      "captured_at": "2026-06-07T06:46:33.624576+00:00",
       "confidence": "high",
       "method": "json-api",
       "notes": null
@@ -5085,7 +5085,7 @@
       "unit": "per_1m_input_tokens",
       "price_usd": 3.0,
       "source_url": "https://www.atlascloud.ai/models",
-      "captured_at": "2026-06-07T04:53:08.859653+00:00",
+      "captured_at": "2026-06-07T06:46:33.624582+00:00",
       "confidence": "high",
       "method": "json-api",
       "notes": null
@@ -5101,7 +5101,7 @@
       "unit": "per_1m_output_tokens",
       "price_usd": 15.0,
       "source_url": "https://www.atlascloud.ai/models",
-      "captured_at": "2026-06-07T04:53:08.859658+00:00",
+      "captured_at": "2026-06-07T06:46:33.624586+00:00",
       "confidence": "high",
       "method": "json-api",
       "notes": null
@@ -5117,7 +5117,7 @@
       "unit": "per_1m_input_cache_read_tokens",
       "price_usd": 0.3,
       "source_url": "https://www.atlascloud.ai/models",
-      "captured_at": "2026-06-07T04:53:08.859663+00:00",
+      "captured_at": "2026-06-07T06:46:33.624593+00:00",
       "confidence": "high",
       "method": "json-api",
       "notes": null
@@ -5133,7 +5133,7 @@
       "unit": "per_1m_input_tokens",
       "price_usd": 15.0,
       "source_url": "https://www.atlascloud.ai/models",
-      "captured_at": "2026-06-07T04:53:08.859673+00:00",
+      "captured_at": "2026-06-07T06:46:33.624599+00:00",
       "confidence": "high",
       "method": "json-api",
       "notes": null
@@ -5149,7 +5149,7 @@
       "unit": "per_1m_output_tokens",
       "price_usd": 75.0,
       "source_url": "https://www.atlascloud.ai/models",
-      "captured_at": "2026-06-07T04:53:08.859678+00:00",
+      "captured_at": "2026-06-07T06:46:33.624603+00:00",
       "confidence": "high",
       "method": "json-api",
       "notes": null
@@ -5165,7 +5165,7 @@
       "unit": "per_1m_input_cache_read_tokens",
       "price_usd": 1.5,
       "source_url": "https://www.atlascloud.ai/models",
-      "captured_at": "2026-06-07T04:53:08.859683+00:00",
+      "captured_at": "2026-06-07T06:46:33.624608+00:00",
       "confidence": "high",
       "method": "json-api",
       "notes": null
@@ -5181,7 +5181,7 @@
       "unit": "per_1m_input_tokens",
       "price_usd": 15.0,
       "source_url": "https://www.atlascloud.ai/models",
-      "captured_at": "2026-06-07T04:53:08.859689+00:00",
+      "captured_at": "2026-06-07T06:46:33.624614+00:00",
       "confidence": "high",
       "method": "json-api",
       "notes": null
@@ -5197,7 +5197,7 @@
       "unit": "per_1m_output_tokens",
       "price_usd": 75.0,
       "source_url": "https://www.atlascloud.ai/models",
-      "captured_at": "2026-06-07T04:53:08.859694+00:00",
+      "captured_at": "2026-06-07T06:46:33.624619+00:00",
       "confidence": "high",
       "method": "json-api",
       "notes": null
@@ -5213,7 +5213,7 @@
       "unit": "per_1m_input_cache_read_tokens",
       "price_usd": 1.5,
       "source_url": "https://www.atlascloud.ai/models",
-      "captured_at": "2026-06-07T04:53:08.859704+00:00",
+      "captured_at": "2026-06-07T06:46:33.624623+00:00",
       "confidence": "high",
       "method": "json-api",
       "notes": null
@@ -5229,7 +5229,7 @@
       "unit": "per_1m_input_tokens",
       "price_usd": 5.0,
       "source_url": "https://www.atlascloud.ai/models",
-      "captured_at": "2026-06-07T04:53:08.859716+00:00",
+      "captured_at": "2026-06-07T06:46:33.624629+00:00",
       "confidence": "high",
       "method": "json-api",
       "notes": null
@@ -5245,7 +5245,7 @@
       "unit": "per_1m_output_tokens",
       "price_usd": 25.0,
       "source_url": "https://www.atlascloud.ai/models",
-      "captured_at": "2026-06-07T04:53:08.859721+00:00",
+      "captured_at": "2026-06-07T06:46:33.624634+00:00",
       "confidence": "high",
       "method": "json-api",
       "notes": null
@@ -5261,7 +5261,7 @@
       "unit": "per_1m_input_cache_read_tokens",
       "price_usd": 0.5,
       "source_url": "https://www.atlascloud.ai/models",
-      "captured_at": "2026-06-07T04:53:08.859726+00:00",
+      "captured_at": "2026-06-07T06:46:33.624639+00:00",
       "confidence": "high",
       "method": "json-api",
       "notes": null
@@ -5277,7 +5277,7 @@
       "unit": "per_1m_input_tokens",
       "price_usd": 5.0,
       "source_url": "https://www.atlascloud.ai/models",
-      "captured_at": "2026-06-07T04:53:08.859732+00:00",
+      "captured_at": "2026-06-07T06:46:33.624644+00:00",
       "confidence": "high",
       "method": "json-api",
       "notes": null
@@ -5293,7 +5293,7 @@
       "unit": "per_1m_output_tokens",
       "price_usd": 25.0,
       "source_url": "https://www.atlascloud.ai/models",
-      "captured_at": "2026-06-07T04:53:08.859737+00:00",
+      "captured_at": "2026-06-07T06:46:33.624649+00:00",
       "confidence": "high",
       "method": "json-api",
       "notes": null
@@ -5309,7 +5309,7 @@
       "unit": "per_1m_input_cache_read_tokens",
       "price_usd": 0.5,
       "source_url": "https://www.atlascloud.ai/models",
-      "captured_at": "2026-06-07T04:53:08.859741+00:00",
+      "captured_at": "2026-06-07T06:46:33.624654+00:00",
       "confidence": "high",
       "method": "json-api",
       "notes": null
@@ -5325,7 +5325,7 @@
       "unit": "per_1m_input_tokens",
       "price_usd": 3.0,
       "source_url": "https://www.atlascloud.ai/models",
-      "captured_at": "2026-06-07T04:53:08.859747+00:00",
+      "captured_at": "2026-06-07T06:46:33.624660+00:00",
       "confidence": "high",
       "method": "json-api",
       "notes": null
@@ -5341,7 +5341,7 @@
       "unit": "per_1m_output_tokens",
       "price_usd": 15.0,
       "source_url": "https://www.atlascloud.ai/models",
-      "captured_at": "2026-06-07T04:53:08.859752+00:00",
+      "captured_at": "2026-06-07T06:46:33.624664+00:00",
       "confidence": "high",
       "method": "json-api",
       "notes": null
@@ -5357,7 +5357,7 @@
       "unit": "per_1m_input_cache_read_tokens",
       "price_usd": 0.3,
       "source_url": "https://www.atlascloud.ai/models",
-      "captured_at": "2026-06-07T04:53:08.859756+00:00",
+      "captured_at": "2026-06-07T06:46:33.624669+00:00",
       "confidence": "high",
       "method": "json-api",
       "notes": null
@@ -5373,7 +5373,7 @@
       "unit": "per_1m_input_tokens",
       "price_usd": 5.0,
       "source_url": "https://www.atlascloud.ai/models",
-      "captured_at": "2026-06-07T04:53:08.859763+00:00",
+      "captured_at": "2026-06-07T06:46:33.624675+00:00",
       "confidence": "high",
       "method": "json-api",
       "notes": null
@@ -5389,7 +5389,7 @@
       "unit": "per_1m_output_tokens",
       "price_usd": 25.0,
       "source_url": "https://www.atlascloud.ai/models",
-      "captured_at": "2026-06-07T04:53:08.859767+00:00",
+      "captured_at": "2026-06-07T06:46:33.624682+00:00",
       "confidence": "high",
       "method": "json-api",
       "notes": null
@@ -5405,7 +5405,7 @@
       "unit": "per_1m_input_cache_read_tokens",
       "price_usd": 0.5,
       "source_url": "https://www.atlascloud.ai/models",
-      "captured_at": "2026-06-07T04:53:08.859772+00:00",
+      "captured_at": "2026-06-07T06:46:33.624686+00:00",
       "confidence": "high",
       "method": "json-api",
       "notes": null
@@ -5421,7 +5421,7 @@
       "unit": "per_1m_input_tokens",
       "price_usd": 5.0,
       "source_url": "https://www.atlascloud.ai/models",
-      "captured_at": "2026-06-07T04:53:08.859778+00:00",
+      "captured_at": "2026-06-07T06:46:33.624692+00:00",
       "confidence": "high",
       "method": "json-api",
       "notes": null
@@ -5437,7 +5437,7 @@
       "unit": "per_1m_output_tokens",
       "price_usd": 25.0,
       "source_url": "https://www.atlascloud.ai/models",
-      "captured_at": "2026-06-07T04:53:08.859783+00:00",
+      "captured_at": "2026-06-07T06:46:33.624699+00:00",
       "confidence": "high",
       "method": "json-api",
       "notes": null
@@ -5453,7 +5453,7 @@
       "unit": "per_1m_input_cache_read_tokens",
       "price_usd": 0.5,
       "source_url": "https://www.atlascloud.ai/models",
-      "captured_at": "2026-06-07T04:53:08.859787+00:00",
+      "captured_at": "2026-06-07T06:46:33.624703+00:00",
       "confidence": "high",
       "method": "json-api",
       "notes": null
@@ -5469,7 +5469,7 @@
       "unit": "per_1m_input_tokens",
       "price_usd": 1.25,
       "source_url": "https://www.atlascloud.ai/models",
-      "captured_at": "2026-06-07T04:53:08.859794+00:00",
+      "captured_at": "2026-06-07T06:46:33.624710+00:00",
       "confidence": "high",
       "method": "json-api",
       "notes": null
@@ -5485,7 +5485,7 @@
       "unit": "per_1m_output_tokens",
       "price_usd": 2.5,
       "source_url": "https://www.atlascloud.ai/models",
-      "captured_at": "2026-06-07T04:53:08.859798+00:00",
+      "captured_at": "2026-06-07T06:46:33.624715+00:00",
       "confidence": "high",
       "method": "json-api",
       "notes": null
@@ -5501,7 +5501,7 @@
       "unit": "per_1m_input_cache_read_tokens",
       "price_usd": 0.19999999999999998,
       "source_url": "https://www.atlascloud.ai/models",
-      "captured_at": "2026-06-07T04:53:08.859803+00:00",
+      "captured_at": "2026-06-07T06:46:33.624719+00:00",
       "confidence": "high",
       "method": "json-api",
       "notes": null
@@ -5517,7 +5517,7 @@
       "unit": "per_1m_input_tokens",
       "price_usd": 5.0,
       "source_url": "https://www.atlascloud.ai/models",
-      "captured_at": "2026-06-07T04:53:08.859809+00:00",
+      "captured_at": "2026-06-07T06:46:33.624725+00:00",
       "confidence": "high",
       "method": "json-api",
       "notes": null
@@ -5533,7 +5533,7 @@
       "unit": "per_1m_output_tokens",
       "price_usd": 30.0,
       "source_url": "https://www.atlascloud.ai/models",
-      "captured_at": "2026-06-07T04:53:08.859813+00:00",
+      "captured_at": "2026-06-07T06:46:33.624730+00:00",
       "confidence": "high",
       "method": "json-api",
       "notes": null
@@ -5549,7 +5549,7 @@
       "unit": "per_1m_input_cache_read_tokens",
       "price_usd": 0.5,
       "source_url": "https://www.atlascloud.ai/models",
-      "captured_at": "2026-06-07T04:53:08.859818+00:00",
+      "captured_at": "2026-06-07T06:46:33.624734+00:00",
       "confidence": "high",
       "method": "json-api",
       "notes": null
@@ -5565,7 +5565,7 @@
       "unit": "per_1m_input_tokens",
       "price_usd": 0.3,
       "source_url": "https://www.atlascloud.ai/models",
-      "captured_at": "2026-06-07T04:53:08.859824+00:00",
+      "captured_at": "2026-06-07T06:46:33.624741+00:00",
       "confidence": "high",
       "method": "json-api",
       "notes": null
@@ -5581,7 +5581,7 @@
       "unit": "per_1m_output_tokens",
       "price_usd": 1.2,
       "source_url": "https://www.atlascloud.ai/models",
-      "captured_at": "2026-06-07T04:53:08.859828+00:00",
+      "captured_at": "2026-06-07T06:46:33.624746+00:00",
       "confidence": "high",
       "method": "json-api",
       "notes": null
@@ -5597,7 +5597,7 @@
       "unit": "per_1m_input_cache_read_tokens",
       "price_usd": 0.06,
       "source_url": "https://www.atlascloud.ai/models",
-      "captured_at": "2026-06-07T04:53:08.859833+00:00",
+      "captured_at": "2026-06-07T06:46:33.624752+00:00",
       "confidence": "high",
       "method": "json-api",
       "notes": null
