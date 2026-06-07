@@ -51,9 +51,31 @@ A maintainer will check:
 ## Maintenance cadence
 
 - Monthly review pass (`last_reviewed` updated in `providers.yaml`).
+- **Weekly automated price refresh** opens a PR labeled `price-refresh`
+  via [`.github/workflows/price-refresh.yml`](.github/workflows/price-refresh.yml)
+  on Sundays 02:00 UTC. Maintainer reviews the diff and merges.
 - Issues triaged within ~1 week.
 - Anyone can help: a PR that just verifies/refreshes existing entries is
   valuable and welcome.
+
+## Adding a price fetcher
+
+If a provider exposes prices (JSON API or scrapeable HTML), add a fetcher:
+
+1. Add a `pricing:` block to the provider's entry in `data/providers.yaml`
+   (see [`schema.md`](data/schema.md)).
+2. Create `fetchers/<fetcher_id>.py` exporting `PROVIDER_ID`, `PROVIDER_NAME`,
+   and `fetch() -> FetchResult`. Use `fetchers._common` types — every
+   `PriceRecord` must carry `source_url`, `captured_at`, `method`.
+3. Register the fetcher ID in `fetchers/__init__.REGISTRY`.
+4. Add new model aliases to `data/canonical-models.yaml` if you want the model
+   to appear in the README's tier-ladder table.
+5. Run locally: `python -m scripts.scrape <fetcher_id>` then
+   `python -m scripts.build_prices` and `python -m scripts.validate`.
+
+Prefer a public JSON endpoint (most new-api forks expose `/api/pricing`;
+OpenAI-compatible relays expose `/v1/models` with pricing). Fall back to
+DOM scraping with `selectolax`, then Playwright as last resort.
 
 ## Conduct
 

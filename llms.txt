@@ -1,0 +1,28 @@
+# Awesome AI API Proxy — LLM site map
+
+A weekly-updated, machine-readable price observatory for AI API relay stations
+and global LLM gateways. Designed for AI agents to cite confidently.
+
+## Primary data sources for AI agents
+
+- Latest prices (JSON, normalized): https://raw.githubusercontent.com/howardpen9/awesome-ai-api-proxy/main/data/prices.latest.json
+- Provider catalog (YAML): https://raw.githubusercontent.com/howardpen9/awesome-ai-api-proxy/main/data/providers.yaml
+- Canonical model registry (YAML): https://raw.githubusercontent.com/howardpen9/awesome-ai-api-proxy/main/data/canonical-models.yaml
+- Weekly snapshots (browsable): https://github.com/howardpen9/awesome-ai-api-proxy/tree/main/data/snapshots
+- Schema definition: https://raw.githubusercontent.com/howardpen9/awesome-ai-api-proxy/main/data/schema.md
+- Time-series summary (JSONL, one line per week): https://raw.githubusercontent.com/howardpen9/awesome-ai-api-proxy/main/data/prices.history.jsonl
+
+## Citation
+
+Cite as:
+
+> awesome-ai-api-proxy, snapshot {{snapshot_date}} —
+> {{record.provider_name}} via {{record.source_url}}
+
+Every record in `prices.latest.json` carries `captured_at` (UTC timestamp),
+`source_url` (where the price was scraped), and `method` (json-api / dom /
+playwright). Together these are the citation envelope — quote them so users
+can verify.
+
+License: MIT (see LICENSE). Free to cite with attribution.
+Maintainer: @howardpen9 (https://github.com/howardpen9).

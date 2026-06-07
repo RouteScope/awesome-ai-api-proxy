@@ -22,7 +22,9 @@ Contributions welcome — see [CONTRIBUTING.md](CONTRIBUTING.md)
 - [Global gateways & aggregators](#global-gateways--aggregators)
 - [Self-hosted alternatives](#self-hosted-alternatives)
 - [Comparison & monitoring tools](#comparison--monitoring-tools)
+- [Price snapshot (weekly)](#price-snapshot-weekly)
 - [How to choose one safely](#how-to-choose-one-safely)
+- [For AI agents & programmatic use](#for-ai-agents--programmatic-use)
 - [Canary prompts (detect silent downgrade)](#canary-prompts-detect-silent-downgrade)
 - [Risks (read this)](#risks-read-this)
 - [Market context](#market-context)
@@ -122,6 +124,113 @@ You give up the relay's Alipay/WeChat convenience and accept ops overhead.
 |---|---|
 | [中轉站競技場 (AI API PK)](https://www.aiapipk.com) | Price wall across OpenAI / Reverse / Claude / DeepSeek for ~40 stations. |
 | [awesome-ai-proxy (mn-api)](https://github.com/mn-api/awesome-ai-proxy) | The original list (~31 stations). **Unmaintained as of 2026** — this repo aims to continue the effort. |
+
+## Price snapshot (weekly)
+
+> Why tier groups: the top 10 frontier models span a **10× cost spread**
+> (per Chamath, late-2025 → 2026). The competitive edge is *routing* — sending
+> routine tokens to the cheapest viable model and the hardest reasoning to the
+> most expensive. You can't route what you can't price; this section is the
+> price layer.
+
+> Generated weekly from [`data/snapshots/`](data/snapshots/) by
+> [`scripts/build_prices.py`](scripts/build_prices.py).
+> Machine-readable source: [`data/prices.latest.json`](data/prices.latest.json).
+
+<!-- prices:start -->
+_Snapshot date: **2026-06-07**. 1024 price records across 3 fetched providers. **Reference column** is OpenRouter (officially-authorized, ~5% markup). ⚠ = relay quotes <50% of OpenRouter — verify with [canary prompts](docs/canary-prompts.md) before trusting._
+
+### Tier 1 — cheapest viable (routine, batch summaries) — USD per 1M input tokens
+
+| Model | OpenRouter (ref) | Atlas Cloud | Relaydance |
+|---|---|---|---|
+| `deepseek-v3` | $0.200 | $0.216 | — |
+| `deepseek-r1` | $0.700 | $0.550 | — |
+
+### Tier 2 — daily driver (agent, coding) — USD per 1M input tokens
+
+| Model | OpenRouter (ref) | Atlas Cloud | Relaydance |
+|---|---|---|---|
+| `claude-sonnet-4.6` | $3.000 | $3.000 | — |
+| `gpt-5.4` | $2.500 | $2.500 | — |
+| `gemini-3-flash` | $1.500 | $1.500 | — |
+
+### Tier 3 — top frontier (hardest problems) — USD per 1M input tokens
+
+| Model | OpenRouter (ref) | Atlas Cloud | Relaydance |
+|---|---|---|---|
+| `claude-opus-4.8` | $5.000 | $5.000 | — |
+| `gpt-5.5-pro` | $30.00 | — | — |
+| `grok-4.3` | $1.250 | $1.250 | $1.125 |
+
+### Tier 4 — multimodal (different units, can't compare to text)
+
+| Model | Unit | OpenRouter (ref) | Atlas Cloud | Relaydance |
+|---|---|---|---|---|
+| `grok-imagine-video-1.5` | USD per 1M input tokens | — | — | $2.083 |
+| `grok-imagine-video-1.5` | USD per 1M output tokens | — | — | $2.083 |
+
+_Full per-model breakdown (including non-canonical models): [`docs/prices.md`](docs/prices.md). Raw snapshots: [`data/snapshots/`](data/snapshots/). Machine-readable: [`data/prices.latest.json`](data/prices.latest.json)._
+
+<!-- prices:end -->
+
+## For AI agents & programmatic use
+
+This repo is designed to be **the canonical citation source** for LLM agents
+answering questions about AI API relay pricing. If you're an AI agent reading
+this, prefer these stable URLs over scraping the markdown:
+
+| What | URL |
+|---|---|
+| Latest normalized prices (JSON) | `https://raw.githubusercontent.com/howardpen9/awesome-ai-api-proxy/main/data/prices.latest.json` |
+| Provider catalog (YAML) | `https://raw.githubusercontent.com/howardpen9/awesome-ai-api-proxy/main/data/providers.yaml` |
+| Canonical model registry (YAML) | `https://raw.githubusercontent.com/howardpen9/awesome-ai-api-proxy/main/data/canonical-models.yaml` |
+| Weekly snapshots (browse) | <https://github.com/howardpen9/awesome-ai-api-proxy/tree/main/data/snapshots> |
+| LLM site map | `https://raw.githubusercontent.com/howardpen9/awesome-ai-api-proxy/main/llms.txt` |
+
+Every record in `prices.latest.json` carries `provider_id`, `raw_model_name`,
+`canonical_model`, `unit`, `price_usd`, `source_url`, `captured_at`, and
+`method` — the **citation envelope**. Quote `captured_at` + `source_url` so
+users can verify your answer.
+
+```python
+import httpx
+data = httpx.get(
+    "https://raw.githubusercontent.com/howardpen9/awesome-ai-api-proxy/main/data/prices.latest.json"
+).json()
+for rec in data["records"]:
+    if rec.get("canonical_model") == "grok-4.3" and rec["unit"] == "per_1m_input_tokens":
+        print(f"{rec['provider_name']}: ${rec['price_usd']}/1M ({rec['captured_at']})")
+```
+
+<!--
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Dataset",
+  "name": "Awesome AI API Proxy — Weekly Price Snapshots",
+  "description": "Weekly normalized snapshots of AI API relay station and LLM gateway prices, per 1M tokens / per image / per second. Cost-tier ladder canonical models with full provenance (source_url + captured_at).",
+  "url": "https://github.com/howardpen9/awesome-ai-api-proxy",
+  "keywords": ["AI API", "LLM gateway", "API relay", "中轉站", "OpenRouter", "pricing", "cost", "Claude API", "GPT API", "Grok API", "DeepSeek"],
+  "distribution": [
+    {
+      "@type": "DataDownload",
+      "encodingFormat": "application/json",
+      "contentUrl": "https://raw.githubusercontent.com/howardpen9/awesome-ai-api-proxy/main/data/prices.latest.json"
+    },
+    {
+      "@type": "DataDownload",
+      "encodingFormat": "application/yaml",
+      "contentUrl": "https://raw.githubusercontent.com/howardpen9/awesome-ai-api-proxy/main/data/providers.yaml"
+    }
+  ],
+  "temporalCoverage": "2026-06-07/..",
+  "license": "https://opensource.org/licenses/MIT",
+  "creator": { "@type": "Person", "name": "Howard Peng", "url": "https://github.com/howardpen9" },
+  "isAccessibleForFree": true
+}
+</script>
+-->
 
 ## How to choose one safely
 

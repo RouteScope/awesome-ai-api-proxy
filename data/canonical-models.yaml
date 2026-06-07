@@ -1,0 +1,121 @@
+# Canonical model registry.
+#
+# The README's top-level price table compares ONLY these canonical models — picked
+# to span the cost-tier ladder so the reader sees the 10x spread at a glance,
+# not 300 lines of obscure variants.
+#
+# Each entry:
+#   canonical  - the slug used in the price table (stable, never renamed)
+#   family     - vendor family (used for grouping / icon lookup)
+#   tier       - 1 = cheapest viable, 2 = mid-frontier default, 3 = top frontier, 4 = multimodal
+#   task       - "text" | "text-to-image" | "text-to-video" | ...
+#   aliases    - raw model names from various providers that map to this canonical
+#                Add new aliases here whenever a new fetcher surfaces a name we haven't seen.
+#
+# We don't store static "official prices" — they go stale fast. OpenRouter's
+# observed price (an officially-authorized aggregator, ~5% markup) is used as the
+# reference baseline at build time. The ⚠ marker triggers when a relay quotes
+# <50% of OpenRouter — a classic signal of reverse / mixed channel.
+#
+# Models NOT in this list still appear in data/snapshots/ and docs/prices.md,
+# but won't show in the README headline table.
+
+schema_version: 1
+last_reviewed: "2026-06-07"
+
+canonical_models:
+  # ---------- Tier 1: cheapest viable (routine, batch summaries) ----------
+  - canonical: deepseek-v3
+    family: deepseek
+    tier: 1
+    task: text
+    aliases:
+      - deepseek-chat
+      - deepseek-v3
+      - deepseek/deepseek-v3
+      - deepseek/deepseek-v3-base
+      - deepseek-ai/DeepSeek-V3-0324
+      - deepseek-ai/deepseek-v3
+      - deepseek/deepseek-chat-v3
+
+  - canonical: deepseek-r1
+    family: deepseek
+    tier: 1
+    task: text
+    aliases:
+      - deepseek-r1
+      - deepseek-reasoner
+      - deepseek-ai/deepseek-r1
+      - deepseek-ai/deepseek-r1-0528
+      - deepseek/deepseek-r1
+
+  # ---------- Tier 2: main-line daily driver (agent, coding) ----------
+  - canonical: claude-sonnet-4.6
+    family: claude
+    tier: 2
+    task: text
+    aliases:
+      - claude-sonnet-4.6
+      - claude-sonnet-4-6
+      - claude-4.6-sonnet
+      - anthropic/claude-sonnet-4.6
+      - anthropic/claude-sonnet-4.6-coding
+
+  - canonical: gpt-5.4
+    family: openai
+    tier: 2
+    task: text
+    aliases:
+      - gpt-5.4
+      - openai/gpt-5.4
+      - gpt-5.4-2026
+
+  - canonical: gemini-3-flash
+    family: gemini
+    tier: 2
+    task: text
+    aliases:
+      - gemini-3.5-flash
+      - gemini-3-flash
+      - google/gemini-3-flash
+      - google/gemini-3.5-flash
+
+  # ---------- Tier 3: top frontier (hardest problems) ----------
+  - canonical: claude-opus-4.8
+    family: claude
+    tier: 3
+    task: text
+    aliases:
+      - claude-opus-4.8
+      - anthropic/claude-opus-4.8
+      - claude-4.8-opus
+
+  - canonical: gpt-5.5-pro
+    family: openai
+    tier: 3
+    task: text
+    aliases:
+      - gpt-5.5-pro
+      - openai/gpt-5.5-pro
+
+  - canonical: grok-4.3
+    family: grok
+    tier: 3
+    task: text
+    aliases:
+      - grok-4.3
+      - grok-4-3
+      - xai/grok-4.3
+      - x-ai/grok-4.3
+
+  # ---------- Tier 4: multimodal (different units, can't compare to text) ----------
+  - canonical: grok-imagine-video-1.5
+    family: grok
+    tier: 4
+    task: text-to-video
+    unit: per_second
+    aliases:
+      - grok-imagine-video
+      - grok-imagine-video-1.5
+      - grok-imagine-video-1.5-preview
+      - xai/grok-imagine-video-1.5

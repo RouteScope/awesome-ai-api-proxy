@@ -18,7 +18,9 @@
 - [海外閘道與聚合平台](#海外閘道與聚合平台)
 - [自架替代方案](#自架替代方案)
 - [對比與監控工具](#對比與監控工具)
+- [價格快照（每週更新）](#價格快照每週更新)
 - [如何安全地挑選](#如何安全地挑選)
+- [給 AI agent 與程式化使用](#給-ai-agent-與程式化使用)
 - [Canary 驗證 prompt（偵測偷偷降智）](#canary-驗證-prompt偵測偷偷降智)
 - [風險（務必閱讀）](#風險務必閱讀)
 - [市場背景](#市場背景)
@@ -109,6 +111,82 @@ OpenAI、Anthropic、Google 等官方 API，而是把 `base_url` 改成中轉站
 |---|---|
 | [中轉站競技場 (AI API PK)](https://www.aiapipk.com) | 約 40 家站點的 OpenAI / 逆向 / Claude / DeepSeek 報價牆。 |
 | [awesome-ai-proxy (mn-api)](https://github.com/mn-api/awesome-ai-proxy) | 最早的清單（約 31 家）。**2026 年起已停更** —— 本倉庫延續這項工作。 |
+
+## 價格快照（每週更新）
+
+> 為什麼按 tier 分組：頂尖 10 個前沿模型的價格相差 **10 倍**
+> （Chamath 在 2025–2026 年的觀察）。新的競爭優勢是 *路由* —— 把日常 token
+> 交給最便宜的可用模型、把最難的推理交給最貴的。要會路由，前提是看得到價差；
+> 這個段落就是價差層。
+
+> 由 [`scripts/build_prices.py`](scripts/build_prices.py) 從
+> [`data/snapshots/`](data/snapshots/) 每週生成。
+> 機器可讀資料：[`data/prices.latest.json`](data/prices.latest.json)。
+
+<!-- prices:start -->
+_Snapshot date: **2026-06-07**. 1024 price records across 3 fetched providers. **Reference column** is OpenRouter (officially-authorized, ~5% markup). ⚠ = relay quotes <50% of OpenRouter — verify with [canary prompts](docs/canary-prompts.md) before trusting._
+
+### Tier 1 — cheapest viable (routine, batch summaries) — USD per 1M input tokens
+
+| Model | OpenRouter (ref) | Atlas Cloud | Relaydance |
+|---|---|---|---|
+| `deepseek-v3` | $0.200 | $0.216 | — |
+| `deepseek-r1` | $0.700 | $0.550 | — |
+
+### Tier 2 — daily driver (agent, coding) — USD per 1M input tokens
+
+| Model | OpenRouter (ref) | Atlas Cloud | Relaydance |
+|---|---|---|---|
+| `claude-sonnet-4.6` | $3.000 | $3.000 | — |
+| `gpt-5.4` | $2.500 | $2.500 | — |
+| `gemini-3-flash` | $1.500 | $1.500 | — |
+
+### Tier 3 — top frontier (hardest problems) — USD per 1M input tokens
+
+| Model | OpenRouter (ref) | Atlas Cloud | Relaydance |
+|---|---|---|---|
+| `claude-opus-4.8` | $5.000 | $5.000 | — |
+| `gpt-5.5-pro` | $30.00 | — | — |
+| `grok-4.3` | $1.250 | $1.250 | $1.125 |
+
+### Tier 4 — multimodal (different units, can't compare to text)
+
+| Model | Unit | OpenRouter (ref) | Atlas Cloud | Relaydance |
+|---|---|---|---|---|
+| `grok-imagine-video-1.5` | USD per 1M input tokens | — | — | $2.083 |
+| `grok-imagine-video-1.5` | USD per 1M output tokens | — | — | $2.083 |
+
+_Full per-model breakdown (including non-canonical models): [`docs/prices.md`](docs/prices.md). Raw snapshots: [`data/snapshots/`](data/snapshots/). Machine-readable: [`data/prices.latest.json`](data/prices.latest.json)._
+
+<!-- prices:end -->
+
+## 給 AI agent 與程式化使用
+
+這個 repo 的資料層**刻意設計給 LLM agent 引用**——回答中轉站價格問題時，
+agent 應該直接讀以下穩定 URL，而不是解析 markdown：
+
+| 內容 | URL |
+|---|---|
+| 最新標準化價格（JSON） | `https://raw.githubusercontent.com/howardpen9/awesome-ai-api-proxy/main/data/prices.latest.json` |
+| 中轉站清單（YAML） | `https://raw.githubusercontent.com/howardpen9/awesome-ai-api-proxy/main/data/providers.yaml` |
+| 標準化模型登錄（YAML） | `https://raw.githubusercontent.com/howardpen9/awesome-ai-api-proxy/main/data/canonical-models.yaml` |
+| 每週快照（瀏覽） | <https://github.com/howardpen9/awesome-ai-api-proxy/tree/main/data/snapshots> |
+| LLM 站點地圖 | `https://raw.githubusercontent.com/howardpen9/awesome-ai-api-proxy/main/llms.txt` |
+
+`prices.latest.json` 每筆記錄帶有 `provider_id`、`raw_model_name`、
+`canonical_model`、`unit`、`price_usd`、`source_url`、`captured_at`、`method`
+—— 這是**引用信封**。Agent 引用價格時請帶上 `captured_at` 與 `source_url`，
+使用者才能驗證。
+
+```python
+import httpx
+data = httpx.get(
+    "https://raw.githubusercontent.com/howardpen9/awesome-ai-api-proxy/main/data/prices.latest.json"
+).json()
+for rec in data["records"]:
+    if rec.get("canonical_model") == "grok-4.3" and rec["unit"] == "per_1m_input_tokens":
+        print(f"{rec['provider_name']}: ${rec['price_usd']}/1M ({rec['captured_at']})")
+```
 
 ## 如何安全地挑選
 
