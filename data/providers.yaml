@@ -40,7 +40,10 @@ china_relays:
     entity_registered: unknown
     supports_stream: true
     supports_tools: unknown
-    notes: "Marketed on speed/stability; widely cited as a top-tier station."
+    notes:
+      en: "Marketed on speed/stability; widely cited as a top-tier station."
+      zh-TW: "主打高速穩定；社群常列為頭部站。"
+      zh-CN: "主打高速稳定；社区常列为头部站。"
 
   - name: 柏拉图 AI (bltcy)
     url: https://api.bltcy.ai
@@ -53,7 +56,10 @@ china_relays:
     entity_registered: unknown
     supports_stream: true
     supports_tools: unknown
-    notes: "Azure-backed channel; positions as lowest-price."
+    notes:
+      en: "Azure-backed channel; positions as lowest-price."
+      zh-TW: "Azure 通道；主打最低價。"
+      zh-CN: "Azure 通道；主打最低价。"
 
   - name: No.1-API
     url: https://api.rcouyi.com
@@ -66,7 +72,10 @@ china_relays:
     entity_registered: unknown
     supports_stream: true
     supports_tools: unknown
-    notes: "One-stop aggregation + relay platform."
+    notes:
+      en: "One-stop aggregation + relay platform."
+      zh-TW: "一站式聚合 + 中轉平台。"
+      zh-CN: "一站式聚合 + 中转平台。"
 
   - name: UiUiAPI
     url: https://uiuiapi.com
@@ -82,7 +91,10 @@ china_relays:
     entity_registered: unknown
     supports_stream: true
     supports_tools: true
-    notes: "Claims official channels + official multipliers; rare quantified discount."
+    notes:
+      en: "Claims official channels + official multipliers; rare quantified discount."
+      zh-TW: "宣稱官方渠道 + 官方倍率；約便宜 49%（宣稱），300+ 模型。"
+      zh-CN: "宣称官方渠道 + 官方倍率；约便宜 49%（宣称），300+ 模型。"
 
   - name: DMXAPI
     url: https://dmxapi.cn
@@ -95,7 +107,10 @@ china_relays:
     entity_registered: unknown
     supports_stream: unknown
     supports_tools: unknown
-    notes: "Listed in community sources; homepage not independently verified."
+    notes:
+      en: "Listed in community sources; homepage not independently verified."
+      zh-TW: "社群收錄；官網未獨立核實。"
+      zh-CN: "社区收录；官网未独立核实。"
 
   - name: MKEAI
     url: https://mkeai.com
@@ -108,7 +123,10 @@ china_relays:
     entity_registered: unknown
     supports_stream: unknown
     supports_tools: unknown
-    notes: "Community-forum + relay hybrid; pushes DeepSeek heavily."
+    notes:
+      en: "Community-forum + relay hybrid; pushes DeepSeek heavily."
+      zh-TW: "社群論壇 + 中轉混合；主推 DeepSeek。"
+      zh-CN: "社区论坛 + 中转混合；主推 DeepSeek。"
 
   - name: GPTGOD
     url: https://gptgod.online
@@ -121,7 +139,10 @@ china_relays:
     entity_registered: unknown
     supports_stream: unknown
     supports_tools: unknown
-    notes: "Reverse-engineered; among cheapest, stability not guaranteed."
+    notes:
+      en: "Reverse-engineered; among cheapest, stability not guaranteed."
+      zh-TW: "逆向；便宜，穩定性無保證。"
+      zh-CN: "逆向；便宜，稳定性无保证。"
 
   - name: CloseAI
     url: https://www.closeai-asia.com
@@ -134,7 +155,10 @@ china_relays:
     entity_registered: true
     supports_stream: true
     supports_tools: true
-    notes: "Issues enterprise invoices; self-describes as largest enterprise-grade relay in Asia."
+    notes:
+      en: "Issues enterprise invoices; self-describes as largest enterprise-grade relay in Asia."
+      zh-TW: "提供對公發票；自稱亞洲最大企業級中轉。"
+      zh-CN: "提供对公发票；自称亚洲最大企业级中转。"
 
 # ---------------------------------------------------------------------------
 # Comparison / monitoring tools (中轉站對比工具)
@@ -146,7 +170,10 @@ comparison_tools:
     status: active
     last_verified: "2026-05-26"
     verified_by: maintainer
-    notes: "Price wall across OpenAI / Reverse / Claude / DeepSeek for ~40 stations."
+    notes:
+      en: "Price wall across OpenAI / Reverse / Claude / DeepSeek for ~40 stations."
+      zh-TW: "約 40 家站點的 OpenAI / 逆向 / Claude / DeepSeek 報價牆。"
+      zh-CN: "约 40 家站点的 OpenAI / 逆向 / Claude / DeepSeek 报价墙。"
 
   - name: awesome-ai-proxy (mn-api, unmaintained)
     url: https://github.com/mn-api/awesome-ai-proxy
@@ -154,7 +181,10 @@ comparison_tools:
     status: inactive
     last_verified: "2026-05-26"
     verified_by: maintainer
-    notes: "Original list (~31 stations); no longer maintained as of 2026."
+    notes:
+      en: "Original list (~31 stations); no longer maintained as of 2026."
+      zh-TW: "最早的清單（約 31 家）。**2026 年起已停更** —— 本倉庫延續這項工作。"
+      zh-CN: "最早的清单（约 31 家）。**2026 年起已停更** —— 本仓库延续这一工作。"
 
 # ---------------------------------------------------------------------------
 # Global gateways / aggregators (海外對比方案)
@@ -173,7 +203,10 @@ comparison_tools:
     entity_registered: unknown
     supports_stream: true
     supports_tools: true
-    notes: "OpenAI-compatible relay targeting Chinese developers; domestic direct connect, ¥10 minimum top-up."
+    notes:
+      en: "Community-submitted; claims 50+ models incl. OpenAI/Anthropic/Google/DeepSeek/xAI."
+      zh-TW: "社群投稿；宣稱 50+ 模型，含 OpenAI/Anthropic/Google/DeepSeek/xAI。"
+      zh-CN: "社区投稿；宣称 50+ 模型，含 OpenAI/Anthropic/Google/DeepSeek/xAI。"
 global_gateways:
   - name: OpenRouter
     url: https://openrouter.ai
@@ -193,7 +226,10 @@ global_gateways:
       api_url: https://openrouter.ai/api/v1/models
       fetcher: openrouter
       pricing_currency: USD
-    notes: "Official-authorized routing, ~5% markup. ARR reportedly $5M (2025-05) to ~$50M (early 2026). Public JSON API at /api/v1/models with normalized per-token pricing."
+    notes:
+      en: "Official-authorized routing, ~5% markup. ARR reportedly $5M (2025-05) to ~$50M (early 2026). Public JSON API at /api/v1/models with normalized per-token pricing."
+      zh-TW: "官方授權路由，加價約 5%；400+ 模型、60+ 供應商。ARR 據報約 $5M（2025-05）→ 約 $50M（2026 初）。公開 `/api/v1/models` JSON。"
+      zh-CN: "官方授权路由，加价约 5%；400+ 模型、60+ 供应商。ARR 据报约 $5M（2025-05）→ 约 $50M（2026 初）。公开 `/api/v1/models` JSON。"
 
   - name: Atlas Cloud
     url: https://www.atlascloud.ai
@@ -212,7 +248,10 @@ global_gateways:
       api_url: https://api.atlascloud.ai/v1/models
       fetcher: atlascloud
       pricing_currency: USD
-    notes: "Multi-modal aggregator; image/video heavy (Grok Imagine, Kling, ByteDance, Vidu). Public OpenAI-compatible /v1/models endpoint exposes per-token pricing including cache-read."
+    notes:
+      en: "Multi-modal aggregator; image/video heavy (Grok Imagine, Kling, ByteDance, Vidu). Public OpenAI-compatible /v1/models endpoint exposes per-token pricing including cache-read."
+      zh-TW: "多模態聚合平台；影像/影片模型多（Grok Imagine、Kling、ByteDance、Vidu）。公開 OpenAI 相容 `/v1/models` 含 cache-read 計價。"
+      zh-CN: "多模态聚合平台；图像/视频模型多（Grok Imagine、Kling、ByteDance、Vidu）。公开 OpenAI 兼容 `/v1/models` 含 cache-read 计价。"
 
   - name: Relaydance
     url: https://relaydance.com
@@ -231,7 +270,10 @@ global_gateways:
       api_url: https://relaydance.com/api/pricing
       fetcher: relaydance
       pricing_currency: USD
-    notes: "新-API (Calcium-Ion fork) operator focused on xAI Grok + ByteDance Doubao. Public /api/pricing returns ratio-based pricing (model_ratio × $2 / 1M tokens)."
+    notes:
+      en: "新-API (Calcium-Ion fork) operator focused on xAI Grok + ByteDance Doubao. Public /api/pricing returns ratio-based pricing (model_ratio × $2 / 1M tokens)."
+      zh-TW: "基於 new-api 的中文介面海外站，主打 xAI Grok + 字節跳動 Doubao。`/api/pricing` 公開倍率計價（model_ratio × $2/1M tokens）。"
+      zh-CN: "基于 new-api 的中文界面海外站，主打 xAI Grok + 字节跳动 Doubao。`/api/pricing` 公开倍率计价（model_ratio × $2/1M tokens）。"
 
   - name: LiteLLM
     url: https://litellm.ai
@@ -244,7 +286,10 @@ global_gateways:
     entity_registered: true
     supports_stream: true
     supports_tools: true
-    notes: "Open-source gateway + enterprise tier. Self-hosted; not retail."
+    notes:
+      en: "Open-source gateway + enterprise tier. Self-hosted; not retail."
+      zh-TW: "開源閘道（100+ 供應商）+ 企業版。自架，自帶 Key。"
+      zh-CN: "开源网关（100+ 供应商）+ 企业版。自托管，自带 Key。"
 
   - name: Helicone
     url: https://helicone.ai
@@ -256,7 +301,10 @@ global_gateways:
     entity_registered: true
     supports_stream: true
     supports_tools: true
-    notes: "LLM observability gateway; logging/analytics focus."
+    notes:
+      en: "LLM observability gateway; logging/analytics focus."
+      zh-TW: "LLM 可觀測性閘道；日誌/成本分析。"
+      zh-CN: "LLM 可观测性网关；日志/成本分析。"
 
   - name: AIMLAPI
     url: https://aimlapi.com
@@ -270,7 +318,10 @@ global_gateways:
     entity_registered: true
     supports_stream: true
     supports_tools: unknown
-    notes: "Prepaid from $20; crypto support implies payment-friction workaround."
+    notes:
+      en: "Prepaid from $20; crypto support implies payment-friction workaround."
+      zh-TW: "400+ 模型，$20 起預付；支援加密貨幣暗示繞支付障礙。"
+      zh-CN: "400+ 模型，$20 起预付；支持加密货币暗示绕支付障碍。"
 
 # ---------------------------------------------------------------------------
 # Self-hosted alternatives (自架閘道，供參考對比 — 非「中轉站」)
@@ -285,7 +336,10 @@ self_hosted_alternatives:
     entity_registered: false
     supports_stream: true
     supports_tools: true
-    notes: "Popular Go-based self-hosted multi-vendor gateway; the de-facto OSS template behind many relay stations."
+    notes:
+      en: "Popular Go-based self-hosted multi-vendor gateway; the de-facto OSS template behind many relay stations."
+      zh-TW: "流行的 Go 多廠商閘道；多數中轉站的底層 OSS 模板。"
+      zh-CN: "流行的 Go 多厂商网关；多数中转站的底层 OSS 模板。"
 
   - name: new-api
     url: https://github.com/Calcium-Ion/new-api
@@ -296,4 +350,7 @@ self_hosted_alternatives:
     entity_registered: false
     supports_stream: true
     supports_tools: true
-    notes: "Fork of One-API with extra channel types; same self-hosted model — you supply keys."
+    notes:
+      en: "Fork of One-API with extra channel types; same self-hosted model — you supply keys."
+      zh-TW: "One-API 的 fork，多了幾種通道類型；同樣自架、自帶 key。"
+      zh-CN: "One-API 的 fork，多了几种通道类型；同样自托管、自带 key。"

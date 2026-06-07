@@ -40,6 +40,9 @@ jobs:
       - name: Build charts (SVG)
         run: python -m scripts.build_charts
 
+      - name: Build provider tables (READMEs from providers.yaml)
+        run: python -m scripts.build_provider_tables
+
       - name: Validate
         run: python -m scripts.validate
 

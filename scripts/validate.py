@@ -66,6 +66,11 @@ def validate_providers(problems: list[str]) -> None:
                             problems,
                             f"{section}: '{entry['name']}' pricing block missing '{required}'",
                         )
+            notes = entry.get("notes")
+            if notes is not None and not isinstance(notes, (str, dict)):
+                _problem(problems, f"{section}: '{entry['name']}' notes must be string or dict")
+            if isinstance(notes, dict) and "en" not in notes:
+                _problem(problems, f"{section}: '{entry['name']}' bilingual notes must include 'en' key")
 
 
 def validate_canonical(problems: list[str]) -> None:
