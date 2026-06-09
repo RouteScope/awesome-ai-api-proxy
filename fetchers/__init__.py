@@ -16,6 +16,9 @@ REGISTRY: dict[str, str] = {
     "openrouter": "fetchers.openrouter",
     "atlascloud": "fetchers.atlascloud",
     "relaydance": "fetchers.relaydance",
+    "uiuiapi": "fetchers.uiuiapi",
+    "bltcy": "fetchers.bltcy",
+    "unorouter": "fetchers.unorouter",
 }
 
 

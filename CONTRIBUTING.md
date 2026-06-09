@@ -68,7 +68,29 @@ A maintainer will check:
 
 ## Adding a price fetcher
 
-If a provider exposes prices (JSON API or scrapeable HTML), add a fetcher:
+> **AI agents:** start at step 0. The sniffer answers "which of the three
+> shapes is this?" in one command and prints the exact files to create.
+> 90% of new fetchers are 10 lines of glue.
+
+### 0. Sniff the endpoint first
+
+```bash
+python -m scripts.sniff_endpoint <pricing_api_url> \
+    --id <slug> --name "<Display Name>" --display-url <human_pricing_page>
+```
+
+The sniffer prints (a) the `pricing:` YAML block, (b) the fetcher source code,
+(c) the REGISTRY line, and (d) the verify command — paste, commit, PR. It
+detects:
+
+| Shape | Wrapper | Effort |
+|---|---|---|
+| **new-api fork** (`/api/pricing` with `{success, data, group_ratio}`) | `fetchers/_new_api.fetch_new_api()` | 10-line wrapper, see `fetchers/bltcy.py` / `fetchers/unorouter.py` |
+| **OpenRouter-style** (`/v1/models` with `pricing.{prompt,completion,image}`) | none yet — copy `fetchers/openrouter.py` | rename constants, adjust key paths |
+| **OpenAI `/v1/models`** (no prices) | not pricable from this endpoint | find the actual pricing URL or use `submitted_prices` |
+| **Anything else** | custom | model after `fetchers/openrouter.py`; ensure every `PriceRecord` carries `source_url`, `captured_at`, `method` |
+
+### 1. Manual steps (if sniffer wasn't enough)
 
 1. Add a `pricing:` block to the provider's entry in `data/providers.yaml`
    (see [`schema.md`](data/schema.md)).
@@ -84,6 +106,19 @@ If a provider exposes prices (JSON API or scrapeable HTML), add a fetcher:
 Prefer a public JSON endpoint (most new-api forks expose `/api/pricing`;
 OpenAI-compatible relays expose `/v1/models` with pricing). Fall back to
 DOM scraping with `selectolax`, then Playwright as last resort.
+
+### 2. new-api fork quirks worth knowing
+
+The shared `fetch_new_api()` handles two pricing conventions:
+
+- **Per-token (`quota_type=0`):** `input = model_ratio × $2 × group_ratio`,
+  `output = input × completion_ratio`.
+- **Per-call (`quota_type=1`):** `cost = model_price × group_ratio`. Units are
+  inferred from the model name (`per_image` / `per_second` / `per_request`).
+
+If the fork **doesn't expose a flat `default` group** — e.g. UnoRouter, where
+each model has its own per-channel groups like `default-yun-doubao-seedream-5`
+— pass `group=None` to skip the filter; the sniffer detects this automatically.
 
 ## Conduct
 
