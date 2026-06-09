@@ -203,9 +203,21 @@ schema 見 [CONTRIBUTING.md](CONTRIBUTING.md)；
 <!-- prices:start -->
 _Snapshot date: **2026-06-07**. 3026 price records across 5 providers. **Reference column** is OpenRouter (officially-authorized, ~5% markup). Rows sorted cheapest-by-OpenRouter first. ⚠ = relay quotes <50% of OpenRouter — verify with [canary prompts](docs/canary-prompts.md) before trusting._
 
+#### Six indicator models, six providers, one snapshot
+
+**Absolute prices — tier ladder (input)** · ▼ marks the cheapest provider per model
+
 ![Tier-ladder input pricing](assets/charts/tier-ladder-input.svg)
 
-_More charts (output pricing, cost-spread heatmaps): [`assets/charts/`](assets/charts/). Interactive dashboard: <https://howardpen9.github.io/awesome-ai-api-proxy/>._
+**Price spread per model (input)** · how much variance exists between providers
+
+![Spread range input](assets/charts/spread-range-input.svg)
+
+**Savings vs OpenRouter (input)** · how much cheaper (or pricier) each relay is
+
+![Savings vs OpenRouter input](assets/charts/savings-vs-ref-input.svg)
+
+_Output-token equivalents and the full-matrix heatmap: [`assets/charts/`](assets/charts/) ([tier-ladder-output](assets/charts/tier-ladder-output.svg), [spread-range-output](assets/charts/spread-range-output.svg), [savings-vs-ref-output](assets/charts/savings-vs-ref-output.svg), [spread-heatmap-input](assets/charts/spread-heatmap-input.svg)). Interactive dashboard: <https://howardpen9.github.io/awesome-ai-api-proxy/>._
 
 ### Tier 1 — cheapest viable (routine, batch summaries) — USD per 1M input tokens
 
