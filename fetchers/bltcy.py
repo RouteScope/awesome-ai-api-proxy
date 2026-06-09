@@ -1,14 +1,14 @@
-"""Relaydance — new-api fork. Thin wrapper over fetchers._new_api."""
+"""bltcy (柏拉图 AI) — new-api fork. Thin wrapper over fetchers._new_api."""
 
 from __future__ import annotations
 
 from ._common import FetchResult
 from ._new_api import fetch_new_api
 
-PROVIDER_ID = "relaydance"
-PROVIDER_NAME = "Relaydance"
-SOURCE_URL = "https://relaydance.com/api/pricing"
-DISPLAY_URL = "https://relaydance.com/pricing"
+PROVIDER_ID = "bltcy"
+PROVIDER_NAME = "柏拉图 AI (bltcy)"
+SOURCE_URL = "https://api.bltcy.ai/api/pricing"
+DISPLAY_URL = "https://api.bltcy.ai"
 
 
 def fetch() -> FetchResult:

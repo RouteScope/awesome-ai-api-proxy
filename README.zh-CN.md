@@ -74,9 +74,9 @@ OpenAI、Anthropic、Google 等官方 API，而是把 `base_url` 改成中转站
 | 中转站 | 类型 | 支付 | 信任 | 备注 |
 |---|---|---|---|---|
 | [云雾 API (YUNWU)](https://yunwu.ai) | mixed | 支付宝/微信 | active · 2026-05-26 | 主打高速稳定；社区常列为头部站。 |
-| [柏拉图 AI (bltcy)](https://api.bltcy.ai) | mixed | 支付宝/微信 | active · 2026-05-26 | Azure 通道；主打最低价。 |
+| [柏拉图 AI (bltcy)](https://api.bltcy.ai) | mixed | 支付宝/微信 | active · 2026-06-07 | Azure 通道；主打最低价。new-api fork，1000+ 模型横跨 25+ 分组；`/api/pricing` 公开 default 分组倍率。 |
 | [No.1-API](https://api.rcouyi.com) | aggregator | 支付宝/微信 | active · 2026-05-26 | 一站式聚合 + 中转平台。 |
-| [UiUiAPI](https://uiuiapi.com) | official-relay | 支付宝/微信 | active · 2026-05-26 | 宣称官方渠道 + 官方倍率；约便宜 49%（宣称），300+ 模型。 |
+| [UiUiAPI](https://uiuiapi.com) | official-relay | 支付宝/微信 | active · 2026-06-07 | 宣称官方渠道 + 官方倍率；约便宜 49%（宣称），311 模型。new-api `/api/pricing` 公开于 api1 子域名。 |
 | [DMXAPI](https://dmxapi.cn) | mixed | 支付宝/微信 | unverified | 社区收录；官网未独立核实。 |
 | [MKEAI](https://mkeai.com) | mixed | 支付宝/微信 | unverified | 社区论坛 + 中转混合；主推 DeepSeek。 |
 | [GPTGOD](https://gptgod.online) | reverse | 支付宝 | unverified | 逆向；便宜，稳定性无保证。 |
@@ -97,6 +97,7 @@ OpenAI、Anthropic、Google 等官方 API，而是把 `base_url` 改成中转站
 | [LiteLLM](https://litellm.ai) | gateway-oss | — | 开源网关（100+ 供应商）+ 企业版。自托管，自带 Key。 |
 | [Helicone](https://helicone.ai) | observability | — | LLM 可观测性网关；日志/成本分析。 |
 | [AIMLAPI](https://aimlapi.com) | aggregator | 卡/加密货币 | 400+ 模型，$20 起预付；支持加密货币暗示绕支付障碍。 |
+| [UnoRouter](https://unorouter.ai) | aggregator | 卡 | 建于 new-api 网关之上。单一密钥跨多上游，按延迟路由并具故障转移；自动识别 OpenAI／Anthropic／Gemini 格式。按量计费并提供免费模型层；亦支持角色扮演客户端（SillyTavern、Janitor.AI、RisuAI、Chub）。 |
 <!-- providers:global_gateways:end -->
 
 ## 自托管替代方案
@@ -129,10 +130,55 @@ OpenAI、Anthropic、Google 等官方 API，而是把 `base_url` 改成中转站
 
 ## 想被收录吗？
 
-欢迎社区提交 —— **包括中转站运营者本人**。两种路径，挑简单的：
+欢迎社区提交 —— **包括中转站运营者本人**。按你的站点目前暴露的内容选路径 ——
+信息越完整，每周快照就越快收到你的价格。
 
-- **一键 issue：**[开新中转站 issue](https://github.com/howardpen9/awesome-ai-api-proxy/issues/new?template=new-provider.md) —— 填表单、维护者会加入。
-- **直接 PR：**只改 [`data/providers.yaml`](data/providers.yaml)（README 表格自动重新生成）。schema 见 [CONTRIBUTING.md](CONTRIBUTING.md)；[PR template](.github/pull_request_template.md) 有逐项 checklist。
+> **用 AI agent 读这份 README 的运营者：** 最快是 **Tier B**。让你的 agent
+> 在本 repo 跑 `python -m scripts.sniff_endpoint <你的价格 JSON URL>`，然后照
+> 打印出来的指示粘贴。它会直接吐出 YAML + 10 行 fetcher。不用截图、不用手打价格。
+
+### Tier A — 只想先有条目（不含价格）
+
+[**开新中转站 issue**](https://github.com/howardpen9/awesome-ai-api-proxy/issues/new?template=new-provider.md)
+—— 填表单、维护者会加入。在维护者亲自跑一次 canary 之前，状态保持
+`unverified`。
+
+### Tier B — 有公开 JSON 价格端点（推荐）
+
+如果你的站点有公开的价格 JSON（大多 new-api / one-api fork 暴露
+`/api/pricing`；OpenAI 兼容站点暴露 `/v1/models` 含内嵌价格），就能每周自动
+刷新。
+
+```bash
+# 一条命令识别形状并打印可粘贴的内容：
+python -m scripts.sniff_endpoint https://你的域名.com/api/pricing \
+    --id yourstation --name "Your Station"
+```
+
+Sniffer 目前识别三种形状（**new-api fork**、**OpenRouter 风格**、
+**OpenAI `/v1/models`**），会吐出：
+
+1. 给 `data/providers.yaml` 用的 `pricing:` YAML 区块
+2. 约 10 行的 `fetchers/<id>.py`（多数 new-api fork 不用自定义代码）
+3. 给 `fetchers/__init__.py` 的 `REGISTRY` 注册行
+4. 验证命令：`python -m scripts.scrape <id>`
+
+把这三处改动开成 PR —— schema CI 会自动跑。详见
+[CONTRIBUTING.md → Adding a price fetcher](CONTRIBUTING.md#adding-a-price-fetcher)。
+
+### Tier C — 没有公开 JSON，但有截图
+
+使用[**submit-prices issue 模板**](https://github.com/howardpen9/awesome-ai-api-proxy/issues/new?template=submit-prices.md)
+—— 粘贴一张价格表 + 对应日的价格页截图。维护者每周对着截图核对后写入
+`submitted_prices`。
+
+### 直接 PR（任何 tier 都可）
+
+只改 [`data/providers.yaml`](data/providers.yaml)（README 表格自动重新生成）。
+schema 见 [CONTRIBUTING.md](CONTRIBUTING.md)；
+[PR template](.github/pull_request_template.md) 有逐项 checklist。
+
+---
 
 **默认 `status: unverified`**，直到维护者亲自跑一次 canary。这不是拒绝 ——
 只是表示"社区登录、未独立确认"。通常 2 周内验证完，状态改成 `active`、
@@ -155,7 +201,7 @@ OpenAI、Anthropic、Google 等官方 API，而是把 `base_url` 改成中转站
 > 机器可读资料：[`data/prices.latest.json`](data/prices.latest.json)。
 
 <!-- prices:start -->
-_Snapshot date: **2026-06-07**. 1024 price records across 3 fetched providers. **Reference column** is OpenRouter (officially-authorized, ~5% markup). ⚠ = relay quotes <50% of OpenRouter — verify with [canary prompts](docs/canary-prompts.md) before trusting._
+_Snapshot date: **2026-06-07**. 3026 price records across 5 providers. **Reference column** is OpenRouter (officially-authorized, ~5% markup). Rows sorted cheapest-by-OpenRouter first. ⚠ = relay quotes <50% of OpenRouter — verify with [canary prompts](docs/canary-prompts.md) before trusting._
 
 ![Tier-ladder input pricing](assets/charts/tier-ladder-input.svg)
 
@@ -163,33 +209,34 @@ _More charts (output pricing, cost-spread heatmaps): [`assets/charts/`](assets/c
 
 ### Tier 1 — cheapest viable (routine, batch summaries) — USD per 1M input tokens
 
-| Model | OpenRouter (ref) | Atlas Cloud | Relaydance |
-|---|---|---|---|
-| `deepseek-v3` | $0.200 | $0.216 | — |
-| `deepseek-r1` | $0.700 | $0.550 | — |
+| Model | OpenRouter (ref) | Atlas Cloud | Relaydance | UiUiAPI | bltcy |
+|---|---|---|---|---|---|
+| `deepseek-v3` | $0.200 | $0.216 | — | $2.000 | $2.000 |
+| `deepseek-r1` | $0.700 | $0.550 | — | $4.000 | $4.000 |
 
 ### Tier 2 — daily driver (agent, coding) — USD per 1M input tokens
 
-| Model | OpenRouter (ref) | Atlas Cloud | Relaydance |
-|---|---|---|---|
-| `claude-sonnet-4.6` | $3.000 | $3.000 | — |
-| `gpt-5.4` | $2.500 | $2.500 | — |
-| `gemini-3-flash` | $1.500 | $1.500 | — |
+| Model | OpenRouter (ref) | Atlas Cloud | Relaydance | UiUiAPI | bltcy |
+|---|---|---|---|---|---|
+| `gemini-3-flash` | $1.500 | $1.500 | — | — | — |
+| `gpt-5.4` | $2.500 | $2.500 | — | $2.500 | $2.500 |
+| `claude-sonnet-4.6` | $3.000 | $3.000 | — | $3.000 | $3.000 |
 
 ### Tier 3 — top frontier (hardest problems) — USD per 1M input tokens
 
-| Model | OpenRouter (ref) | Atlas Cloud | Relaydance |
-|---|---|---|---|
-| `claude-opus-4.8` | $5.000 | $5.000 | — |
-| `gpt-5.5-pro` | $30.00 | — | — |
-| `grok-4.3` | $1.250 | $1.250 | $1.125 |
+| Model | OpenRouter (ref) | Atlas Cloud | Relaydance | UiUiAPI | bltcy |
+|---|---|---|---|---|---|
+| `grok-4.3` | $1.250 | $1.250 | $1.125 | — | — |
+| `claude-opus-4.8` | $5.000 | $5.000 | — | — | — |
+| `gpt-5.5-pro` | $30.00 | — | — | — | — |
 
 ### Tier 4 — multimodal (different units, can't compare to text)
 
-| Model | Unit | OpenRouter (ref) | Atlas Cloud | Relaydance |
-|---|---|---|---|---|
-| `grok-imagine-video-1.5` | USD per 1M input tokens | — | — | $2.083 |
-| `grok-imagine-video-1.5` | USD per 1M output tokens | — | — | $2.083 |
+| Model | Unit | OpenRouter (ref) | Atlas Cloud | Relaydance | UiUiAPI | bltcy |
+|---|---|---|---|---|---|---|
+| `grok-imagine-video-1.5` | USD per 1M input tokens | — | — | $2.083 | — | — |
+| `grok-imagine-video-1.5` | USD per 1M output tokens | — | — | $2.083 | — | — |
+| `grok-imagine-video-1.5` | USD per second | — | — | — | — | — |
 
 _Full per-model breakdown (including non-canonical models): [`docs/prices.md`](docs/prices.md). Raw snapshots: [`data/snapshots/`](data/snapshots/). Machine-readable: [`data/prices.latest.json`](data/prices.latest.json)._
 

@@ -84,9 +84,9 @@ market, not a workaround niche.
 | Station | Type | Payment | Trust | Notes |
 |---|---|---|---|---|
 | [云雾 API (YUNWU)](https://yunwu.ai) | mixed | Alipay/WeChat | active · 2026-05-26 | Marketed on speed/stability; widely cited as a top-tier station. |
-| [柏拉图 AI (bltcy)](https://api.bltcy.ai) | mixed | Alipay/WeChat | active · 2026-05-26 | Azure-backed channel; positions as lowest-price. |
+| [柏拉图 AI (bltcy)](https://api.bltcy.ai) | mixed | Alipay/WeChat | active · 2026-06-07 | Azure-backed channel; positions as lowest-price. new-api fork with 1000+ models across 25+ access groups; public /api/pricing exposes default-group ratios. |
 | [No.1-API](https://api.rcouyi.com) | aggregator | Alipay/WeChat | active · 2026-05-26 | One-stop aggregation + relay platform. |
-| [UiUiAPI](https://uiuiapi.com) | official-relay | Alipay/WeChat | active · 2026-05-26 | Claims official channels + official multipliers; rare quantified discount. |
+| [UiUiAPI](https://uiuiapi.com) | official-relay | Alipay/WeChat | active · 2026-06-07 | Claims official channels + official multipliers; rare quantified discount. Public new-api /api/pricing on api1 subdomain. |
 | [DMXAPI](https://dmxapi.cn) | mixed | Alipay/WeChat | unverified | Listed in community sources; homepage not independently verified. |
 | [MKEAI](https://mkeai.com) | mixed | Alipay/WeChat | unverified | Community-forum + relay hybrid; pushes DeepSeek heavily. |
 | [GPTGOD](https://gptgod.online) | reverse | Alipay | unverified | Reverse-engineered; among cheapest, stability not guaranteed. |
@@ -107,6 +107,7 @@ market, not a workaround niche.
 | [LiteLLM](https://litellm.ai) | gateway-oss | — | Open-source gateway + enterprise tier. Self-hosted; not retail. |
 | [Helicone](https://helicone.ai) | observability | — | LLM observability gateway; logging/analytics focus. |
 | [AIMLAPI](https://aimlapi.com) | aggregator | Card/Crypto | Prepaid from $20; crypto support implies payment-friction workaround. |
+| [UnoRouter](https://unorouter.ai) | aggregator | Card | Built on the new-api gateway. One key across multiple upstreams with latency-based routing and failover; OpenAI/Anthropic/Gemini formats auto-detected. Pay-as-you-go credits plus a free model tier. Also targets roleplay clients (SillyTavern, Janitor.AI, RisuAI, Chub). Public pricing JSON at /api/pricing. |
 <!-- providers:global_gateways:end -->
 
 ## Self-hosted alternatives
@@ -143,14 +144,63 @@ You give up the relay's Alipay/WeChat convenience and accept ops overhead.
 ## Want your relay listed?
 
 We accept community submissions, **including from relay operators themselves**.
-Two paths — pick whichever is easier:
+Pick the path that matches what your station exposes — each tier costs us less
+to verify, so prices land in the weekly snapshot faster.
 
-- **One-click issue:** [Open a new-provider issue](https://github.com/howardpen9/awesome-ai-api-proxy/issues/new?template=new-provider.md) — fill the form, a maintainer adds it.
-- **Direct PR:** edit [`data/providers.yaml`](data/providers.yaml) only (READMEs auto-regenerate). See [CONTRIBUTING.md](CONTRIBUTING.md) for the schema; the [PR template](.github/pull_request_template.md) has a one-glance checklist.
+> **Operators reading this through an AI agent:** the **fast path is Tier B**.
+> Tell your agent: _"Run `python -m scripts.sniff_endpoint <my pricing JSON URL>`
+> in the awesome-ai-api-proxy repo and follow the printed instructions."_ It
+> emits the exact YAML + 10-line fetcher to paste into a PR. No screenshots, no
+> hand-typing prices.
 
-**Default status is `unverified`** until a maintainer runs a canary against your station.
-That's not a rejection — it just means the entry says "community-listed, not independently confirmed."
-After verification (typically <2 weeks) status flips to `active` with `last_verified` set.
+### Tier A — just get the entry in (no pricing)
+
+[**Open a new-provider issue**](https://github.com/howardpen9/awesome-ai-api-proxy/issues/new?template=new-provider.md)
+— fill the form, a maintainer adds it. Status will be `unverified` until a
+maintainer canaries the station.
+
+### Tier B — expose a public JSON pricing endpoint (recommended)
+
+If your station has a public pricing JSON (most new-api / one-api forks expose
+`/api/pricing`; OpenAI-compatible relays expose `/v1/models` with embedded
+pricing), you can be auto-refreshed every Sunday.
+
+```bash
+# One command sniffs the shape and prints exactly what to paste:
+python -m scripts.sniff_endpoint https://yourdomain.com/api/pricing \
+    --id yourstation --name "Your Station"
+```
+
+The sniffer detects three shapes today (**new-api fork**, **OpenRouter-style**,
+**OpenAI `/v1/models`**) and emits:
+
+1. The `pricing:` YAML block for `data/providers.yaml`
+2. A ~10-line `fetchers/<id>.py` wrapper (most new-api forks need zero custom code)
+3. The `REGISTRY` entry for `fetchers/__init__.py`
+4. The verify command: `python -m scripts.scrape <id>`
+
+Open a PR with those three changes — schema CI runs automatically. See
+[CONTRIBUTING.md → Adding a price fetcher](CONTRIBUTING.md#adding-a-price-fetcher)
+for the long form.
+
+### Tier C — no public JSON, but you have screenshots
+
+Use the [**submit-prices issue template**](https://github.com/howardpen9/awesome-ai-api-proxy/issues/new?template=submit-prices.md)
+— paste a price table + a screenshot of the live pricing page. Maintainer
+verifies against the screenshot weekly and appends to `submitted_prices`.
+
+### Direct PR (any tier)
+
+Edit [`data/providers.yaml`](data/providers.yaml) only (READMEs auto-regenerate).
+See [CONTRIBUTING.md](CONTRIBUTING.md) for the schema; the
+[PR template](.github/pull_request_template.md) has a one-glance checklist.
+
+---
+
+**Default status is `unverified`** until a maintainer runs a canary against your
+station. That's not a rejection — it just means the entry says "community-listed,
+not independently confirmed." After verification (typically <2 weeks) status
+flips to `active` with `last_verified` set.
 
 We never accept referral links or marketing copy. We do accept honest entries
 from operators — one factual sentence in `notes`, no superlatives.
@@ -170,7 +220,7 @@ from operators — one factual sentence in `notes`, no superlatives.
 > Machine-readable source: [`data/prices.latest.json`](data/prices.latest.json).
 
 <!-- prices:start -->
-_Snapshot date: **2026-06-07**. 1024 price records across 3 fetched providers. **Reference column** is OpenRouter (officially-authorized, ~5% markup). ⚠ = relay quotes <50% of OpenRouter — verify with [canary prompts](docs/canary-prompts.md) before trusting._
+_Snapshot date: **2026-06-07**. 3026 price records across 5 providers. **Reference column** is OpenRouter (officially-authorized, ~5% markup). Rows sorted cheapest-by-OpenRouter first. ⚠ = relay quotes <50% of OpenRouter — verify with [canary prompts](docs/canary-prompts.md) before trusting._
 
 ![Tier-ladder input pricing](assets/charts/tier-ladder-input.svg)
 
@@ -178,33 +228,34 @@ _More charts (output pricing, cost-spread heatmaps): [`assets/charts/`](assets/c
 
 ### Tier 1 — cheapest viable (routine, batch summaries) — USD per 1M input tokens
 
-| Model | OpenRouter (ref) | Atlas Cloud | Relaydance |
-|---|---|---|---|
-| `deepseek-v3` | $0.200 | $0.216 | — |
-| `deepseek-r1` | $0.700 | $0.550 | — |
+| Model | OpenRouter (ref) | Atlas Cloud | Relaydance | UiUiAPI | bltcy |
+|---|---|---|---|---|---|
+| `deepseek-v3` | $0.200 | $0.216 | — | $2.000 | $2.000 |
+| `deepseek-r1` | $0.700 | $0.550 | — | $4.000 | $4.000 |
 
 ### Tier 2 — daily driver (agent, coding) — USD per 1M input tokens
 
-| Model | OpenRouter (ref) | Atlas Cloud | Relaydance |
-|---|---|---|---|
-| `claude-sonnet-4.6` | $3.000 | $3.000 | — |
-| `gpt-5.4` | $2.500 | $2.500 | — |
-| `gemini-3-flash` | $1.500 | $1.500 | — |
+| Model | OpenRouter (ref) | Atlas Cloud | Relaydance | UiUiAPI | bltcy |
+|---|---|---|---|---|---|
+| `gemini-3-flash` | $1.500 | $1.500 | — | — | — |
+| `gpt-5.4` | $2.500 | $2.500 | — | $2.500 | $2.500 |
+| `claude-sonnet-4.6` | $3.000 | $3.000 | — | $3.000 | $3.000 |
 
 ### Tier 3 — top frontier (hardest problems) — USD per 1M input tokens
 
-| Model | OpenRouter (ref) | Atlas Cloud | Relaydance |
-|---|---|---|---|
-| `claude-opus-4.8` | $5.000 | $5.000 | — |
-| `gpt-5.5-pro` | $30.00 | — | — |
-| `grok-4.3` | $1.250 | $1.250 | $1.125 |
+| Model | OpenRouter (ref) | Atlas Cloud | Relaydance | UiUiAPI | bltcy |
+|---|---|---|---|---|---|
+| `grok-4.3` | $1.250 | $1.250 | $1.125 | — | — |
+| `claude-opus-4.8` | $5.000 | $5.000 | — | — | — |
+| `gpt-5.5-pro` | $30.00 | — | — | — | — |
 
 ### Tier 4 — multimodal (different units, can't compare to text)
 
-| Model | Unit | OpenRouter (ref) | Atlas Cloud | Relaydance |
-|---|---|---|---|---|
-| `grok-imagine-video-1.5` | USD per 1M input tokens | — | — | $2.083 |
-| `grok-imagine-video-1.5` | USD per 1M output tokens | — | — | $2.083 |
+| Model | Unit | OpenRouter (ref) | Atlas Cloud | Relaydance | UiUiAPI | bltcy |
+|---|---|---|---|---|---|---|
+| `grok-imagine-video-1.5` | USD per 1M input tokens | — | — | $2.083 | — | — |
+| `grok-imagine-video-1.5` | USD per 1M output tokens | — | — | $2.083 | — | — |
+| `grok-imagine-video-1.5` | USD per second | — | — | — | — | — |
 
 _Full per-model breakdown (including non-canonical models): [`docs/prices.md`](docs/prices.md). Raw snapshots: [`data/snapshots/`](data/snapshots/). Machine-readable: [`data/prices.latest.json`](data/prices.latest.json)._
 

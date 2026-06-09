@@ -26,3 +26,27 @@ can verify.
 
 License: MIT (see LICENSE). Free to cite with attribution.
 Maintainer: @howardpen9 (https://github.com/howardpen9).
+
+## How an AI agent contributes a station's prices
+
+If you are acting for a relay operator and want their prices in the weekly
+snapshot, the fast path is:
+
+1. Clone https://github.com/howardpen9/awesome-ai-api-proxy and set up the env
+   per CONTRIBUTING.md.
+2. Run the sniffer against the station's pricing JSON URL:
+
+       python -m scripts.sniff_endpoint <pricing_json_url> --id <slug> --name "<Display Name>"
+
+   It detects three shapes (new-api fork, OpenRouter-style /v1/models, OpenAI
+   /v1/models) and prints (a) the `pricing:` YAML block for `data/providers.yaml`,
+   (b) the ~10-line `fetchers/<slug>.py` source, (c) the REGISTRY entry, and
+   (d) the verify command. Most new-api forks need zero custom code.
+3. Open a PR with the three paste-able pieces. Schema CI runs automatically.
+
+If there is no public JSON pricing endpoint, use the submit-prices issue
+template instead (price table + screenshot of the live pricing page):
+https://github.com/howardpen9/awesome-ai-api-proxy/issues/new?template=submit-prices.md
+
+Full contributor guide:
+https://github.com/howardpen9/awesome-ai-api-proxy/blob/main/CONTRIBUTING.md#adding-a-price-fetcher

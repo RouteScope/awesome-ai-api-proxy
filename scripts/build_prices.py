@@ -33,7 +33,7 @@ from ._paths import (
 
 console = Console()
 
-PROVIDER_COLUMN_ORDER = ["openrouter", "atlascloud", "relaydance"]
+PROVIDER_COLUMN_ORDER = ["openrouter", "atlascloud", "relaydance", "uiuiapi", "bltcy"]
 START_MARKER = "<!-- prices:start -->"
 END_MARKER = "<!-- prices:end -->"
 
@@ -69,6 +69,48 @@ def _load_snapshots(snapshot_dir: Path) -> list[dict]:
         result = json.loads(path.read_text(encoding="utf-8"))
         flat.extend(result.get("records", []))
     return flat
+
+
+def _load_submitted_prices() -> list[dict]:
+    """Read each provider's pricing.submitted_prices and convert to PriceRecord-shaped dicts."""
+    import yaml
+
+    from ._paths import PROVIDERS_YAML
+    doc = yaml.safe_load(PROVIDERS_YAML.read_text(encoding="utf-8"))
+    out: list[dict] = []
+    for section, entries in doc.items():
+        if not isinstance(entries, list):
+            continue
+        for entry in entries:
+            if not isinstance(entry, dict):
+                continue
+            pricing = entry.get("pricing") or {}
+            submitted = pricing.get("submitted_prices") or []
+            for sp in submitted:
+                # Build a slug from provider name. Use the fetcher id when present
+                # so manual + fetched records share provider_id (column in table).
+                provider_id = pricing.get("fetcher") or _slug(entry.get("name", ""))
+                out.append({
+                    "provider_id": provider_id,
+                    "provider_name": entry.get("name", ""),
+                    "raw_model_name": sp["canonical_model"],
+                    "canonical_model": sp["canonical_model"],
+                    "model_family": None,
+                    "tier": None,
+                    "channel_type": entry.get("type", "unknown"),
+                    "unit": sp["unit"],
+                    "price_usd": sp["price_usd"],
+                    "source_url": sp.get("source_url", pricing.get("pricing_url", "")),
+                    "captured_at": sp.get("captured_at", ""),
+                    "confidence": "medium",
+                    "method": "manual",
+                    "notes": f"submitted by {sp.get('submitted_by','?')}, verified by {sp.get('verified_by','?')}",
+                })
+    return out
+
+
+def _slug(name: str) -> str:
+    return "".join(c.lower() if c.isalnum() else "-" for c in name).strip("-")
 
 
 def _resolve_canonical(records: list[dict], alias_index: dict[str, dict]) -> list[dict]:
@@ -164,52 +206,67 @@ def _format_price(price: float) -> str:
 def _build_tier_tables(
     records: list[dict], canonical_doc: dict, snapshot_date: str
 ) -> str:
-    """Render markdown tables grouped by tier."""
+    """Render markdown tables grouped by tier, sorted cheapest-by-OpenRouter first."""
     canonical_models = canonical_doc.get("canonical_models", [])
-    # Index: (canonical, unit, provider_id) -> price
-    matrix: dict[tuple[str, str, str], float] = {}
+    # Index: (canonical, unit, provider_id) -> (price, method)
+    matrix: dict[tuple[str, str, str], tuple[float, str]] = {}
     for rec in records:
         cm = rec.get("canonical_model")
         if not cm:
             continue
         key = (cm, rec["unit"], rec["provider_id"])
-        # Keep the first record per cell (snapshots are flat; no aggregation needed today).
-        matrix.setdefault(key, rec["price_usd"])
+        method = rec.get("method", "json-api")
+        # Prefer fetched (json-api) over manual when both exist for the same cell.
+        prev = matrix.get(key)
+        if prev is None or (prev[1] == "manual" and method != "manual"):
+            matrix[key] = (rec["price_usd"], method)
 
     providers_in_use = [p for p in PROVIDER_COLUMN_ORDER if any(p == k[2] for k in matrix)]
+    has_manual = any(m == "manual" for (_, m) in matrix.values())
 
     def render_row(model: dict, unit: str) -> str:
         cells = [f"`{model['canonical']}`"]
-        # Use OpenRouter's observed price as the reference (it's the closest objective
-        # baseline we have — officially-authorized, ~5% markup). ⚠ if relay < 50% of OR.
-        or_price = matrix.get((model["canonical"], unit, "openrouter"))
+        or_entry = matrix.get((model["canonical"], unit, "openrouter"))
+        or_price = or_entry[0] if or_entry else None
         for pid in providers_in_use:
-            price = matrix.get((model["canonical"], unit, pid))
-            if price is None:
+            entry = matrix.get((model["canonical"], unit, pid))
+            if entry is None:
                 cells.append("—")
                 continue
+            price, method = entry
             cell = _format_price(price)
             if pid != "openrouter" and or_price and price < or_price * 0.5:
                 cell += " ⚠"
+            if method == "manual":
+                cell += " †"
             cells.append(cell)
         return "| " + " | ".join(cells) + " |"
 
+    def row_sort_key(model: dict, unit: str) -> float:
+        entry = matrix.get((model["canonical"], unit, "openrouter"))
+        if entry is not None:
+            return entry[0]
+        # Fallback: cheapest available across providers
+        prices = [v[0] for (cm, u, _pid), v in matrix.items() if cm == model["canonical"] and u == unit]
+        return min(prices) if prices else float("inf")
+
     def render_tier_table(tier: int, unit: str, header_suffix: str) -> str:
-        rows = []
-        for model in canonical_models:
-            if model.get("tier") != tier:
-                continue
-            # only render rows where at least one provider has data for this unit
-            cm = model["canonical"]
-            if not any(k[0] == cm and k[1] == unit for k in matrix):
-                continue
-            rows.append(render_row(model, unit))
+        models_in_tier = [
+            m for m in canonical_models
+            if m.get("tier") == tier
+            and any(k[0] == m["canonical"] and k[1] == unit for k in matrix)
+        ]
+        # Sort cheapest-by-OpenRouter first within each tier.
+        models_in_tier.sort(key=lambda m: row_sort_key(m, unit))
+        rows = [render_row(model, unit) for model in models_in_tier]
         if not rows:
             return ""
         provider_names = {
             "openrouter": "OpenRouter (ref)",
             "atlascloud": "Atlas Cloud",
             "relaydance": "Relaydance",
+            "uiuiapi": "UiUiAPI",
+            "bltcy": "bltcy",
         }
         header = (
             "| Model | "
@@ -256,14 +313,23 @@ def _build_tier_tables(
                 }.get(unit, unit)
                 cells = [f"`{cm}`", pretty_unit]
                 for pid in providers_in_use:
-                    price = matrix.get((cm, unit, pid))
-                    cells.append(_format_price(price) if price is not None else "—")
+                    entry = matrix.get((cm, unit, pid))
+                    if entry is None:
+                        cells.append("—")
+                    else:
+                        price, method = entry
+                        cell = _format_price(price)
+                        if method == "manual":
+                            cell += " †"
+                        cells.append(cell)
                 rows.append("| " + " | ".join(cells) + " |")
         if rows:
             provider_names = {
                 "openrouter": "OpenRouter (ref)",
                 "atlascloud": "Atlas Cloud",
                 "relaydance": "Relaydance",
+                "uiuiapi": "UiUiAPI",
+                "bltcy": "bltcy",
             }
             header = (
                 "| Model | Unit | "
@@ -282,11 +348,16 @@ def _build_tier_tables(
             )
 
     snapshot_count = len(records)
+    manual_note = (
+        " † = community-submitted, verified by maintainer (see issue template)."
+        if has_manual else ""
+    )
     intro = (
         f"_Snapshot date: **{snapshot_date}**. {snapshot_count} price records across "
-        f"{len(providers_in_use)} fetched providers. **Reference column** is OpenRouter "
-        f"(officially-authorized, ~5% markup). ⚠ = relay quotes <50% of OpenRouter — "
-        f"verify with [canary prompts](docs/canary-prompts.md) before trusting._\n\n"
+        f"{len(providers_in_use)} providers. **Reference column** is OpenRouter "
+        f"(officially-authorized, ~5% markup). Rows sorted cheapest-by-OpenRouter first. "
+        f"⚠ = relay quotes <50% of OpenRouter — verify with "
+        f"[canary prompts](docs/canary-prompts.md) before trusting.{manual_note}_\n\n"
         f"![Tier-ladder input pricing](assets/charts/tier-ladder-input.svg)\n\n"
         f"_More charts (output pricing, cost-spread heatmaps): "
         f"[`assets/charts/`](assets/charts/). "
@@ -362,12 +433,20 @@ def main() -> int:
     console.print(f"canonical aliases indexed: {len(alias_index)}")
 
     records = _load_snapshots(snapshot_dir)
-    console.print(f"records loaded: {len(records)}")
-    if not records:
+    submitted = _load_submitted_prices()
+    console.print(f"records loaded: {len(records)} fetched + {len(submitted)} submitted")
+    if not records and not submitted:
         console.print("[red]No records to compile.[/red]")
         return 1
 
     records = _resolve_canonical(records, alias_index)
+    # submitted records already carry canonical_model; just resolve tier/family by lookup
+    for sp in submitted:
+        entry = alias_index.get((sp.get("canonical_model") or "").lower())
+        if entry:
+            sp["model_family"] = entry.get("family")
+            sp["tier"] = entry.get("tier")
+    records = records + submitted
     matched = sum(1 for r in records if r.get("canonical_model"))
     console.print(f"records resolved to a canonical model: {matched}/{len(records)}")
 
