@@ -323,6 +323,29 @@ global_gateways:
       zh-TW: "400+ 模型，$20 起預付；支援加密貨幣暗示繞支付障礙。"
       zh-CN: "400+ 模型，$20 起预付；支持加密货币暗示绕支付障碍。"
 
+  - name: UnoRouter
+    url: https://unorouter.ai
+    type: aggregator
+    status: unverified
+    payment: [card]
+    models: [openai, anthropic, gemini]
+    model_count: 212
+    provider_count: 31
+    last_verified: null
+    verified_by: community
+    entity_registered: unknown
+    supports_stream: true
+    supports_tools: true
+    pricing:
+      pricing_url: https://unorouter.ai/models
+      api_url: https://api.unorouter.ai/api/pricing
+      fetcher: unorouter
+      pricing_currency: USD
+    notes:
+      en: "Built on the new-api gateway. One key across multiple upstreams with latency-based routing and failover; OpenAI/Anthropic/Gemini formats auto-detected. Pay-as-you-go credits plus a free model tier. Also targets roleplay clients (SillyTavern, Janitor.AI, RisuAI, Chub). Public pricing JSON at /api/pricing."
+      zh-TW: "建於 new-api 閘道之上。單一金鑰跨多上游，依延遲路由並具故障轉移；自動辨識 OpenAI／Anthropic／Gemini 格式。按量計費並提供免費模型層；亦支援角色扮演用戶端（SillyTavern、Janitor.AI、RisuAI、Chub）。"
+      zh-CN: "建于 new-api 网关之上。单一密钥跨多上游，按延迟路由并具故障转移；自动识别 OpenAI／Anthropic／Gemini 格式。按量计费并提供免费模型层；亦支持角色扮演客户端（SillyTavern、Janitor.AI、RisuAI、Chub）。"
+
 # ---------------------------------------------------------------------------
 # Self-hosted alternatives (自架閘道，供參考對比 — 非「中轉站」)
 # ---------------------------------------------------------------------------
