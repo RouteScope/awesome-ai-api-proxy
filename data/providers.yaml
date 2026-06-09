@@ -50,16 +50,22 @@ china_relays:
     type: mixed
     status: active
     payment: [alipay, wechat]
-    models: [openai, anthropic, midjourney, suno, luma]
-    last_verified: "2026-05-26"
+    models: [openai, anthropic, midjourney, suno, luma, deepseek, grok, gemini, qwen]
+    model_count: 1043
+    last_verified: "2026-06-07"
     verified_by: maintainer
     entity_registered: unknown
     supports_stream: true
     supports_tools: unknown
+    pricing:
+      pricing_url: https://api.bltcy.ai
+      api_url: https://api.bltcy.ai/api/pricing
+      fetcher: bltcy
+      pricing_currency: USD
     notes:
-      en: "Azure-backed channel; positions as lowest-price."
-      zh-TW: "Azure 通道；主打最低價。"
-      zh-CN: "Azure 通道；主打最低价。"
+      en: "Azure-backed channel; positions as lowest-price. new-api fork with 1000+ models across 25+ access groups; public /api/pricing exposes default-group ratios."
+      zh-TW: "Azure 通道；主打最低價。new-api fork，1000+ 模型橫跨 25+ 分組；`/api/pricing` 公開 default 分組倍率。"
+      zh-CN: "Azure 通道；主打最低价。new-api fork，1000+ 模型横跨 25+ 分组；`/api/pricing` 公开 default 分组倍率。"
 
   - name: No.1-API
     url: https://api.rcouyi.com
@@ -83,18 +89,22 @@ china_relays:
     status: active
     payment: [alipay, wechat]
     models: [openai, anthropic, gemini]
-    model_count: 300
+    model_count: 311
     provider_count: 30
-    discount_vs_official: "~49% cheaper (claimed)"
-    last_verified: "2026-05-26"
+    last_verified: "2026-06-07"
     verified_by: maintainer
     entity_registered: unknown
     supports_stream: true
     supports_tools: true
+    pricing:
+      pricing_url: https://uiuiapi.com
+      api_url: https://api1.uiuiapi.com/api/pricing
+      fetcher: uiuiapi
+      pricing_currency: USD
     notes:
-      en: "Claims official channels + official multipliers; rare quantified discount."
-      zh-TW: "宣稱官方渠道 + 官方倍率；約便宜 49%（宣稱），300+ 模型。"
-      zh-CN: "宣称官方渠道 + 官方倍率；约便宜 49%（宣称），300+ 模型。"
+      en: "Claims official channels + official multipliers; rare quantified discount. Public new-api /api/pricing on api1 subdomain."
+      zh-TW: "宣稱官方渠道 + 官方倍率；約便宜 49%（宣稱），311 模型。new-api `/api/pricing` 公開於 api1 子網域。"
+      zh-CN: "宣称官方渠道 + 官方倍率；约便宜 49%（宣称），311 模型。new-api `/api/pricing` 公开于 api1 子域名。"
 
   - name: DMXAPI
     url: https://dmxapi.cn

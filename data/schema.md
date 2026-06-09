@@ -32,9 +32,39 @@ weekly via the `price-refresh` workflow.
 |---|---|---|
 | `pricing_url` | yes | The human-readable pricing page (what users see). |
 | `api_url` | no | The JSON endpoint the fetcher calls. Omit when fetcher uses HTML/DOM. |
-| `fetcher` | yes | Fetcher ID — must match `fetchers/<id>.py`'s `PROVIDER_ID`. |
+| `fetcher` | conditionally | Fetcher ID — must match `fetchers/<id>.py`'s `PROVIDER_ID`. Required unless `submitted_prices` is the only price source. |
 | `pricing_currency` | yes | ISO 4217. We normalize to `USD` in `data/prices.latest.json`. |
 | `last_priced` | no | `YYYY-MM-DD` of the most recent successful scrape. Written by `scripts/build_prices.py`. |
+| `submitted_prices` | no | List of community-submitted price records, manually verified by the maintainer. See below. |
+
+## `submitted_prices` (schema v4)
+
+For providers without a public JSON pricing API (e.g. Yunwu, CloseAI) the relay
+operator or community members can submit prices via the
+[`submit-prices` issue template](../.github/ISSUE_TEMPLATE/submit-prices.md).
+Howard reviews these weekly via `python -m scripts.review_submissions` and on
+accept appends entries here.
+
+```yaml
+pricing:
+  pricing_url: https://example.com/pricing
+  submitted_prices:
+    - canonical_model: claude-sonnet-4.6
+      unit: per_1m_input_tokens
+      price_usd: 1.50
+      source_url: https://example.com/pricing
+      screenshot_url: https://github.com/howardpen9/awesome-ai-api-proxy/issues/42#issuecomment-123
+      captured_at: "2026-06-07"
+      submitted_by: "@operator-handle"
+      submitted_by_role: operator      # operator | community
+      verified_at: "2026-06-08"
+      verified_by: maintainer
+```
+
+`fetcher` and `submitted_prices` can coexist on the same provider — the
+auto-scraper covers what it can, manual submissions fill gaps. Build step
+merges both into `data/prices.latest.json` but tags them differently
+(`method: json-api` vs `method: manual`, `confidence: high` vs `medium`).
 
 ## `type` definitions
 

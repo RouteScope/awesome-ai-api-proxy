@@ -43,6 +43,28 @@ def _problem(messages: list[str], msg: str) -> None:
     messages.append(msg)
 
 
+_REQUIRED_SUBMITTED_FIELDS = {
+    "canonical_model", "unit", "price_usd", "source_url",
+    "captured_at", "submitted_by", "verified_by",
+}
+
+
+def _validate_submitted_prices(problems: list[str], section: str, entry: dict, submitted: list) -> None:
+    name = entry.get("name", "?")
+    for i, sp in enumerate(submitted):
+        if not isinstance(sp, dict):
+            _problem(problems, f"{section}: '{name}' submitted_prices[{i}] is not a dict")
+            continue
+        missing = _REQUIRED_SUBMITTED_FIELDS - sp.keys()
+        if missing:
+            _problem(problems, f"{section}: '{name}' submitted_prices[{i}] missing: {sorted(missing)}")
+        if sp.get("unit") not in ALLOWED_UNITS:
+            _problem(problems, f"{section}: '{name}' submitted_prices[{i}] invalid unit: {sp.get('unit')!r}")
+        price = sp.get("price_usd")
+        if price is None or not (isinstance(price, (int, float)) and 0 < price < 1000):
+            _problem(problems, f"{section}: '{name}' submitted_prices[{i}] suspicious price_usd: {price!r}")
+
+
 def validate_providers(problems: list[str]) -> None:
     raw = yaml.safe_load(PROVIDERS_YAML.read_text(encoding="utf-8"))
     for section, entries in raw.items():
@@ -60,12 +82,20 @@ def validate_providers(problems: list[str]) -> None:
                 _problem(problems, f"{section}: '{entry['name']}' has invalid status: {entry.get('status')!r}")
             pricing = entry.get("pricing")
             if pricing:
-                for required in ("pricing_url", "fetcher", "pricing_currency"):
+                # pricing_url + pricing_currency always required; fetcher optional
+                # when submitted_prices is present (manual-only providers).
+                for required in ("pricing_url", "pricing_currency"):
                     if required not in pricing:
                         _problem(
                             problems,
                             f"{section}: '{entry['name']}' pricing block missing '{required}'",
                         )
+                if "fetcher" not in pricing and not pricing.get("submitted_prices"):
+                    _problem(
+                        problems,
+                        f"{section}: '{entry['name']}' pricing block needs either 'fetcher' or 'submitted_prices'",
+                    )
+                _validate_submitted_prices(problems, section, entry, pricing.get("submitted_prices") or [])
             notes = entry.get("notes")
             if notes is not None and not isinstance(notes, (str, dict)):
                 _problem(problems, f"{section}: '{entry['name']}' notes must be string or dict")
@@ -103,8 +133,10 @@ def validate_prices(problems: list[str]) -> None:
         if rec.get("unit") not in ALLOWED_UNITS:
             _problem(problems, f"record[{i}] has invalid unit: {rec.get('unit')!r}")
         price = rec.get("price_usd")
-        if price is not None and not (price > 0 and price < 1000):
-            _problem(problems, f"record[{i}] suspicious price_usd: {price}")
+        # Real-world extreme prices exist (some bltcy thinking variants at $1750/1M).
+        # Keep an upper bound for sanity, but loose enough not to false-positive.
+        if price is not None and not (price > 0 and price < 5000):
+            _problem(problems, f"record[{i}] suspicious price_usd: {price} ({rec.get('provider_name')} / {rec.get('raw_model_name')})")
 
 
 def main() -> int:
