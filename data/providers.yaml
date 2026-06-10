@@ -117,6 +117,7 @@ china_relays:
     entity_registered: unknown
     supports_stream: unknown
     supports_tools: unknown
+    risk_flags: [no_entity]
     notes:
       en: "Listed in community sources; homepage not independently verified."
       zh-TW: "社群收錄；官網未獨立核實。"
@@ -133,6 +134,7 @@ china_relays:
     entity_registered: unknown
     supports_stream: unknown
     supports_tools: unknown
+    risk_flags: [no_entity]
     notes:
       en: "Community-forum + relay hybrid; pushes DeepSeek heavily."
       zh-TW: "社群論壇 + 中轉混合；主推 DeepSeek。"
@@ -149,6 +151,7 @@ china_relays:
     entity_registered: unknown
     supports_stream: unknown
     supports_tools: unknown
+    risk_flags: [reverse_channel, no_entity]
     notes:
       en: "Reverse-engineered; among cheapest, stability not guaranteed."
       zh-TW: "逆向；便宜，穩定性無保證。"
@@ -213,6 +216,7 @@ comparison_tools:
     entity_registered: unknown
     supports_stream: true
     supports_tools: true
+    risk_flags: [operator_submitted, no_entity]
     notes:
       en: "Community-submitted; claims 50+ models incl. OpenAI/Anthropic/Google/DeepSeek/xAI."
       zh-TW: "社群投稿；宣稱 50+ 模型，含 OpenAI/Anthropic/Google/DeepSeek/xAI。"
@@ -346,6 +350,7 @@ global_gateways:
     entity_registered: unknown
     supports_stream: true
     supports_tools: true
+    risk_flags: [operator_submitted]
     pricing:
       pricing_url: https://unorouter.ai/models
       api_url: https://api.unorouter.ai/api/pricing

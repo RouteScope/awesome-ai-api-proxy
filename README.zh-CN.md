@@ -80,23 +80,23 @@ OpenAI、Anthropic、Google 等官方 API，而是把 `base_url` 改成中转站
 
 ## 中国 / 亚洲中转站
 
-> **信任** = 状态 + 最后验证日期 +（若公开可见公司主体会多 `· 已注册`）。
-> `active` = 可独立访问；`unverified` = 社区来源，未独立确认。
-> 价格变动极快，请以官网为准。完整字段（payment、models、supports_tools 等）
-> 在 [`data/providers.yaml`](data/providers.yaml)；下面的表格由
-> [`scripts/build_provider_tables.py`](scripts/build_provider_tables.py) 自动生成。
+> **怎么读这张表：** 🟢 = `active` 且维护者亲自 canary 过 · 🟡 = 社区登录或 `unverified` · 🔴 = `inactive`／跑路。
+>
+> **信任** = 状态 + 最后验证日期 +（若公开可见公司主体会多 `· 已注册`）+（已知安全顾虑会多 `· ⚠ <旗标>`）。常见旗标：`自荐`（运营者自荐）、`无主体`（无公开公司／ICP）、`逆向`（逆向通道）、`价过低`（价格远低于 OR，多半降智）、`跑路`（已卷款）。完整 enum 见 [`data/schema.md`](data/schema.md#risk_flags-enum-schema-v5)。
+>
+> 价格变动极快，请以官网为准。完整字段（payment、models、supports_tools 等）在 [`data/providers.yaml`](data/providers.yaml)；下面的表格由 [`scripts/build_provider_tables.py`](scripts/build_provider_tables.py) 自动生成。
 
 <!-- providers:china_relays:start -->
 | 中转站 | 类型 | 支付 | 信任 | 备注 |
 |---|---|---|---|---|
-| [云雾 API (YUNWU)](https://yunwu.ai) | mixed | 支付宝/微信 | active · 2026-05-26 | 主打高速稳定；社区常列为头部站。 |
-| [柏拉图 AI (bltcy)](https://api.bltcy.ai) | mixed | 支付宝/微信 | active · 2026-06-07 | Azure 通道；主打最低价。new-api fork，1000+ 模型横跨 25+ 分组；`/api/pricing` 公开 default 分组倍率。 |
-| [No.1-API](https://api.rcouyi.com) | aggregator | 支付宝/微信 | active · 2026-05-26 | 一站式聚合 + 中转平台。 |
-| [UiUiAPI](https://uiuiapi.com) | official-relay | 支付宝/微信 | active · 2026-06-07 | 宣称官方渠道 + 官方倍率；约便宜 49%（宣称），311 模型。new-api `/api/pricing` 公开于 api1 子域名。 |
-| [DMXAPI](https://dmxapi.cn) | mixed | 支付宝/微信 | unverified | 社区收录；官网未独立核实。 |
-| [MKEAI](https://mkeai.com) | mixed | 支付宝/微信 | unverified | 社区论坛 + 中转混合；主推 DeepSeek。 |
-| [GPTGOD](https://gptgod.online) | reverse | 支付宝 | unverified | 逆向；便宜，稳定性无保证。 |
-| [CloseAI](https://www.closeai-asia.com) | official-relay | 支付宝/微信/对公 | active · 2026-05-26 · 已注册 | 提供对公发票；自称亚洲最大企业级中转。 |
+| 🟢 [云雾 API (YUNWU)](https://yunwu.ai) | mixed | 支付宝/微信 | active · 2026-05-26 | 主打高速稳定；社区常列为头部站。 |
+| 🟢 [柏拉图 AI (bltcy)](https://api.bltcy.ai) | mixed | 支付宝/微信 | active · 2026-06-07 | Azure 通道；主打最低价。new-api fork，1000+ 模型横跨 25+ 分组；`/api/pricing` 公开 default 分组倍率。 |
+| 🟢 [No.1-API](https://api.rcouyi.com) | aggregator | 支付宝/微信 | active · 2026-05-26 | 一站式聚合 + 中转平台。 |
+| 🟢 [UiUiAPI](https://uiuiapi.com) | official-relay | 支付宝/微信 | active · 2026-06-07 | 宣称官方渠道 + 官方倍率；约便宜 49%（宣称），311 模型。new-api `/api/pricing` 公开于 api1 子域名。 |
+| 🟡 [DMXAPI](https://dmxapi.cn) | mixed | 支付宝/微信 | unverified · ⚠ 无主体 | 社区收录；官网未独立核实。 |
+| 🟡 [MKEAI](https://mkeai.com) | mixed | 支付宝/微信 | unverified · ⚠ 无主体 | 社区论坛 + 中转混合；主推 DeepSeek。 |
+| 🟡 [GPTGOD](https://gptgod.online) | reverse | 支付宝 | unverified · ⚠ 逆向, 无主体 | 逆向；便宜，稳定性无保证。 |
+| 🟢 [CloseAI](https://www.closeai-asia.com) | official-relay | 支付宝/微信/对公 | active · 2026-05-26 · 已注册 | 提供对公发票；自称亚洲最大企业级中转。 |
 <!-- providers:china_relays:end -->
 
 > **收录 ≠ 推荐。** 收录是为了记录市场。打款或传数据前请先走
@@ -107,13 +107,13 @@ OpenAI、Anthropic、Google 等官方 API，而是把 `base_url` 改成中转站
 <!-- providers:global_gateways:start -->
 | 服务 | 类型 | 支付 | 备注 |
 |---|---|---|---|
-| [OpenRouter](https://openrouter.ai) | aggregator | 卡/加密货币 | 官方授权路由，加价约 5%；400+ 模型、60+ 供应商。ARR 据报约 $5M（2025-05）→ 约 $50M（2026 初）。公开 `/api/v1/models` JSON。 |
-| [Atlas Cloud](https://www.atlascloud.ai) | aggregator | 卡 | 多模态聚合平台；图像/视频模型多（Grok Imagine、Kling、ByteDance、Vidu）。公开 OpenAI 兼容 `/v1/models` 含 cache-read 计价。 |
-| [Relaydance](https://relaydance.com) | mixed | 支付宝/微信/卡 | 基于 new-api 的中文界面海外站，主打 xAI Grok + 字节跳动 Doubao。`/api/pricing` 公开倍率计价（model_ratio × $2/1M tokens）。 |
-| [LiteLLM](https://litellm.ai) | gateway-oss | — | 开源网关（100+ 供应商）+ 企业版。自托管，自带 Key。 |
-| [Helicone](https://helicone.ai) | observability | — | LLM 可观测性网关；日志/成本分析。 |
-| [AIMLAPI](https://aimlapi.com) | aggregator | 卡/加密货币 | 400+ 模型，$20 起预付；支持加密货币暗示绕支付障碍。 |
-| [UnoRouter](https://unorouter.ai) | aggregator | 卡 | 建于 new-api 网关之上。单一密钥跨多上游，按延迟路由并具故障转移；自动识别 OpenAI／Anthropic／Gemini 格式。按量计费并提供免费模型层；亦支持角色扮演客户端（SillyTavern、Janitor.AI、RisuAI、Chub）。 |
+| 🟢 [OpenRouter](https://openrouter.ai) | aggregator | 卡/加密货币 | 官方授权路由，加价约 5%；400+ 模型、60+ 供应商。ARR 据报约 $5M（2025-05）→ 约 $50M（2026 初）。公开 `/api/v1/models` JSON。 |
+| 🟢 [Atlas Cloud](https://www.atlascloud.ai) | aggregator | 卡 | 多模态聚合平台；图像/视频模型多（Grok Imagine、Kling、ByteDance、Vidu）。公开 OpenAI 兼容 `/v1/models` 含 cache-read 计价。 |
+| 🟢 [Relaydance](https://relaydance.com) | mixed | 支付宝/微信/卡 | 基于 new-api 的中文界面海外站，主打 xAI Grok + 字节跳动 Doubao。`/api/pricing` 公开倍率计价（model_ratio × $2/1M tokens）。 |
+| 🟢 [LiteLLM](https://litellm.ai) | gateway-oss | — | 开源网关（100+ 供应商）+ 企业版。自托管，自带 Key。 |
+| 🟢 [Helicone](https://helicone.ai) | observability | — | LLM 可观测性网关；日志/成本分析。 |
+| 🟢 [AIMLAPI](https://aimlapi.com) | aggregator | 卡/加密货币 | 400+ 模型，$20 起预付；支持加密货币暗示绕支付障碍。 |
+| 🟡 [UnoRouter](https://unorouter.ai) | aggregator | 卡 | 建于 new-api 网关之上。单一密钥跨多上游，按延迟路由并具故障转移；自动识别 OpenAI／Anthropic／Gemini 格式。按量计费并提供免费模型层；亦支持角色扮演客户端（SillyTavern、Janitor.AI、RisuAI、Chub）。 |
 <!-- providers:global_gateways:end -->
 
 ## 自托管替代方案
@@ -125,8 +125,8 @@ OpenAI、Anthropic、Google 等官方 API，而是把 `base_url` 改成中转站
 <!-- providers:self_hosted_alternatives:start -->
 | 项目 | 类型 | 备注 |
 |---|---|---|
-| [One-API](https://github.com/songquanpeng/one-api) | gateway-oss | 流行的 Go 多厂商网关；多数中转站的底层 OSS 模板。 |
-| [new-api](https://github.com/Calcium-Ion/new-api) | gateway-oss | One-API 的 fork，多了几种通道类型；同样自托管、自带 key。 |
+| 🟢 [One-API](https://github.com/songquanpeng/one-api) | gateway-oss | 流行的 Go 多厂商网关；多数中转站的底层 OSS 模板。 |
+| 🟢 [new-api](https://github.com/Calcium-Ion/new-api) | gateway-oss | One-API 的 fork，多了几种通道类型；同样自托管、自带 key。 |
 <!-- providers:self_hosted_alternatives:end -->
 
 > [LiteLLM](https://litellm.ai)（在上面海外网关表格内）同样是自托管方案（Python 为主、100+ 供应商、企业常用）。
@@ -139,9 +139,9 @@ OpenAI、Anthropic、Google 等官方 API，而是把 `base_url` 改成中转站
 <!-- providers:comparison_tools:start -->
 | 工具 | 备注 |
 |---|---|
-| [中轉站競技場 (AI API PK)](https://www.aiapipk.com) | 约 40 家站点的 OpenAI / 逆向 / Claude / DeepSeek 报价墙。 |
-| [awesome-ai-proxy (mn-api, unmaintained)](https://github.com/mn-api/awesome-ai-proxy) | 最早的清单（约 31 家）。**2026 年起已停更** —— 本仓库延续这一工作。 |
-| [CoderPlan](https://coderplan.ai) | 社区投稿；宣称 50+ 模型，含 OpenAI/Anthropic/Google/DeepSeek/xAI。 |
+| 🟢 [中轉站競技場 (AI API PK)](https://www.aiapipk.com) | 约 40 家站点的 OpenAI / 逆向 / Claude / DeepSeek 报价墙。 |
+| 🔴 [awesome-ai-proxy (mn-api, unmaintained)](https://github.com/mn-api/awesome-ai-proxy) | 最早的清单（约 31 家）。**2026 年起已停更** —— 本仓库延续这一工作。 |
+| 🟡 [CoderPlan](https://coderplan.ai) | 社区投稿；宣称 50+ 模型，含 OpenAI/Anthropic/Google/DeepSeek/xAI。 |
 <!-- providers:comparison_tools:end -->
 
 ## 想被收录吗？
@@ -269,6 +269,16 @@ _Output-token equivalents and the full-matrix heatmap: [`assets/charts/`](assets
 _Full per-model breakdown (including non-canonical models): [`docs/prices.md`](docs/prices.md). Raw snapshots: [`data/snapshots/`](data/snapshots/). Machine-readable: [`data/prices.latest.json`](data/prices.latest.json)._
 
 <!-- prices:end -->
+
+### 质量参考（搭配这份价格数据用）
+
+这个 repo 追踪**价格**且每条都有完整出处。**质量／智力**我们刻意链接出去到既有 benchmark，而不是把分数抄进来（分数衰退快、需要持续维护）。把我们的价格数据搭配以下其一使用：
+
+- **[Terminal Bench](https://www.tbench.ai/)** —— 真实 terminal 驱动 agent 任务的完成率。最贴近 coding／agent 场景。
+- **[Kilo Code 排行榜](https://kilo.ai/leaderboard)** —— 真实开发者 token 用量排名 + cost-per-attempt × completion-% 散布图。已经帮你画好 Pareto 前沿。
+- **[lmarena ELO](https://arena.ai/leaderboard)** —— 来自盲测双模型偏好投票的 ELO 分数。一般 chat 场景最常被引用。
+
+路由经验法则：**在你质量预算内的模型，挑这份数据里最便宜的 provider**。完整 benchmark 清单也在 [`data/canonical-models.yaml`](data/canonical-models.yaml#benchmark_references)，agent 可通过 MCP server 取用。
 
 ## 给 AI agent 与程序化使用
 

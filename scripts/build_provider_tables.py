@@ -88,6 +88,39 @@ TRUST_TEMPLATE = {
     },
 }
 
+# Per-status emoji prefix on the Station/Service cell.
+# 🟢 maintainer-verified active · 🟡 community-listed or unverified · 🔴 inactive
+STATUS_EMOJI = {
+    "active": "🟢",      # adjusted to 🟡 below if verified_by != maintainer
+    "unverified": "🟡",
+    "inactive": "🔴",
+}
+
+# Risk flag short labels, per language. Brief on purpose — these appear inside the Trust cell.
+RISK_LABELS = {
+    "en": {
+        "operator_submitted": "operator-self",
+        "no_entity": "no-entity",
+        "reverse_channel": "reverse",
+        "prices_too_cheap": "cheap-trap",
+        "ran_away": "ran-away",
+    },
+    "zh-TW": {
+        "operator_submitted": "自薦",
+        "no_entity": "無主體",
+        "reverse_channel": "逆向",
+        "prices_too_cheap": "價過低",
+        "ran_away": "跑路",
+    },
+    "zh-CN": {
+        "operator_submitted": "自荐",
+        "no_entity": "无主体",
+        "reverse_channel": "逆向",
+        "prices_too_cheap": "价过低",
+        "ran_away": "跑路",
+    },
+}
+
 
 def _notes_for(entry: dict, lang: str) -> str:
     notes = entry.get("notes") or ""
@@ -113,11 +146,24 @@ def _trust_cell(entry: dict, lang: str) -> str:
         parts.append(f"{tmpl['date_prefix']}{last_verified}")
     if entry.get("entity_registered") is True:
         parts.append(tmpl["registered_suffix"])
+    flags = entry.get("risk_flags") or []
+    if flags:
+        labels = RISK_LABELS[lang]
+        rendered = ", ".join(labels.get(f, f) for f in flags)
+        parts.append(f" · ⚠ {rendered}")
     return "".join(parts)
 
 
+def _status_emoji(entry: dict) -> str:
+    """Pick a status emoji. `active + verified_by maintainer` → 🟢; other active → 🟡; etc."""
+    status = entry.get("status", "unverified")
+    if status == "active" and entry.get("verified_by") != "maintainer":
+        return "🟡"  # active but only community-verified — slightly less trusted
+    return STATUS_EMOJI.get(status, "🟡")
+
+
 def _station_cell(entry: dict) -> str:
-    return f"[{entry['name']}]({entry['url']})"
+    return f"{_status_emoji(entry)} [{entry['name']}]({entry['url']})"
 
 
 def _render_china_row(entry: dict, lang: str) -> str:
