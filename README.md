@@ -2,20 +2,36 @@
 
 ![Awesome AI API Proxy — a curated map of AI API relay stations (中轉站), LLM gateways, and OpenAI / Anthropic Claude / Google Gemini / Meta Llama proxy services for developers in China, Taiwan, Southeast Asia, Russia, and the Middle East](assets/ai-api-relay-proxy-banner.jpg)
 
-> **One key. Every model. Anywhere.**
-> A curated, **actively maintained** list of AI API relay / proxy stations
-> ("中轉站"), global LLM gateways, and the tools to evaluate them — with an
-> evidence-based look at why this market exists and where it's risky.
+> **One pricing endpoint for AI agents.** Stop hand-checking 10 relay pricing pages — point your agent here.
+
+### 🤖 For AI agents — three ways to consume
+
+```bash
+# 1) Raw JSON (every relay's prices, full provenance)
+curl https://raw.githubusercontent.com/howardpen9/awesome-ai-api-proxy/main/data/prices.latest.json
+
+# 2) MCP server (Claude Desktop / Cursor / Cline) — auto tool-call from the model
+uvx awesome-ai-api-proxy-mcp
+
+# 3) Interactive dashboard for humans
+open https://howardpen9.github.io/awesome-ai-api-proxy/
+```
+
+**What's inside:** 7 relay fetchers refreshed weekly, ~3000 normalized price records, 6 canonical models on a cost-tier ladder, full provenance per row (`source_url` + `captured_at` + `method`) so agents can cite confidently. See [docs/agent-integration.md](docs/agent-integration.md) for MCP / LangChain / OpenAI function-calling / direct HTTP examples.
+
+---
 
 **Languages:** English · [繁體中文](README.zh-TW.md) · [简体中文](README.zh-CN.md)
 
-Last reviewed: **2026-05-26** · Maintained by [@howardpen9](https://github.com/howardpen9) ·
+Last reviewed: **2026-06-09** · Maintained by [@howardpen9](https://github.com/howardpen9) ·
 Contributions welcome — see [CONTRIBUTING.md](CONTRIBUTING.md)
 
 ---
 
 ## Contents
 
+- [For AI agents & programmatic use](#for-ai-agents--programmatic-use) ← start here
+- [Price snapshot (weekly)](#price-snapshot-weekly)
 - [What is an AI API relay?](#what-is-an-ai-api-relay)
 - [Why this exists (globally)](#why-this-exists-globally)
 - [China / Asia relay stations](#china--asia-relay-stations)
@@ -23,9 +39,7 @@ Contributions welcome — see [CONTRIBUTING.md](CONTRIBUTING.md)
 - [Self-hosted alternatives](#self-hosted-alternatives)
 - [Comparison & monitoring tools](#comparison--monitoring-tools)
 - [Want your relay listed?](#want-your-relay-listed)
-- [Price snapshot (weekly)](#price-snapshot-weekly)
 - [How to choose one safely](#how-to-choose-one-safely)
-- [For AI agents & programmatic use](#for-ai-agents--programmatic-use)
 - [Canary prompts (detect silent downgrade)](#canary-prompts-detect-silent-downgrade)
 - [Risks (read this)](#risks-read-this)
 - [Market context](#market-context)
