@@ -1,17 +1,35 @@
 # Awesome AI API 中轉站 [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
 
-> 一份**持續維護**的 AI API 中轉站 / 代理（「中轉站」）、全球 LLM 閘道，
-> 以及評估工具的清單 —— 用證據說清楚這個市場為什麼存在、風險在哪。
+> **一個給 AI agent 的價格端點。** 不用再手動打開 10 家中轉站的價格頁 —— 把 agent 指過來這裡。
+
+### 🤖 給 AI agent —— 三種取用方式
+
+```bash
+# 1) 純 JSON（全部中轉站的價格、附完整出處）
+curl https://raw.githubusercontent.com/howardpen9/awesome-ai-api-proxy/main/data/prices.latest.json
+
+# 2) MCP server（Claude Desktop / Cursor / Cline）—— 模型自己會叫 tool
+uvx awesome-ai-api-proxy-mcp
+
+# 3) 給人類看的互動 dashboard
+open https://howardpen9.github.io/awesome-ai-api-proxy/
+```
+
+**內容：**7 個中轉站 fetcher 每週自動爬、~3000 條標準化價格、6 個 canonical 模型在 cost-tier ladder 上、每筆都帶完整出處（`source_url` + `captured_at` + `method`）讓 agent 可以引用得有底氣。MCP / LangChain / OpenAI function-calling / 純 HTTP 範例見 [docs/agent-integration.md](docs/agent-integration.md)。
+
+---
 
 **語言：** [English](README.md) · 繁體中文 · [简体中文](README.zh-CN.md)
 
-最後審閱：**2026-05-26** · 維護者 [@howardpen9](https://github.com/howardpen9) ·
+最後審閱：**2026-06-09** · 維護者 [@howardpen9](https://github.com/howardpen9) ·
 歡迎貢獻 —— 見 [CONTRIBUTING.md](CONTRIBUTING.md)
 
 ---
 
 ## 目錄
 
+- [給 AI agent 與程式化使用](#給-ai-agent-與程式化使用) ← 從這裡開始
+- [價格快照（每週更新）](#價格快照每週更新)
 - [什麼是 API 中轉站](#什麼是-api-中轉站)
 - [為什麼會出現（全球視角）](#為什麼會出現全球視角)
 - [中國 / 亞洲中轉站](#中國--亞洲中轉站)
@@ -19,9 +37,7 @@
 - [自架替代方案](#自架替代方案)
 - [對比與監控工具](#對比與監控工具)
 - [想被收錄嗎？](#想被收錄嗎)
-- [價格快照（每週更新）](#價格快照每週更新)
 - [如何安全地挑選](#如何安全地挑選)
-- [給 AI agent 與程式化使用](#給-ai-agent-與程式化使用)
 - [Canary 驗證 prompt（偵測偷偷降智）](#canary-驗證-prompt偵測偷偷降智)
 - [風險（務必閱讀）](#風險務必閱讀)
 - [市場背景](#市場背景)

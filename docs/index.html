@@ -52,6 +52,39 @@
     }
     .chart { background: var(--card); border: 1px solid var(--border); border-radius: 12px;
              padding: 8px; margin-bottom: 24px; min-height: 380px; }
+    .agent-hero {
+      background: linear-gradient(135deg, color-mix(in srgb, var(--accent) 12%, transparent),
+                                              color-mix(in srgb, var(--accent) 3%, transparent));
+      border: 1px solid color-mix(in srgb, var(--accent) 30%, transparent);
+      border-radius: 16px; padding: 20px 24px; margin: 24px 0 8px;
+    }
+    .agent-hero h2 { margin: 0 0 4px; padding: 0; border: 0; font-size: 1.15rem; color: var(--accent); }
+    .agent-hero p.tagline { margin: 0 0 16px; color: var(--muted); font-size: 0.95rem; }
+    .copy-row { display: flex; align-items: center; gap: 8px; margin: 10px 0;
+                background: var(--bg); padding: 6px 6px 6px 12px; border-radius: 8px;
+                border: 1px solid var(--border); }
+    .copy-row code { flex: 1; font-size: 0.82rem; overflow-x: auto;
+                     white-space: nowrap; padding: 4px 0; }
+    .copy-row button {
+      background: var(--accent); color: white; border: 0; padding: 6px 14px;
+      border-radius: 6px; cursor: pointer; font-size: 0.82rem; white-space: nowrap;
+    }
+    .copy-row button:hover { opacity: 0.9; }
+    .copy-row button.copied { background: #10b981; }
+    details.mcp-config { margin-top: 8px; }
+    details.mcp-config summary { cursor: pointer; padding: 4px 0; color: var(--muted); font-size: 0.88rem; }
+    details.mcp-config pre {
+      background: var(--bg); border: 1px solid var(--border); border-radius: 8px;
+      padding: 10px 14px; font-size: 0.78rem; overflow-x: auto; margin: 8px 0 0;
+    }
+    .human-divider {
+      text-align: center; margin: 32px 0 8px; color: var(--muted); font-size: 0.9rem;
+      position: relative;
+    }
+    .human-divider::before, .human-divider::after {
+      content: ""; display: inline-block; width: 80px; height: 1px;
+      background: var(--border); vertical-align: middle; margin: 0 12px;
+    }
     table { width: 100%; border-collapse: collapse; font-size: 0.88rem; }
     th, td { padding: 8px 10px; text-align: left; border-bottom: 1px solid var(--border); }
     th { background: var(--card); position: sticky; top: 0; font-weight: 600; }
@@ -68,13 +101,51 @@
   <main>
     <h1>AI API Relay Price Observatory</h1>
     <p class="lead">
-      Weekly normalized snapshots of AI API relay station and LLM gateway prices.
+      <strong>One pricing endpoint for AI agents.</strong>
+      Stop hand-checking 10 relay pricing pages — point your agent here.
+    </p>
+
+    <section class="agent-hero" aria-label="For AI agents">
+      <h2>🤖 For AI agents</h2>
+      <p class="tagline">One URL = every relay's prices, full provenance, refreshed weekly.</p>
+
+      <div class="copy-row">
+        <code id="raw-url">https://raw.githubusercontent.com/howardpen9/awesome-ai-api-proxy/main/data/prices.latest.json</code>
+        <button data-copy="raw-url">Copy URL</button>
+      </div>
+
+      <div class="copy-row">
+        <code id="curl-cmd">curl https://raw.githubusercontent.com/howardpen9/awesome-ai-api-proxy/main/data/prices.latest.json</code>
+        <button data-copy="curl-cmd">Copy curl</button>
+      </div>
+
+      <details class="mcp-config">
+        <summary>Claude Desktop / Cursor / Cline (MCP) — model auto-calls the tool</summary>
+        <pre id="mcp-config">{
+  "mcpServers": {
+    "awesome-ai-api-proxy": {
+      "command": "uvx",
+      "args": ["awesome-ai-api-proxy-mcp"]
+    }
+  }
+}</pre>
+        <div class="copy-row">
+          <code style="white-space: pre-wrap;">uvx awesome-ai-api-proxy-mcp</code>
+          <button data-copy="mcp-config">Copy config</button>
+        </div>
+      </details>
+    </section>
+
+    <div class="meta" id="meta">Loading <code>data/prices.latest.json</code>…</div>
+
+    <div class="human-divider">👀 For humans — explore the data below</div>
+
+    <p class="lead" style="margin-top: 8px;">
       <strong class="warn">⚠</strong> = relay quotes <50% of OpenRouter (the
       official-authorized reference baseline) — verify with
       <a href="https://github.com/howardpen9/awesome-ai-api-proxy/blob/main/docs/canary-prompts.md">canary prompts</a>
       before trusting.
     </p>
-    <div class="meta" id="meta">Loading <code>data/prices.latest.json</code>…</div>
 
     <div class="controls" role="tablist" aria-label="Pricing unit">
       <button data-unit="per_1m_input_tokens" aria-pressed="true">Input tokens (per 1M)</button>
@@ -312,6 +383,24 @@
   });
   document.getElementById("search").addEventListener("input", e => {
     renderTable(e.target.value);
+  });
+
+  // Agent-hero copy buttons
+  document.querySelectorAll("[data-copy]").forEach(btn => {
+    btn.addEventListener("click", async () => {
+      const target = document.getElementById(btn.dataset.copy);
+      if (!target) return;
+      try {
+        await navigator.clipboard.writeText(target.textContent.trim());
+        const orig = btn.textContent;
+        btn.textContent = "✓ Copied";
+        btn.classList.add("copied");
+        setTimeout(() => { btn.textContent = orig; btn.classList.remove("copied"); }, 1500);
+      } catch (e) {
+        btn.textContent = "Press Cmd+C";
+        setTimeout(() => { btn.textContent = "Copy"; }, 1500);
+      }
+    });
   });
 
   load();
