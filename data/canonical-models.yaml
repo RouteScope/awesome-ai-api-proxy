@@ -20,8 +20,27 @@
 # Models NOT in this list still appear in data/snapshots/ and docs/prices.md,
 # but won't show in the README headline table.
 
-schema_version: 1
-last_reviewed: "2026-06-07"
+schema_version: 2
+last_reviewed: "2026-06-09"
+
+# Quality references — readers (humans + agents) wanting to combine our price
+# data with a model's quality should consult these benchmarks. We deliberately
+# do NOT transcribe scores per canonical model — scores go stale fast and
+# require ongoing maintenance. Links only. v1.7 may add transcribed scores
+# once the price-collection pipeline is fully saturated.
+benchmark_references:
+  - name: Terminal Bench
+    url: https://www.tbench.ai/
+    measures: "Completion rate on real terminal-driven tasks (agent benchmark)."
+    relevance: "Most directly tied to coding / agent workloads."
+  - name: Kilo Code Leaderboard
+    url: https://kilo.ai/leaderboard
+    measures: "Real developer-token-usage ranking + cost-per-attempt scatter (uses Terminal Bench 2.0)."
+    relevance: "Already plots the Pareto frontier you'd otherwise want to build (USD per attempt × completion %)."
+  - name: lmarena ELO
+    url: https://arena.ai/leaderboard
+    measures: "ELO from blind pairwise human preference votes."
+    relevance: "Most cited general-purpose quality ranking; best for chat workloads."
 
 canonical_models:
   # ---------- Tier 1: cheapest viable (routine, batch summaries) ----------

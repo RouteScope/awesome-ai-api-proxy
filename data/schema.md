@@ -20,7 +20,28 @@ Unverifiable claims must be marked with `(claimed)` or `status: unverified`.
 | `supports_stream` | no | `true`, `false`, or `unknown`. SSE / streaming responses available. |
 | `supports_tools` | no | `true`, `false`, or `unknown`. Function-calling / tools API compatibility. |
 | `notes` | no | One factual sentence, no marketing. **May be a string OR a dict `{en, zh-TW, zh-CN}` for bilingual entries.** Missing translations fall back to `en`. Required key when dict: `en`. |
+| `risk_flags` | no | Array. Visible safety concerns surfaced as ⚠ in the README Trust column. See enum below. |
 | `pricing` | no | Block. See below — present when this provider has an automated fetcher. |
+
+## `risk_flags` enum (schema v5)
+
+Each flag rendered as `⚠ <short-label>` in the Trust column of provider tables.
+Multiple flags concatenated. Keep this list short on purpose — only signals a
+user needs to see before sending money.
+
+| Flag | Meaning | Visible label (en) |
+|---|---|---|
+| `operator_submitted` | The entry was self-submitted by the relay's operator (transparency disclosure, not auto-disqualifying) | `operator-self` |
+| `no_entity` | No publicly visible company / ICP filing / TOS / contact | `no-entity` |
+| `reverse_channel` | Uses a reverse-engineered vendor web client (high ToS risk, may silently downgrade) | `reverse` |
+| `prices_too_cheap` | Prices >50% below OpenRouter without maintainer canary (usually means reverse / mixed) | `cheap-trap` |
+| `ran_away` | Exit-scammed: operator took prepaid balances and disappeared. Use with `status: inactive` | `ran-away` |
+
+Status emoji rendered as a prefix to each Station/Service cell:
+
+- 🟢 `active` + `verified_by: maintainer` — independently canary-tested
+- 🟡 `active` + non-maintainer verification, OR `unverified` — community-listed, not maintainer-confirmed
+- 🔴 `inactive` — dead / ran away (kept as history)
 
 ## `pricing` block (optional, schema v3)
 

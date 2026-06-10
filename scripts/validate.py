@@ -28,6 +28,13 @@ ALLOWED_TYPES = {
     "list",
 }
 ALLOWED_STATUS = {"active", "unverified", "inactive"}
+ALLOWED_RISK_FLAGS = {
+    "operator_submitted",
+    "no_entity",
+    "reverse_channel",
+    "prices_too_cheap",
+    "ran_away",
+}
 ALLOWED_UNITS = {
     "per_1m_input_tokens",
     "per_1m_output_tokens",
@@ -80,6 +87,13 @@ def validate_providers(problems: list[str]) -> None:
                 _problem(problems, f"{section}: '{entry['name']}' has invalid type: {entry.get('type')!r}")
             if entry.get("status") not in ALLOWED_STATUS:
                 _problem(problems, f"{section}: '{entry['name']}' has invalid status: {entry.get('status')!r}")
+            risk_flags = entry.get("risk_flags") or []
+            if not isinstance(risk_flags, list):
+                _problem(problems, f"{section}: '{entry['name']}' risk_flags must be a list")
+            else:
+                for flag in risk_flags:
+                    if flag not in ALLOWED_RISK_FLAGS:
+                        _problem(problems, f"{section}: '{entry['name']}' has invalid risk_flag: {flag!r} (allowed: {sorted(ALLOWED_RISK_FLAGS)})")
             pricing = entry.get("pricing")
             if pricing:
                 # pricing_url + pricing_currency always required; fetcher optional

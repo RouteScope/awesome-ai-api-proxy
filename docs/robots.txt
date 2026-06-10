@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://howardpen9.github.io/awesome-ai-api-proxy/sitemap.xml
